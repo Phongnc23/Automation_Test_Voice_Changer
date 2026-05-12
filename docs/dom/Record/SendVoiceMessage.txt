@@ -1,0 +1,95 @@
+<android.widget.FrameLayout>
+<android.widget.FrameLayout>
+<android.widget.FrameLayout resource-id="android:id/content">
+<android.widget.ScrollView resource-id="android:id/contentPanel">
+<android.widget.RelativeLayout resource-id="android:id/chooser_header">
+<android.widget.RelativeLayout>
+<android.widget.ImageView resource-id="android:id/drag">
+<android.widget.RelativeLayout>
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/ll_cancel">
+<android.widget.TextView text="Hủy" content-desc="Hủy" resource-id="com.android.intentresolver:id/oplus_resolve_close_icon">
+<android.widget.TextView resource-id="com.android.intentresolver:id/oplus_resolve_number">
+<android.widget.ScrollView resource-id="com.android.intentresolver:id/oplus_chooser_nested_scroll">
+<android.widget.LinearLayout>
+<android.widget.TabHost resource-id="android:id/profile_tabhost">
+<android.widget.LinearLayout>
+<android.widget.FrameLayout resource-id="android:id/tabcontent">
+<androidx.viewpager.widget.ViewPager resource-id="android:id/profile_pager">
+<android.widget.RelativeLayout>
+<android.widget.GridView resource-id="android:id/resolver_list">
+<android.widget.LinearLayout resource-id="android:id/content_preview_file_area">
+<android.widget.LinearLayout resource-id="android:id/content_preview_file_layout">
+<android.widget.TextView text="record_1778561405053.m4a" resource-id="com.android.intentresolver:id/content_preview_filename">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/content_preview_file_icon">
+<android.widget.LinearLayout>
+<android.widget.LinearLayout>
+<android.widget.FrameLayout>
+<android.widget.HorizontalScrollView>
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/chooser_row_content">
+<android.widget.LinearLayout content-desc="Người Yêu Anh 🌞 Messenger" resource-id="android:id/item">
+<android.widget.ImageView resource-id="android:id/icon">
+<android.widget.TextView text="Người Yêu Anh 🌞" resource-id="android:id/text1">
+<android.widget.LinearLayout content-desc="Đv Mạnh's Messenger" resource-id="android:id/item">
+<android.widget.ImageView resource-id="android:id/icon">
+<android.widget.TextView text="Đv Mạnh's" resource-id="android:id/text1">
+<android.widget.LinearLayout content-desc="Nguyễn Thuỳ Dung Messenger" resource-id="android:id/item">
+<android.widget.ImageView resource-id="android:id/icon">
+<android.widget.TextView text="Nguyễn Thuỳ Dung" resource-id="android:id/text1">
+<android.widget.LinearLayout content-desc="Hướng dẫn Phong Tester- Thử việc. Từ 16.03 Teams" resource-id="android:id/item">
+<android.widget.ImageView resource-id="android:id/icon">
+<android.widget.TextView text="Hướng dẫn Phong Tester- Thử việc. Từ 16.03" resource-id="android:id/text1">
+<android.widget.LinearLayout content-desc="Không mang cơm Teams" resource-id="android:id/item">
+<android.widget.ImageView resource-id="android:id/icon">
+<android.widget.TextView text="Không mang cơm" resource-id="android:id/text1">
+<android.view.View>
+<android.widget.LinearLayout>
+<com.android.intentresolver.widget.OplusViewPager resource-id="com.android.intentresolver:id/oplus_resolver_pager">
+<com.android.internal.widget.RecyclerView>
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="Chia sẻ nhanh" resource-id="android:id/text1">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="Messenger" resource-id="android:id/text1">
+<android.widget.TextView text="Đoạn chat" resource-id="com.android.intentresolver:id/resolver_item_name">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="Teams" resource-id="android:id/text1">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="Bluetooth" resource-id="android:id/text1">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="Gmail" resource-id="android:id/text1">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="Drive" resource-id="android:id/text1">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="Tệp của tôi" resource-id="android:id/text1">
+<android.widget.TextView text="Lưu vào Tệp của tôi" resource-id="com.android.intentresolver:id/resolver_item_name">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="Thanh bên thông minh" resource-id="android:id/text1">
+<android.widget.TextView text="Lưu vào Trạm trung chuyển tệp" resource-id="com.android.intentresolver:id/resolver_item_name">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="WPS Office" resource-id="android:id/text1">
+<android.widget.TextView text="Lưu vào WPS Cloud" resource-id="com.android.intentresolver:id/resolver_item_name">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="My Viettel" resource-id="android:id/text1">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="CapCut" resource-id="android:id/text1">
+<android.widget.TextView text="Nhập phông chữ" resource-id="com.android.intentresolver:id/resolver_item_name">
+<android.widget.LinearLayout resource-id="com.android.intentresolver:id/resolver_item_layout">
+<android.widget.RelativeLayout>
+<android.widget.ImageView resource-id="com.android.intentresolver:id/resolver_item_icon">
+<android.widget.TextView text="OPPO Share" resource-id="android:id/text1">
+<android.widget.FrameLayout resource-id="com.android.intentresolver:id/oplus_resolver_dots">
+<android.widget.LinearLayout>
+<android.widget.FrameLayout>
+<android.widget.ImageView resource-id="com.android.intentresolver:id/oplus_page_indicator_dot">
+<android.widget.FrameLayout>
+<android.widget.ImageView resource-id="com.android.intentresolver:id/oplus_page_indicator_dot">

@@ -1,0 +1,31 @@
+<android.widget.FrameLayout>
+<android.widget.LinearLayout>
+<android.widget.FrameLayout>
+<android.widget.LinearLayout resource-id="com.android.settings:id/action_bar_root">
+<android.widget.FrameLayout resource-id="android:id/content">
+<android.view.ViewGroup resource-id="com.android.settings:id/content_parent">
+<android.widget.LinearLayout resource-id="com.android.settings:id/abl">
+<android.view.ViewGroup resource-id="com.android.settings:id/toolbar">
+<android.widget.ImageButton content-desc="Di chuyển lên" resource-id="com.android.settings:id/coui_toolbar_back_view">
+<android.widget.TextView text="Chỉnh sửa cài đặt hệ thống">
+<android.widget.FrameLayout resource-id="com.android.settings:id/content_frame">
+<android.widget.LinearLayout>
+<android.widget.FrameLayout resource-id="com.android.settings:id/main_content">
+<android.widget.LinearLayout resource-id="com.android.settings:id/container_material">
+<android.widget.FrameLayout resource-id="android:id/list_container">
+<androidx.recyclerview.widget.RecyclerView resource-id="com.android.settings:id/recycler_view">
+<android.widget.FrameLayout>
+<android.widget.LinearLayout resource-id="com.android.settings:id/entity_header">
+<android.widget.RelativeLayout resource-id="com.android.settings:id/app_snippet">
+<android.widget.ImageView resource-id="com.android.settings:id/entity_header_icon">
+<android.widget.LinearLayout resource-id="com.android.settings:id/entity_header_content">
+<android.widget.TextView text="Voice Changer" resource-id="com.android.settings:id/entity_header_title">
+<android.widget.TextView text="1.0" resource-id="com.android.settings:id/entity_header_summary">
+<android.widget.LinearLayout>
+<android.widget.LinearLayout>
+<android.widget.RelativeLayout>
+<android.widget.TextView text="Cho phép sửa đổi các chế độ cài đặt hệ thống" resource-id="android:id/title">
+<android.widget.LinearLayout resource-id="android:id/widget_frame">
+<android.widget.Switch text="Tắt" resource-id="android:id/switch_widget">
+<android.widget.LinearLayout>
+<android.widget.TextView text="Quyền này cho phép ứng dụng sửa đổi các chế độ cài đặt hệ thống." resource-id="android:id/summary">

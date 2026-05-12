@@ -27,25 +27,58 @@ public class BaseTest {
         driverManager = DriverFactory.getDriverManager(AppConstants.PLATFORM_NAME);
         driver = driverManager.createDriver();
 
-        logger.info("Current package: " + getCurrentPackage());
+        // KHONG terminate+activate o day vi:
+        // - createDriver() da mo app fresh
+        // - Test class nao can reset them thi tu goi resetAppToFreshState()
+        logger.info("Driver created, app launched fresh");
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
         logger.info("TEARDOWN: " + this.getClass().getSimpleName());
 
+        // Buoc 1: Terminate app de dam bao app khong con chay tren device
         if (driver != null) {
             try {
-                if (driver instanceof AndroidDriver) {
-                    ((AndroidDriver) driver).terminateApp(AppConstants.APP_PACKAGE);
-                }
+                ((AndroidDriver) driver).terminateApp(AppConstants.APP_PACKAGE);
+                Thread.sleep(800);
+                logger.info("App terminated");
             } catch (Exception e) {
                 logger.warn("Cannot terminate app: " + e.getMessage());
             }
         }
 
+        // Buoc 2: Quit driver
         if (driverManager != null) {
-            driverManager.quitDriver();
+            try {
+                driverManager.quitDriver();
+                logger.info("Driver quit completed");
+            } catch (Exception e) {
+                logger.warn("Error quitting driver: " + e.getMessage());
+            }
+        }
+    }
+
+    /**
+     * Reset app ve trang thai fresh.
+     * Goi method nay trong @BeforeClass cua test class can app fresh:
+     * - Record (ghi am, state phuc tap)
+     * - Voice Effects, Audio Saved (sub-screens)
+     *
+     * KHONG can goi neu test class chi test Home (cap nhat truc tiep).
+     */
+    protected void resetAppToFreshState() {
+        if (driver == null) return;
+
+        try {
+            logger.info("Reset app to fresh state");
+            ((AndroidDriver) driver).terminateApp(AppConstants.APP_PACKAGE);
+            Thread.sleep(1000);
+            ((AndroidDriver) driver).activateApp(AppConstants.APP_PACKAGE);
+            Thread.sleep(1500);
+            logger.info("App is fresh");
+        } catch (Exception e) {
+            logger.warn("Cannot reset app: " + e.getMessage());
         }
     }
 

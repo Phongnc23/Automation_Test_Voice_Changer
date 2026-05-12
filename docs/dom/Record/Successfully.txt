@@ -1,0 +1,22 @@
+<android.widget.FrameLayout>
+<android.widget.LinearLayout>
+<android.widget.FrameLayout>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/action_bar_root">
+<android.widget.FrameLayout resource-id="android:id/content">
+<androidx.drawerlayout.widget.DrawerLayout resource-id="com.bluesoftware.voicechanger:id/main">
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment">
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/btnClose">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/btnHome">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgSuccess">
+<android.widget.TextView text="Audio Saved Successfully" resource-id="com.bluesoftware.voicechanger:id/tvTitle">
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layoutAudio">
+<android.widget.ImageView>
+<android.widget.LinearLayout>
+<android.widget.TextView text="record_1778561405053.m4a" resource-id="com.bluesoftware.voicechanger:id/tvFileName">
+<android.widget.TextView text="00:03 · 56 KB" resource-id="com.bluesoftware.voicechanger:id/tvInfo">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/image_more">
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layoutButtons">
+<android.widget.TextView text="Set as ringtone" resource-id="com.bluesoftware.voicechanger:id/btnSetRingtone">
+<android.widget.TextView text="Share" resource-id="com.bluesoftware.voicechanger:id/btnSend">

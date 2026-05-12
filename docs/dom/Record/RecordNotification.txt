@@ -1,0 +1,14 @@
+<android.widget.FrameLayout>
+<android.widget.FrameLayout>
+<android.widget.FrameLayout resource-id="android:id/content">
+<android.widget.ScrollView>
+<android.widget.LinearLayout resource-id="com.android.permissioncontroller:id/grant_singleton">
+<android.widget.LinearLayout resource-id="com.android.permissioncontroller:id/grant_dialog">
+<android.widget.LinearLayout resource-id="com.android.permissioncontroller:id/content_container">
+<android.widget.LinearLayout>
+<android.widget.ImageView resource-id="com.android.permissioncontroller:id/permission_icon">
+<android.widget.TextView text="Cho phép Voice Changer ghi âm?" resource-id="com.android.permissioncontroller:id/permission_message">
+<android.widget.LinearLayout>
+<android.widget.Button text="Trong khi dùng ứng dụng" resource-id="com.android.permissioncontroller:id/permission_allow_foreground_only_button">
+<android.widget.Button text="Chỉ lần này" resource-id="com.android.permissioncontroller:id/permission_allow_one_time_button">
+<android.widget.Button text="Không cho phép" resource-id="com.android.permissioncontroller:id/permission_deny_button">

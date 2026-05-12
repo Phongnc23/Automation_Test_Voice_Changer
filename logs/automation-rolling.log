@@ -1,0 +1,70 @@
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - ==========================================
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - START SUITE: Home Screen Tests
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - ==========================================
+2026-05-11 17:05:19 [main] INFO  Base.BaseTest - ========================================
+2026-05-11 17:05:19 [main] INFO  Base.BaseTest - SETUP: Home01_Verify_App_Launched
+2026-05-11 17:05:19 [main] INFO  Base.BaseTest - ========================================
+2026-05-11 17:05:19 [main] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-11 17:05:19 [main] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-11 17:05:19 [main] ERROR Driver.AndroidDriverManager - Failed to create Android driver: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-9VTPIBJ', ip: '192.168.1.14'
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Oppo Pad Neo, appium:ignoreHiddenApiPolicyError: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:platformVersion: 14, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Oppo Pad Neo, appium:ignoreHiddenApiPolicyError: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:platformVersion: 14, platformName: ANDROID}
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - START TEST: test_app_launched_successfully
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - Description: Kiem tra app Voice Changer mo thanh cong
+2026-05-11 17:05:19 [main] INFO  Report.ExtentReportManager - ExtentReport created: reports/ExtentReport_20260511_170519.html
+2026-05-11 17:05:19 [main] WARN  Listeners.TestListener - ⊘ SKIPPED: test_app_launched_successfully
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - START TEST: test_get_current_activity
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - Description: Kiem tra activity hien tai cua app
+2026-05-11 17:05:19 [main] WARN  Listeners.TestListener - ⊘ SKIPPED: test_get_current_activity
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - ==========================================
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - END SUITE: Home Screen Tests
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - Total: 2
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - Passed: 0
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - Failed: 0
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - Skipped: 2
+2026-05-11 17:05:19 [main] INFO  Listeners.TestListener - ==========================================
+2026-05-11 17:05:20 [main] INFO  Report.ExtentReportManager - Report saved: D:\Phong\AutomationTest\Automation_Test_Claude_AI\reports\ExtentReport_20260511_170519.html
+2026-05-11 17:19:15 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-11 17:19:15 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Screen Tests
+2026-05-11 17:19:15 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-11 17:19:15 [Test worker] INFO  Base.BaseTest - ========================================
+2026-05-11 17:19:15 [Test worker] INFO  Base.BaseTest - SETUP: Home01_Verify_App_Launched
+2026-05-11 17:19:15 [Test worker] INFO  Base.BaseTest - ========================================
+2026-05-11 17:19:15 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-11 17:19:15 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-11 17:19:36 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-11 17:19:36 [Test worker] INFO  Base.BaseTest - Current package: com.bluesoftware.voicechanger
+2026-05-11 17:19:36 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-11 17:19:36 [Test worker] INFO  Listeners.TestListener - START TEST: test_app_launched_successfully
+2026-05-11 17:19:36 [Test worker] INFO  Listeners.TestListener - Description: Kiem tra app Voice Changer mo thanh cong
+2026-05-11 17:19:37 [Test worker] INFO  Report.ExtentReportManager - ExtentReport created: reports/ExtentReport_20260511_171936.html
+2026-05-11 17:19:37 [Test worker] INFO  Base.BaseTest - Test: Verify app launched successfully
+2026-05-11 17:19:40 [Test worker] INFO  Base.BaseTest - Current package: com.bluesoftware.voicechanger
+2026-05-11 17:19:40 [Test worker] INFO  Base.BasePage - Verify app launched - current package: com.bluesoftware.voicechanger
+2026-05-11 17:19:40 [Test worker] INFO  Base.BaseTest - ✓ App Voice Changer da mo thanh cong
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - ✓ PASSED: test_app_launched_successfully
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - START TEST: test_get_current_activity
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - Description: Kiem tra activity hien tai cua app
+2026-05-11 17:19:40 [Test worker] INFO  Base.BaseTest - Test: Get current activity
+2026-05-11 17:19:40 [Test worker] INFO  Base.BaseTest - Current activity: .MainActivity
+2026-05-11 17:19:40 [Test worker] INFO  Base.BaseTest - ✓ Get activity thanh cong: .MainActivity
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - ✓ PASSED: test_get_current_activity
+2026-05-11 17:19:40 [Test worker] INFO  Base.BaseTest - ========================================
+2026-05-11 17:19:40 [Test worker] INFO  Base.BaseTest - TEARDOWN: Home01_Verify_App_Launched
+2026-05-11 17:19:40 [Test worker] INFO  Base.BaseTest - ========================================
+2026-05-11 17:19:40 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Screen Tests
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - Total: 2
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - Passed: 2
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - Failed: 0
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - Skipped: 0
+2026-05-11 17:19:40 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-11 17:19:41 [Test worker] INFO  Report.ExtentReportManager - Report saved: D:\Phong\AutomationTest\Automation_Test_Claude_AI\reports\ExtentReport_20260511_171936.html

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Properties>
+        <Property name="LOG_PATTERN_FILE">
+            %d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n
+        </Property>
+        <Property name="LOG_PATTERN_CONSOLE">
+            %msg%n
+        </Property>
+        <Property name="LOG_DIR">test-output</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- Console: chi hien thi log co marker "RESULT" hoac level WARN/ERROR -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN_CONSOLE}"/>
+            <Filters>
+                <!-- Chi cho log level WARN/ERROR/FATAL di qua -->
+                <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </Console>
+
+        <!-- Console rieng cho RESULT log (cho phep INFO neu logger ten 'RESULT') -->
+        <Console name="ResultConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN_CONSOLE}"/>
+        </Console>
+
+        <!-- File: log day du o level INFO -->
+        <File name="FileAppender" fileName="${LOG_DIR}/automation.log" append="false">
+            <PatternLayout pattern="${LOG_PATTERN_FILE}"/>
+        </File>
+
+        <!-- Rolling File -->
+        <RollingFile name="RollingFileAppender"
+                     fileName="${LOG_DIR}/automation-rolling.log"
+                     filePattern="${LOG_DIR}/automation-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN_FILE}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Logger rieng cho ket qua test (in ra console) -->
+        <Logger name="RESULT" level="INFO" additivity="false">
+            <AppenderRef ref="ResultConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+
+        <!-- Tat noise tu Selenium/Appium -->
+        <Logger name="org.openqa.selenium" level="ERROR"/>
+        <Logger name="io.appium" level="ERROR"/>
+        <Logger name="io.netty" level="ERROR"/>
+
+        <!-- Root logger: chi ghi vao file, console chi nhan WARN+ -->
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="RollingFileAppender"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

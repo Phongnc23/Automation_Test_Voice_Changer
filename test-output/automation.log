@@ -1,0 +1,259 @@
+2026-05-12 10:54:10 [main] INFO  Listeners.TestListener - ==========================================
+2026-05-12 10:54:10 [main] INFO  Listeners.TestListener - START SUITE: Home Screen Tests
+2026-05-12 10:54:10 [main] INFO  Listeners.TestListener - ==========================================
+2026-05-12 10:54:11 [main] INFO  RESULT - ==========================================
+2026-05-12 10:54:11 [main] INFO  RESULT - STARTING SUITE: Home Screen Tests
+2026-05-12 10:54:11 [main] INFO  RESULT - ==========================================
+2026-05-12 10:54:11 [main] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260512_105411.html
+2026-05-12 10:54:11 [main] INFO  Base.BaseTest - SETUP: Home01_Verify_App_Launched
+2026-05-12 10:54:11 [main] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-12 10:54:11 [main] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-12 10:54:19 [main] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-12 10:54:19 [main] INFO  Base.BaseTest - Current package: com.bluesoftware.voicechanger
+2026-05-12 10:54:19 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:19 [main] INFO  Listeners.TestListener - START TEST: test_app_launched_successfully
+2026-05-12 10:54:19 [main] INFO  Listeners.TestListener - Description: Kiem tra app Voice Changer mo thanh cong
+2026-05-12 10:54:19 [main] INFO  RESULT - 
+2026-05-12 10:54:19 [main] INFO  RESULT - ▶ Running: test_app_launched_successfully
+2026-05-12 10:54:19 [main] INFO  RESULT -   Description: Kiem tra app Voice Changer mo thanh cong
+2026-05-12 10:54:19 [main] INFO  Base.BaseTest - Test: Verify app launched successfully
+2026-05-12 10:54:21 [main] INFO  Base.BaseTest - Current package: com.bluesoftware.voicechanger
+2026-05-12 10:54:21 [main] INFO  Base.BasePage - Verify Home page is displayed
+2026-05-12 10:54:21 [main] INFO  Base.BaseTest - ✓ App Voice Changer da mo thanh cong
+2026-05-12 10:54:21 [main] INFO  Listeners.TestListener - PASSED: test_app_launched_successfully
+2026-05-12 10:54:21 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:21 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:21 [main] INFO  Listeners.TestListener - START TEST: test_get_current_activity
+2026-05-12 10:54:21 [main] INFO  Listeners.TestListener - Description: Kiem tra activity hien tai cua app
+2026-05-12 10:54:21 [main] INFO  RESULT - 
+2026-05-12 10:54:21 [main] INFO  RESULT - ▶ Running: test_get_current_activity
+2026-05-12 10:54:21 [main] INFO  RESULT -   Description: Kiem tra activity hien tai cua app
+2026-05-12 10:54:21 [main] INFO  Base.BaseTest - Test: Get current activity
+2026-05-12 10:54:21 [main] INFO  Base.BaseTest - Current activity: .MainActivity
+2026-05-12 10:54:21 [main] INFO  Base.BaseTest - ✓ Get activity thanh cong: .MainActivity
+2026-05-12 10:54:21 [main] INFO  Listeners.TestListener - PASSED: test_get_current_activity
+2026-05-12 10:54:21 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:21 [main] INFO  Base.BaseTest - TEARDOWN: Home01_Verify_App_Launched
+2026-05-12 10:54:22 [main] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-12 10:54:22 [main] INFO  Base.BaseTest - SETUP: Home02_Verify_UI_Display
+2026-05-12 10:54:22 [main] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-12 10:54:22 [main] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-12 10:54:29 [main] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-12 10:54:29 [main] INFO  Base.BaseTest - Current package: com.bluesoftware.voicechanger
+2026-05-12 10:54:30 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:30 [main] INFO  Listeners.TestListener - START TEST: TC_01_verify_home_layout
+2026-05-12 10:54:30 [main] INFO  Listeners.TestListener - Description: TC_01: Kiem tra hien thi man hinh Home dung bo cuc
+2026-05-12 10:54:30 [main] INFO  RESULT - 
+2026-05-12 10:54:30 [main] INFO  RESULT - ▶ Running: TC_01_verify_home_layout
+2026-05-12 10:54:30 [main] INFO  RESULT -   Description: TC_01: Kiem tra hien thi man hinh Home dung bo cuc
+2026-05-12 10:54:30 [main] INFO  Listeners.TestListener - PASSED: TC_01_verify_home_layout
+2026-05-12 10:54:30 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:31 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:31 [main] INFO  Listeners.TestListener - START TEST: TC_02_verify_header_and_title
+2026-05-12 10:54:31 [main] INFO  Listeners.TestListener - Description: TC_02: Kiem tra hien thi Header va tieu de ung dung
+2026-05-12 10:54:31 [main] INFO  RESULT - 
+2026-05-12 10:54:31 [main] INFO  RESULT - ▶ Running: TC_02_verify_header_and_title
+2026-05-12 10:54:31 [main] INFO  RESULT -   Description: TC_02: Kiem tra hien thi Header va tieu de ung dung
+2026-05-12 10:54:31 [main] INFO  Base.BasePage - Get text from By.id: com.bluesoftware.voicechanger:id/text_app_name: Voice Changer
+2026-05-12 10:54:31 [main] INFO  Listeners.TestListener - PASSED: TC_02_verify_header_and_title
+2026-05-12 10:54:31 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:32 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:32 [main] INFO  Listeners.TestListener - START TEST: TC_03_verify_record_card
+2026-05-12 10:54:32 [main] INFO  Listeners.TestListener - Description: TC_03: Kiem tra hien thi card Record
+2026-05-12 10:54:32 [main] INFO  RESULT - 
+2026-05-12 10:54:32 [main] INFO  RESULT - ▶ Running: TC_03_verify_record_card
+2026-05-12 10:54:32 [main] INFO  RESULT -   Description: TC_03: Kiem tra hien thi card Record
+2026-05-12 10:54:32 [main] INFO  Base.BasePage - Get text from By.id: com.bluesoftware.voicechanger:id/text_record: Record
+2026-05-12 10:54:33 [main] INFO  Base.BasePage - Get text from By.xpath: //android.widget.TextView[@text='Tap to record and transform your voice']: Tap to record and transform your voice
+2026-05-12 10:54:33 [main] INFO  Listeners.TestListener - PASSED: TC_03_verify_record_card
+2026-05-12 10:54:33 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:33 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:33 [main] INFO  Listeners.TestListener - START TEST: TC_04_verify_text_to_speech_card
+2026-05-12 10:54:33 [main] INFO  Listeners.TestListener - Description: TC_04: Kiem tra hien thi card Text to Speech
+2026-05-12 10:54:33 [main] INFO  RESULT - 
+2026-05-12 10:54:33 [main] INFO  RESULT - ▶ Running: TC_04_verify_text_to_speech_card
+2026-05-12 10:54:33 [main] INFO  RESULT -   Description: TC_04: Kiem tra hien thi card Text to Speech
+2026-05-12 10:54:33 [main] INFO  Base.BasePage - Get text from By.xpath: //android.widget.TextView[@text='Text to speech']: Text to speech
+2026-05-12 10:54:33 [main] INFO  Listeners.TestListener - PASSED: TC_04_verify_text_to_speech_card
+2026-05-12 10:54:33 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:34 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:34 [main] INFO  Listeners.TestListener - START TEST: TC_05_verify_my_audio_card
+2026-05-12 10:54:34 [main] INFO  Listeners.TestListener - Description: TC_05: Kiem tra hien thi card My Audio
+2026-05-12 10:54:34 [main] INFO  RESULT - 
+2026-05-12 10:54:34 [main] INFO  RESULT - ▶ Running: TC_05_verify_my_audio_card
+2026-05-12 10:54:34 [main] INFO  RESULT -   Description: TC_05: Kiem tra hien thi card My Audio
+2026-05-12 10:54:34 [main] INFO  Base.BasePage - Get text from By.xpath: //android.widget.TextView[@text='My audio']: My audio
+2026-05-12 10:54:34 [main] INFO  Listeners.TestListener - PASSED: TC_05_verify_my_audio_card
+2026-05-12 10:54:34 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:35 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:35 [main] INFO  Listeners.TestListener - START TEST: TC_06_verify_import_audio_card
+2026-05-12 10:54:35 [main] INFO  Listeners.TestListener - Description: TC_06: Kiem tra hien thi card Import Audio
+2026-05-12 10:54:35 [main] INFO  RESULT - 
+2026-05-12 10:54:35 [main] INFO  RESULT - ▶ Running: TC_06_verify_import_audio_card
+2026-05-12 10:54:35 [main] INFO  RESULT -   Description: TC_06: Kiem tra hien thi card Import Audio
+2026-05-12 10:54:35 [main] INFO  Base.BasePage - Get text from By.id: com.bluesoftware.voicechanger:id/text_folder: Import audio
+2026-05-12 10:54:35 [main] INFO  Base.BasePage - Get text from By.xpath: //android.widget.TextView[@text='Transform your voice with effects']: Transform your voice with effects
+2026-05-12 10:54:35 [main] INFO  Listeners.TestListener - PASSED: TC_06_verify_import_audio_card
+2026-05-12 10:54:35 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:36 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:36 [main] INFO  Listeners.TestListener - START TEST: TC_07_verify_two_cards_same_row
+2026-05-12 10:54:36 [main] INFO  Listeners.TestListener - Description: TC_07: Kiem tra layout 2 card ngang hang (Text to Speech & My Audio)
+2026-05-12 10:54:36 [main] INFO  RESULT - 
+2026-05-12 10:54:36 [main] INFO  RESULT - ▶ Running: TC_07_verify_two_cards_same_row
+2026-05-12 10:54:36 [main] INFO  RESULT -   Description: TC_07: Kiem tra layout 2 card ngang hang (Text to Speech & My Audio)
+2026-05-12 10:54:36 [main] INFO  Listeners.TestListener - PASSED: TC_07_verify_two_cards_same_row
+2026-05-12 10:54:36 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:37 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:37 [main] INFO  Listeners.TestListener - START TEST: TC_10_verify_watermark_icons
+2026-05-12 10:54:37 [main] INFO  Listeners.TestListener - Description: TC_10: Kiem tra icon watermark tren cac card co hien thi
+2026-05-12 10:54:37 [main] INFO  RESULT - 
+2026-05-12 10:54:37 [main] INFO  RESULT - ▶ Running: TC_10_verify_watermark_icons
+2026-05-12 10:54:37 [main] INFO  RESULT -   Description: TC_10: Kiem tra icon watermark tren cac card co hien thi
+2026-05-12 10:54:37 [main] INFO  Listeners.TestListener - PASSED: TC_10_verify_watermark_icons
+2026-05-12 10:54:37 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:37 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:37 [main] INFO  Listeners.TestListener - START TEST: TC_20_verify_all_texts
+2026-05-12 10:54:37 [main] INFO  Listeners.TestListener - Description: TC_20: Kiem tra hien thi chinh xac text tren man hinh Home
+2026-05-12 10:54:37 [main] INFO  RESULT - 
+2026-05-12 10:54:37 [main] INFO  RESULT - ▶ Running: TC_20_verify_all_texts
+2026-05-12 10:54:37 [main] INFO  RESULT -   Description: TC_20: Kiem tra hien thi chinh xac text tren man hinh Home
+2026-05-12 10:54:37 [main] INFO  Base.BasePage - Get text from By.id: com.bluesoftware.voicechanger:id/text_app_name: Voice Changer
+2026-05-12 10:54:37 [main] INFO  Base.BasePage - Get text from By.id: com.bluesoftware.voicechanger:id/text_record: Record
+2026-05-12 10:54:38 [main] INFO  Base.BasePage - Get text from By.xpath: //android.widget.TextView[@text='Tap to record and transform your voice']: Tap to record and transform your voice
+2026-05-12 10:54:38 [main] INFO  Base.BasePage - Get text from By.xpath: //android.widget.TextView[@text='Text to speech']: Text to speech
+2026-05-12 10:54:38 [main] INFO  Base.BasePage - Get text from By.xpath: //android.widget.TextView[@text='My audio']: My audio
+2026-05-12 10:54:38 [main] INFO  Base.BasePage - Get text from By.id: com.bluesoftware.voicechanger:id/text_folder: Import audio
+2026-05-12 10:54:38 [main] INFO  Base.BasePage - Get text from By.xpath: //android.widget.TextView[@text='Transform your voice with effects']: Transform your voice with effects
+2026-05-12 10:54:38 [main] INFO  Base.BasePage - Get text from By.id: com.bluesoftware.voicechanger:id/text_welcome: Welcome back 👋
+2026-05-12 10:54:38 [main] INFO  Listeners.TestListener - PASSED: TC_20_verify_all_texts
+2026-05-12 10:54:38 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:38 [main] INFO  Base.BaseTest - TEARDOWN: Home02_Verify_UI_Display
+2026-05-12 10:54:39 [main] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-12 10:54:39 [main] INFO  Base.BaseTest - SETUP: Home03_Verify_Navigation
+2026-05-12 10:54:39 [main] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-12 10:54:39 [main] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-12 10:54:46 [main] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-12 10:54:46 [main] INFO  Base.BaseTest - Current package: com.bluesoftware.voicechanger
+2026-05-12 10:54:47 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:47 [main] INFO  Listeners.TestListener - START TEST: TC_11_click_hamburger_menu
+2026-05-12 10:54:47 [main] INFO  Listeners.TestListener - Description: TC_11: Kiem tra nhan icon Hamburger Menu mo va dong drawer
+2026-05-12 10:54:47 [main] INFO  RESULT - 
+2026-05-12 10:54:47 [main] INFO  RESULT - ▶ Running: TC_11_click_hamburger_menu
+2026-05-12 10:54:47 [main] INFO  RESULT -   Description: TC_11: Kiem tra nhan icon Hamburger Menu mo va dong drawer
+2026-05-12 10:54:47 [main] INFO  Base.BasePage - Click hamburger menu icon
+2026-05-12 10:54:47 [main] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_menu
+2026-05-12 10:54:48 [main] INFO  Utils.GestureUtils - Tap outside drawer to close
+2026-05-12 10:54:49 [main] INFO  Listeners.TestListener - PASSED: TC_11_click_hamburger_menu
+2026-05-12 10:54:49 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:50 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:50 [main] INFO  Listeners.TestListener - START TEST: TC_12_click_record_card
+2026-05-12 10:54:50 [main] INFO  Listeners.TestListener - Description: TC_12: Click Record card, navigate, back ve Home
+2026-05-12 10:54:50 [main] INFO  RESULT - 
+2026-05-12 10:54:50 [main] INFO  RESULT - ▶ Running: TC_12_click_record_card
+2026-05-12 10:54:50 [main] INFO  RESULT -   Description: TC_12: Click Record card, navigate, back ve Home
+2026-05-12 10:54:50 [main] INFO  Base.BasePage - Click Record card
+2026-05-12 10:54:50 [main] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
+2026-05-12 10:54:50 [main] INFO  Utils.GestureUtils - Swipe back 1 times
+2026-05-12 10:54:50 [main] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-12 10:54:52 [main] INFO  Listeners.TestListener - PASSED: TC_12_click_record_card
+2026-05-12 10:54:52 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:53 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:53 [main] INFO  Listeners.TestListener - START TEST: TC_13_click_text_to_speech_card
+2026-05-12 10:54:53 [main] INFO  Listeners.TestListener - Description: TC_13: Click Text to Speech card, navigate, back ve Home
+2026-05-12 10:54:53 [main] INFO  RESULT - 
+2026-05-12 10:54:53 [main] INFO  RESULT - ▶ Running: TC_13_click_text_to_speech_card
+2026-05-12 10:54:53 [main] INFO  RESULT -   Description: TC_13: Click Text to Speech card, navigate, back ve Home
+2026-05-12 10:54:53 [main] INFO  Base.BasePage - Click Text to Speech card
+2026-05-12 10:54:53 [main] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-12 10:54:53 [main] INFO  Utils.GestureUtils - Swipe back 1 times
+2026-05-12 10:54:53 [main] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-12 10:54:54 [main] WARN  Base.BaseTest - 1 lan swipe chua du, thu swipe them
+2026-05-12 10:54:54 [main] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-12 10:54:55 [main] INFO  Listeners.TestListener - PASSED: TC_13_click_text_to_speech_card
+2026-05-12 10:54:55 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:56 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:56 [main] INFO  Listeners.TestListener - START TEST: TC_14_click_my_audio_card
+2026-05-12 10:54:56 [main] INFO  Listeners.TestListener - Description: TC_14: Click My Audio card, navigate, back ve Home
+2026-05-12 10:54:56 [main] INFO  RESULT - 
+2026-05-12 10:54:56 [main] INFO  RESULT - ▶ Running: TC_14_click_my_audio_card
+2026-05-12 10:54:56 [main] INFO  RESULT -   Description: TC_14: Click My Audio card, navigate, back ve Home
+2026-05-12 10:54:56 [main] INFO  Base.BasePage - Click My Audio card
+2026-05-12 10:54:56 [main] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_my_audio
+2026-05-12 10:54:56 [main] INFO  Utils.GestureUtils - Swipe back 1 times
+2026-05-12 10:54:56 [main] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-12 10:54:57 [main] INFO  Listeners.TestListener - PASSED: TC_14_click_my_audio_card
+2026-05-12 10:54:57 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:54:57 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:54:57 [main] INFO  Listeners.TestListener - START TEST: TC_15_click_import_audio_card
+2026-05-12 10:54:57 [main] INFO  Listeners.TestListener - Description: TC_15: Click Import Audio mo File Picker, back ve Home (3 lan)
+2026-05-12 10:54:57 [main] INFO  RESULT - 
+2026-05-12 10:54:57 [main] INFO  RESULT - ▶ Running: TC_15_click_import_audio_card
+2026-05-12 10:54:57 [main] INFO  RESULT -   Description: TC_15: Click Import Audio mo File Picker, back ve Home (3 lan)
+2026-05-12 10:54:57 [main] INFO  Base.BasePage - Click Import Audio card
+2026-05-12 10:54:58 [main] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_choose_file
+2026-05-12 10:54:59 [main] INFO  Utils.GestureUtils - Swipe back 3 times
+2026-05-12 10:54:59 [main] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-12 10:55:00 [main] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-12 10:55:01 [main] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-12 10:55:03 [main] INFO  Listeners.TestListener - PASSED: TC_15_click_import_audio_card
+2026-05-12 10:55:03 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:55:04 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:55:04 [main] INFO  Listeners.TestListener - START TEST: TC_17_back_to_home_from_sub_screen
+2026-05-12 10:55:04 [main] INFO  Listeners.TestListener - Description: TC_17: SKIPPED - Logic da cover trong TC_12-15
+2026-05-12 10:55:04 [main] INFO  RESULT - 
+2026-05-12 10:55:04 [main] INFO  RESULT - ▶ Running: TC_17_back_to_home_from_sub_screen
+2026-05-12 10:55:04 [main] INFO  RESULT -   Description: TC_17: SKIPPED - Logic da cover trong TC_12-15
+2026-05-12 10:55:04 [main] WARN  Listeners.TestListener - SKIPPED: TC_17_back_to_home_from_sub_screen
+2026-05-12 10:55:04 [main] INFO  RESULT -   ⊘ SKIPPED
+2026-05-12 10:55:04 [main] INFO  Base.BaseTest - TEARDOWN: Home03_Verify_Navigation
+2026-05-12 10:55:04 [main] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-12 10:55:05 [main] INFO  Base.BaseTest - SETUP: Home04_Verify_Edge_Cases
+2026-05-12 10:55:05 [main] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-12 10:55:05 [main] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-12 10:55:12 [main] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-12 10:55:12 [main] INFO  Base.BaseTest - Current package: com.bluesoftware.voicechanger
+2026-05-12 10:55:12 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:55:12 [main] INFO  Listeners.TestListener - START TEST: TC_19_background_and_resume
+2026-05-12 10:55:12 [main] INFO  Listeners.TestListener - Description: TC_19: Kiem tra ung dung khi chay nen va quay lai
+2026-05-12 10:55:12 [main] INFO  RESULT - 
+2026-05-12 10:55:12 [main] INFO  RESULT - ▶ Running: TC_19_background_and_resume
+2026-05-12 10:55:12 [main] INFO  RESULT -   Description: TC_19: Kiem tra ung dung khi chay nen va quay lai
+2026-05-12 10:55:12 [main] INFO  Base.BasePage - Verify Home page is displayed
+2026-05-12 10:55:17 [main] INFO  Base.BasePage - Verify Home page is displayed
+2026-05-12 10:55:17 [main] INFO  Listeners.TestListener - PASSED: TC_19_background_and_resume
+2026-05-12 10:55:17 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:55:17 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:55:17 [main] INFO  Listeners.TestListener - START TEST: TC_21_cold_start_performance
+2026-05-12 10:55:17 [main] INFO  Listeners.TestListener - Description: TC_21: Kiem tra toc do tai man hinh Home (cold start)
+2026-05-12 10:55:17 [main] INFO  RESULT - 
+2026-05-12 10:55:17 [main] INFO  RESULT - ▶ Running: TC_21_cold_start_performance
+2026-05-12 10:55:17 [main] INFO  RESULT -   Description: TC_21: Kiem tra toc do tai man hinh Home (cold start)
+2026-05-12 10:55:20 [main] INFO  Base.BasePage - Verify Home page is displayed
+2026-05-12 10:55:22 [main] INFO  Listeners.TestListener - PASSED: TC_21_cold_start_performance
+2026-05-12 10:55:22 [main] INFO  RESULT -   ✓ PASSED
+2026-05-12 10:55:22 [main] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-12 10:55:22 [main] INFO  Listeners.TestListener - START TEST: TC_22_landscape_orientation
+2026-05-12 10:55:22 [main] INFO  Listeners.TestListener - Description: TC_22: Kiem tra xoay ngang man hinh - SKIPPED (app locked portrait)
+2026-05-12 10:55:22 [main] INFO  RESULT - 
+2026-05-12 10:55:22 [main] INFO  RESULT - ▶ Running: TC_22_landscape_orientation
+2026-05-12 10:55:22 [main] INFO  RESULT -   Description: TC_22: Kiem tra xoay ngang man hinh - SKIPPED (app locked portrait)
+2026-05-12 10:55:22 [main] WARN  Listeners.TestListener - SKIPPED: TC_22_landscape_orientation
+2026-05-12 10:55:22 [main] INFO  RESULT -   ⊘ SKIPPED
+2026-05-12 10:55:22 [main] INFO  Base.BaseTest - TEARDOWN: Home04_Verify_Edge_Cases
+2026-05-12 10:55:23 [main] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-12 10:55:23 [main] INFO  Listeners.TestListener - ==========================================
+2026-05-12 10:55:23 [main] INFO  Listeners.TestListener - END SUITE: Home Screen Tests
+2026-05-12 10:55:23 [main] INFO  Listeners.TestListener - Total: 20, Passed: 18, Failed: 0, Skipped: 2
+2026-05-12 10:55:23 [main] INFO  Listeners.TestListener - ==========================================
+2026-05-12 10:55:23 [main] INFO  RESULT - 
+2026-05-12 10:55:23 [main] INFO  RESULT - ==========================================
+2026-05-12 10:55:23 [main] INFO  RESULT - TEST RESULTS:
+2026-05-12 10:55:23 [main] INFO  RESULT -   Total:   20
+2026-05-12 10:55:23 [main] INFO  RESULT -   Passed:  18
+2026-05-12 10:55:23 [main] INFO  RESULT -   Failed:  0
+2026-05-12 10:55:23 [main] INFO  RESULT -   Skipped: 2
+2026-05-12 10:55:23 [main] INFO  RESULT - ==========================================
+2026-05-12 10:55:24 [main] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260512_105411.html
+2026-05-12 10:55:24 [main] INFO  RESULT - Report:       test-output/ExtentReport_20260512_105411.html
+2026-05-12 10:55:24 [main] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-12 10:55:24 [main] INFO  RESULT - ==========================================

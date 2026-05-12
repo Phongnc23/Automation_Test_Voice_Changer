@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Appium client cho Java
+    implementation 'io.appium:java-client:9.3.0'
+
+    // Selenium (Appium dependency)
+    implementation 'org.seleniumhq.selenium:selenium-java:4.27.0'
+
+    // TestNG (test framework)
+    implementation("org.testng:testng:7.11.0")
+
+    // Logging
+    implementation 'org.slf4j:slf4j-simple:2.0.13'
+
+    // ExtentReports
+    implementation 'com.aventstack:extentreports:5.1.2'
+
+    // Log4j 2
+    implementation 'org.apache.logging.log4j:log4j-core:2.26.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.26.0'
+    implementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.26.0'
+}
+
+test {
+    useTestNG() {
+        suiteXmlFiles = [file('src/test/resources/regression.xml')]
+    }
+
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        showStandardStreams = true
+    }
+}

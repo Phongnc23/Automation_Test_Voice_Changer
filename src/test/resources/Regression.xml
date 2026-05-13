@@ -23,29 +23,29 @@
         </classes>
     </test>
 
-<!--    <test name="Voice Effects Tests">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display"/>-->
-<!--            <class name="testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player"/>-->
-<!--            <class name="testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects"/>-->
-<!--            <class name="testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close"/>-->
-<!--            <class name="testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Voice Effects Tests">
+        <classes>
+            <class name="testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display"/>
+            <class name="testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player"/>
+            <class name="testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects"/>
+            <class name="testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close"/>
+            <class name="testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message"/>
+        </classes>
+    </test>
 
-<!--    <test name="Audio Saved Tests">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Audiosaved.AudioSaved01_Verify_UI_Display"/>-->
-<!--            <class name="testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share"/>-->
-<!--            <class name="testcases.Audiosaved.AudioSaved03_Verify_Rename"/>-->
-<!--            <class name="testcases.Audiosaved.AudioSaved04_Verify_Open_With"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Audio Saved Tests">
+        <classes>
+            <class name="testcases.Audiosaved.AudioSaved01_Verify_UI_Display"/>
+            <class name="testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share"/>
+            <class name="testcases.Audiosaved.AudioSaved03_Verify_Rename"/>
+            <class name="testcases.Audiosaved.AudioSaved04_Verify_Open_With"/>
+        </classes>
+    </test>
 
-<!--    <test name="Ringtone Tests" enabled="false">-->
-<!--        <classes>-->
-<!--            <class name="testcases.Ringtone.Ringtone01_Verify_Set_Ringtone"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Ringtone Tests">
+        <classes>
+            <class name="testcases.Ringtone.Ringtone01_Verify_Set_Ringtone"/>
+        </classes>
+    </test>
 
 </suite>

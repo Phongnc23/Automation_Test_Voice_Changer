@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class GestureUtils {
@@ -103,5 +104,21 @@ public class GestureUtils {
         int endY = swipeUp ? (int)(size.height * 0.2) : (int)(size.height * 0.8);
 
         performSwipe(driver, startX, startY, startX, endY, 300);  // giam tu 500ms
+    }
+
+    public static void swipe(AppiumDriver driver, int startX, int startY,
+                             int endX, int endY, int durationMs) {
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence swipe = new Sequence(finger, 1)
+                .addAction(finger.createPointerMove(Duration.ZERO,
+                        PointerInput.Origin.viewport(), startX, startY))
+                .addAction(finger.createPointerDown(
+                        PointerInput.MouseButton.LEFT.asArg()))
+                .addAction(finger.createPointerMove(
+                        Duration.ofMillis(durationMs),
+                        PointerInput.Origin.viewport(), endX, endY))
+                .addAction(finger.createPointerUp(
+                        PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Arrays.asList(swipe));
     }
 }

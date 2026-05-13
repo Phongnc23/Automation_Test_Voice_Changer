@@ -1,14 +1,16 @@
 package Pages;
 
 import Base.BasePage;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
-/**
- * Page Object cho man hinh Audio Saved Successfully.
- * Truy cap: Voice Effects -> click Save.
- */
+import java.util.List;
+
 public class AudioSavedPage extends BasePage {
+
+    // ... (giu nguyen cac locator hien tai) ...
 
     private static final By CLOSE_BUTTON =
             By.id("com.bluesoftware.voicechanger:id/btnClose");
@@ -31,11 +33,28 @@ public class AudioSavedPage extends BasePage {
     private static final By SHARE_BUTTON =
             By.id("com.bluesoftware.voicechanger:id/btnSend");
 
+    // ========== TOAST/SNACKBAR DETECTION ==========
+
+    /**
+     * Locator cho toast "Ringtone set successfully" - dung UiAutomator
+     * textContains de match toast.
+     */
+    private static final By RINGTONE_SUCCESS_TOAST =
+            AppiumBy.androidUIAutomator(
+                    "new UiSelector().textContains(\"Ringtone set\")");
+
+    /**
+     * Locator generic cho toast bat ky.
+     */
+    private static final By ANY_TOAST =
+            AppiumBy.androidUIAutomator(
+                    "new UiSelector().className(\"android.widget.Toast\")");
+
     public AudioSavedPage(AppiumDriver driver) {
         super(driver);
     }
 
-    // ========== UI VERIFY ==========
+    // ... (giu nguyen cac method UI verify, get info, click) ...
 
     public boolean isDisplayed() {
         try {
@@ -78,9 +97,6 @@ public class AudioSavedPage extends BasePage {
         }
     }
 
-    /**
-     * Parse duration tu fileInfo "00:03 . 56 KB" -> "00:03"
-     */
     public String parseDuration() {
         String info = getFileInfo();
         if (info == null) return null;
@@ -88,9 +104,6 @@ public class AudioSavedPage extends BasePage {
         return parts.length > 0 ? parts[0].trim() : null;
     }
 
-    /**
-     * Parse size tu fileInfo "00:03 . 56 KB" -> "56 KB"
-     */
     public String parseFileSize() {
         String info = getFileInfo();
         if (info == null) return null;
@@ -126,9 +139,17 @@ public class AudioSavedPage extends BasePage {
         click(HOME_BUTTON);
     }
 
+    public void clickHome() {
+        clickHomeButton();
+    }
+
     public void clickThreeDotMenu() {
         logger.info("Click 3 cham (more icon)");
         click(MORE_ICON);
+    }
+
+    public void clickMoreOptions() {
+        clickThreeDotMenu();
     }
 
     public void clickSetAsRingtone() {
@@ -139,5 +160,81 @@ public class AudioSavedPage extends BasePage {
     public void clickShare() {
         logger.info("Click Share");
         click(SHARE_BUTTON);
+    }
+
+    // ========== TOAST DETECTION ==========
+
+    /**
+     * Wait va check toast "Ringtone set successfully" hien thi.
+     * Toast hien thi ~2s, can poll de bat duoc.
+     *
+     * @param timeoutMs max wait time (ms)
+     * @return true neu phat hien toast trong thoi gian poll
+     */
+    public boolean waitForRingtoneSuccessToast(int timeoutMs) {
+        logger.info("Wait for ringtone success toast (max " + timeoutMs + "ms)");
+        long startTime = System.currentTimeMillis();
+        int pollInterval = 200;
+
+        while (System.currentTimeMillis() - startTime < timeoutMs) {
+            try {
+                // Cach 1: Tim toast bang text contains
+                List<WebElement> elements = driver.findElements(
+                        RINGTONE_SUCCESS_TOAST);
+                if (!elements.isEmpty()) {
+                    String text = elements.get(0).getText();
+                    logger.info("Phat hien toast: " + text);
+                    return true;
+                }
+
+                // Cach 2: Tim toast widget bat ky
+                List<WebElement> toasts = driver.findElements(ANY_TOAST);
+                if (!toasts.isEmpty()) {
+                    String text = toasts.get(0).getText();
+                    logger.info("Phat hien toast widget: " + text);
+                    if (text != null && text.toLowerCase().contains("ringtone")) {
+                        return true;
+                    }
+                }
+            } catch (Exception e) {
+                // Continue polling
+            }
+
+            try {
+                Thread.sleep(pollInterval);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return false;
+            }
+        }
+
+        logger.warn("Khong phat hien toast trong " + timeoutMs + "ms");
+        return false;
+    }
+
+    /**
+     * Wait toast voi default timeout 3000ms.
+     */
+    public boolean waitForRingtoneSuccessToast() {
+        return waitForRingtoneSuccessToast(3000);
+    }
+
+    /**
+     * Snapshot text cua toast neu co.
+     */
+    public String getToastText() {
+        try {
+            List<WebElement> elements = driver.findElements(ANY_TOAST);
+            if (!elements.isEmpty()) {
+                return elements.get(0).getText();
+            }
+            elements = driver.findElements(RINGTONE_SUCCESS_TOAST);
+            if (!elements.isEmpty()) {
+                return elements.get(0).getText();
+            }
+        } catch (Exception e) {
+            logger.warn("Get toast text error: " + e.getMessage());
+        }
+        return null;
     }
 }

@@ -3,99 +3,153 @@ package Pages;
 import Base.BasePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
- * Page Object cho man hinh Modify System Settings cua Android.
- * Package: com.android.settings
+ * Page Object cho man System Settings - "Modify system settings" (com.android.settings).
+ * Vao tu app khi click Set Ringtone va chua co quyen WRITE_SETTINGS.
+ *
+ * Layout co:
+ * - Toggle Modify system settings
+ * - App name + version
+ * - Back button
  */
 public class SystemSettingsPage extends BasePage {
 
-    public static final String PACKAGE = "com.android.settings";
+    // System Settings package
+    private static final String SETTINGS_PACKAGE = "com.android.settings";
 
-    private static final By BACK_BUTTON =
-            By.id("com.android.settings:id/coui_toolbar_back_view");
-    private static final By SCREEN_TITLE = By.xpath(
-            "//android.widget.TextView[contains(@text,'Chinh sua') " +
-                    "or contains(@text,'Modify system')]");
-    private static final By APP_TITLE =
-            By.id("com.android.settings:id/entity_header_title");
-    private static final By APP_VERSION =
-            By.id("com.android.settings:id/entity_header_summary");
+    // Toggle switch (UiAutomator)
     private static final By TOGGLE_SWITCH =
-            By.id("android:id/switch_widget");
+            By.xpath("//android.widget.Switch | //android.widget.ToggleButton");
+
+    // App name in title bar
+    private static final By APP_NAME_TITLE =
+            By.xpath("//android.widget.TextView[contains(@text, 'Voice Changer') " +
+                    "or contains(@text, 'voicechanger')]");
+
+    // Version text
+    private static final By VERSION_TEXT =
+            By.xpath("//android.widget.TextView[contains(@text, 'version') " +
+                    "or contains(@text, 'Version') or matches(@text, '\\d+\\.\\d+.*')]");
+
+    // Container layout
+    private static final By SETTINGS_CONTAINER =
+            By.id("android:id/content");
 
     public SystemSettingsPage(AppiumDriver driver) {
         super(driver);
     }
 
+    /**
+     * Kiem tra dang o man System Settings.
+     */
     public boolean isDisplayed() {
         try {
-            String currentPackage = ((AndroidDriver) driver).getCurrentPackage();
-            return PACKAGE.equals(currentPackage)
-                    && driver.findElements(TOGGLE_SWITCH).size() > 0;
+            // Cach 1: check current package
+            if (driver instanceof AndroidDriver) {
+                String currentPkg = ((AndroidDriver) driver).getCurrentPackage();
+                logger.info("Current package: " + currentPkg);
+                if (currentPkg != null && currentPkg.contains("settings")) {
+                    return true;
+                }
+            }
+
+            // Cach 2: check element dac trung
+            return driver.findElements(TOGGLE_SWITCH).size() > 0;
         } catch (Exception e) {
             return false;
         }
     }
 
+    /**
+     * Kiem tra Voice Changer entry hien thi (app name/version).
+     */
     public boolean isVoiceChangerEntryDisplayed() {
-        try {
-            String appName = driver.findElement(APP_TITLE).getText();
-            return appName != null && appName.toLowerCase().contains("voice");
-        } catch (Exception e) {
-            return false;
-        }
+        return driver.findElements(APP_NAME_TITLE).size() > 0;
     }
 
+    /**
+     * Lay ten app hien thi.
+     */
     public String getAppName() {
         try {
-            return driver.findElement(APP_TITLE).getText();
+            return driver.findElement(APP_NAME_TITLE).getText();
         } catch (Exception e) {
+            logger.warn("Cannot get app name: " + e.getMessage());
             return null;
         }
     }
 
+    /**
+     * Lay version hien thi.
+     */
     public String getAppVersion() {
         try {
-            return driver.findElement(APP_VERSION).getText();
+            if (driver.findElements(VERSION_TEXT).size() > 0) {
+                return driver.findElement(VERSION_TEXT).getText();
+            }
         } catch (Exception e) {
-            return null;
+            logger.warn("Cannot get version: " + e.getMessage());
+        }
+        return "unknown";
+    }
+
+    /**
+     * Kiem tra toggle dang OFF.
+     */
+    public boolean isToggleOff() {
+        try {
+            WebElement toggle = driver.findElement(TOGGLE_SWITCH);
+            String checked = toggle.getAttribute("checked");
+            logger.info("Toggle checked: " + checked);
+            return "false".equalsIgnoreCase(checked);
+        } catch (Exception e) {
+            logger.warn("Check toggle off error: " + e.getMessage());
+            return false;
         }
     }
 
+    /**
+     * Kiem tra toggle dang ON.
+     */
     public boolean isToggleOn() {
         try {
             WebElement toggle = driver.findElement(TOGGLE_SWITCH);
-            String text = toggle.getText();
-            // OPPO hien "Bat"/"Tat", Android goc dung attribute checked
-            if (text != null) {
-                return text.equalsIgnoreCase("Bat") || text.equalsIgnoreCase("On");
-            }
             String checked = toggle.getAttribute("checked");
+            logger.info("Toggle checked: " + checked);
             return "true".equalsIgnoreCase(checked);
         } catch (Exception e) {
+            logger.warn("Check toggle on error: " + e.getMessage());
             return false;
         }
     }
 
-    public boolean isToggleOff() {
-        return !isToggleOn();
-    }
-
+    /**
+     * Click toggle de bat/tat permission.
+     */
     public void clickToggle() {
-        logger.info("Click toggle Modify System Settings");
-        click(TOGGLE_SWITCH);
+        logger.info("Click toggle Modify system settings");
         try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            driver.findElement(TOGGLE_SWITCH).click();
+        } catch (Exception e) {
+            logger.error("Click toggle error: " + e.getMessage());
         }
     }
 
+    /**
+     * Click back de quay lai app.
+     * Dung hardware back button cua Android.
+     */
     public void clickBack() {
-        logger.info("Click back button");
-        click(BACK_BUTTON);
+        logger.info("Press BACK to return to app");
+        try {
+            ((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.BACK));
+        } catch (Exception e) {
+            logger.error("Press back error: " + e.getMessage());
+        }
     }
 }

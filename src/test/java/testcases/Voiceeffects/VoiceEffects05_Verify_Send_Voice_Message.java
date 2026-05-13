@@ -13,22 +13,12 @@ import Utils.RecordFlowHelper;
 
 import java.util.List;
 
-/**
- * Pattern: Mo Voice Effects 1 lan, share session cho 3 test.
- * Test 01,02 chi mo bottom sheet -> share duoc.
- * Test 03 phai dong bottom sheet va kiem tra.
- */
 public class VoiceEffects05_Verify_Send_Voice_Message extends BaseTest {
 
     private VoiceEffectsPage voiceEffectsPage;
     private ShareBottomSheet shareSheet;
 
     @BeforeClass(dependsOnMethods = "setUp")
-    public void resetBeforeClass() {
-        resetAppToFreshState();
-    }
-
-    @BeforeClass(dependsOnMethods = "resetBeforeClass")
     public void setupVoiceEffectsSession() {
         logger.info("=== SETUP VOICE EFFECTS SESSION ===");
         try {
@@ -44,7 +34,7 @@ public class VoiceEffects05_Verify_Send_Voice_Message extends BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void cleanupAfterClass() {
-        logger.info("=== CLEANUP AFTER CLASS ===");
+        logger.info("=== CLEANUP ===");
         try {
             RecordFlowHelper.smartResetToHome(driver);
         } catch (Exception e) {
@@ -52,23 +42,10 @@ public class VoiceEffects05_Verify_Send_Voice_Message extends BaseTest {
         }
     }
 
-    /**
-     * Helper: dam bao bottom sheet dang mo. Mo lai neu chua mo.
-     */
     private void ensureShareSheetOpen() throws InterruptedException {
         if (!shareSheet.isDisplayed()) {
             voiceEffectsPage.clickSendVoiceMessage();
             Thread.sleep(3000);
-        }
-    }
-
-    /**
-     * Helper: dam bao quay ve Voice Effects (dong sheet neu mo).
-     */
-    private void ensureBackToVoiceEffects() throws InterruptedException {
-        if (shareSheet.isDisplayed()) {
-            shareSheet.clickCancel();
-            Thread.sleep(2000);
         }
     }
 
@@ -90,12 +67,11 @@ public class VoiceEffects05_Verify_Send_Voice_Message extends BaseTest {
 
     @Test(description = "VE_06_02: Hien thi danh sach app", priority = 2)
     public void test_VE_06_02_share_sheet_lists_apps() throws InterruptedException {
-        // Dam bao sheet dang mo (co the da mo tu test truoc)
         ensureShareSheetOpen();
 
         List<String> apps = shareSheet.getAvailableApps();
         ExtentReportManager.getTest().log(Status.INFO,
-                "Apps: " + apps.size() + " - " + apps);
+                "Apps: " + apps.size());
 
         Assert.assertTrue(apps.size() > 0, "Khong co app nao");
         ExtentReportManager.getTest().log(Status.PASS,
@@ -104,7 +80,6 @@ public class VoiceEffects05_Verify_Send_Voice_Message extends BaseTest {
 
     @Test(description = "VE_06_03: Click Cancel tren bottom sheet", priority = 3)
     public void test_VE_06_03_cancel_share_bottom_sheet() throws InterruptedException {
-        // Dam bao sheet dang mo
         ensureShareSheetOpen();
 
         shareSheet.clickCancel();

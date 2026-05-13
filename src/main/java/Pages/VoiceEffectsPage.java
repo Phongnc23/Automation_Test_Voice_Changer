@@ -1,31 +1,43 @@
 package Pages;
 
 import Base.BasePage;
-import Constants.TimeOutConstants;
+import Pages.Components.DiscardDialog;
+import Utils.GestureUtils;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * Page Object cho man hinh Voice Effects.
- * Truy cap: Recorder -> Stop ghi am.
+ * Truy cap tu: Recorder -> click Stop (sau khi ghi am).
+ *
+ * Layout cua grid effects:
+ * - Grid 3 cot x N hang (Normal, Man, Woman... Bee, Fade)
+ * - Scroll DOC
+ * - Phia tren: audio player (file name, time, play/pause)
+ * - Phia duoi: nut Send Voice Message + Save
+ *
+ * Vung scroll cua grid effects: ~35% - 75% chieu cao man hinh.
  */
 public class VoiceEffectsPage extends BasePage {
 
-    // Tat ca effects co trong app
+    /**
+     * Danh sach 23 effects co the chon tren Voice Effects.
+     */
     public static final List<String> ALL_EFFECTS = Arrays.asList(
             "Normal", "Man", "Woman", "Child", "Penguin", "Monster",
             "Fast", "Slow", "Alien", "Zombie", "Drunk", "Helium",
             "Death", "Robot", "Baby", "Echo", "Underwater", "Telephone",
             "Parody", "Bass", "Tenor", "Bee", "Fade"
     );
+
+    // ========== LOCATORS ==========
 
     private static final By HEADER_LAYOUT =
             By.id("com.bluesoftware.voicechanger:id/layoutHeader");
@@ -35,10 +47,10 @@ public class VoiceEffectsPage extends BasePage {
             By.id("com.bluesoftware.voicechanger:id/tvTitle");
     private static final By AUDIO_LAYOUT =
             By.id("com.bluesoftware.voicechanger:id/layoutAudio");
-    private static final By WAVE_ICON =
-            By.id("com.bluesoftware.voicechanger:id/image_wave");
     private static final By AUDIO_NAME =
             By.id("com.bluesoftware.voicechanger:id/tvAudioName");
+    private static final By IMAGE_WAVE =
+            By.id("com.bluesoftware.voicechanger:id/image_wave");
     private static final By PLAY_PAUSE_BUTTON =
             By.id("com.bluesoftware.voicechanger:id/btnPlayPause");
     private static final By SEEK_BAR =
@@ -47,18 +59,18 @@ public class VoiceEffectsPage extends BasePage {
             By.id("com.bluesoftware.voicechanger:id/tvTime");
     private static final By EFFECTS_RECYCLER =
             By.id("com.bluesoftware.voicechanger:id/rvEffects");
+    private static final By EFFECT_NAME_ITEMS =
+            By.id("com.bluesoftware.voicechanger:id/tv_effect_name");
+    private static final By BOTTOM_LAYOUT =
+            By.id("com.bluesoftware.voicechanger:id/layoutBottom");
     private static final By SEND_BUTTON =
             By.id("com.bluesoftware.voicechanger:id/btnSend");
     private static final By SAVE_BUTTON =
             By.id("com.bluesoftware.voicechanger:id/btnSave");
 
-    // Discard dialog - dung XPath theo text
-    private static final By DISCARD_DIALOG_TITLE = By.xpath(
-            "//*[contains(@text,'Discard') or contains(@text,'unsaved')]");
-    private static final By DISCARD_CANCEL_BTN =
-            By.xpath("//*[@text='Cancel']");
-    private static final By DISCARD_CONFIRM_BTN =
-            By.xpath("//*[@text='Discard']");
+    // UiAutomator selector cho Play/Pause - tranh stale element
+    private static final String PLAY_PAUSE_UIAUTOMATOR =
+            "new UiSelector().resourceId(\"com.bluesoftware.voicechanger:id/btnPlayPause\")";
 
     public VoiceEffectsPage(AppiumDriver driver) {
         super(driver);
@@ -75,6 +87,10 @@ public class VoiceEffectsPage extends BasePage {
         }
     }
 
+    public boolean isHeaderDisplayed() {
+        return driver.findElements(HEADER_LAYOUT).size() > 0;
+    }
+
     public boolean isCloseButtonDisplayed() {
         return driver.findElements(CLOSE_BUTTON).size() > 0;
     }
@@ -87,9 +103,19 @@ public class VoiceEffectsPage extends BasePage {
         }
     }
 
+    public boolean isTitleDisplayed() {
+        return driver.findElements(TITLE).size() > 0;
+    }
+
+    // ========== AUDIO PLAYER ==========
+
     public boolean isAudioPlayerDisplayed() {
         return driver.findElements(AUDIO_LAYOUT).size() > 0
                 && driver.findElements(PLAY_PAUSE_BUTTON).size() > 0;
+    }
+
+    public boolean isAudioLayoutDisplayed() {
+        return driver.findElements(AUDIO_LAYOUT).size() > 0;
     }
 
     public String getAudioFileName() {
@@ -98,6 +124,10 @@ public class VoiceEffectsPage extends BasePage {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public boolean isImageWaveDisplayed() {
+        return driver.findElements(IMAGE_WAVE).size() > 0;
     }
 
     public String getTimeText() {
@@ -112,42 +142,39 @@ public class VoiceEffectsPage extends BasePage {
         return driver.findElements(PLAY_PAUSE_BUTTON).size() > 0;
     }
 
-    public boolean isEffectsRecyclerDisplayed() {
-        return driver.findElements(EFFECTS_RECYCLER).size() > 0;
+    public boolean isSeekBarDisplayed() {
+        return driver.findElements(SEEK_BAR).size() > 0;
     }
 
-    public boolean isSendButtonDisplayed() {
-        return driver.findElements(SEND_BUTTON).size() > 0;
-    }
-
-    public boolean isSaveButtonDisplayed() {
-        return driver.findElements(SAVE_BUTTON).size() > 0;
-    }
-
-    // ========== ACTIONS ==========
-
-    public void clickClose() {
-        logger.info("Click nut X tren Voice Effects");
-        click(CLOSE_BUTTON);
-    }
-
-    public void clickPlayPause() {
-        logger.info("Click Play/Pause button");
-        click(PLAY_PAUSE_BUTTON);
-    }
-
-    public void clickSave() {
-        logger.info("Click Save");
-        click(SAVE_BUTTON);
-    }
-
-    public void clickSendVoiceMessage() {
-        logger.info("Click Send Voice Message");
-        click(SEND_BUTTON);
+    public boolean isTimeTextDisplayed() {
+        return driver.findElements(TIME_TEXT).size() > 0;
     }
 
     /**
-     * Check audio dang phat bang cach so sanh tvTime sau 2s.
+     * Click Play/Pause button.
+     * Dung UiAutomator selector de tim element TUOI MOI moi lan click,
+     * tranh stale element exception khi icon doi tu Play sang Pause.
+     */
+    public void clickPlayPause() {
+        logger.info("Click Play/Pause button");
+
+        try {
+            driver.findElement(AppiumBy.androidUIAutomator(
+                    PLAY_PAUSE_UIAUTOMATOR)).click();
+            Thread.sleep(300);
+        } catch (Exception e) {
+            logger.warn("Loi click PlayPause: " + e.getMessage());
+            try {
+                driver.findElement(PLAY_PAUSE_BUTTON).click();
+                Thread.sleep(300);
+            } catch (Exception ex) {
+                throw new RuntimeException("Cannot click Play/Pause button", ex);
+            }
+        }
+    }
+
+    /**
+     * Verify audio dang phat bang cach so sanh time tang sau khoang thoi gian.
      */
     public boolean isAudioPlaying() {
         try {
@@ -160,8 +187,14 @@ public class VoiceEffectsPage extends BasePage {
         }
     }
 
+    // ========== EFFECTS GRID ==========
+
+    public boolean isEffectsRecyclerDisplayed() {
+        return driver.findElements(EFFECTS_RECYCLER).size() > 0;
+    }
+
     /**
-     * Locator dynamic cho 1 effect cu the.
+     * Lay locator cua effect theo ten.
      */
     public By getEffectLocator(String effectName) {
         return By.xpath(
@@ -171,68 +204,203 @@ public class VoiceEffectsPage extends BasePage {
     }
 
     /**
-     * Click chon 1 effect. Tu dong scroll trong RecyclerView neu can.
+     * Lay danh sach effects dang visible tren man hinh.
+     * Helper de debug va xac dinh vi tri trong list.
+     */
+    public List<String> getVisibleEffectNames() {
+        List<WebElement> elements = driver.findElements(EFFECT_NAME_ITEMS);
+        List<String> names = new ArrayList<>();
+        for (WebElement el : elements) {
+            try {
+                String text = el.getText();
+                if (text != null && !text.isEmpty()) {
+                    names.add(text);
+                }
+            } catch (Exception e) {
+                // skip stale element
+            }
+        }
+        return names;
+    }
+
+    /**
+     * Click effect theo ten - su dung smart swipe.
+     * 1. Check visible truoc -> click ngay
+     * 2. Smart swipe (xuong truoc, neu stuck -> chuyen len)
      */
     public void clickEffect(String effectName) {
         logger.info("Click effect: " + effectName);
 
-        // Scroll trong rvEffects de tim effect
         try {
-            String uiAutomator = String.format(
-                    "new UiScrollable(new UiSelector()" +
-                            ".resourceId(\"com.bluesoftware.voicechanger:id/rvEffects\"))" +
-                            ".scrollIntoView(new UiSelector().text(\"%s\"))",
-                    effectName);
-            driver.findElement(io.appium.java_client.AppiumBy.androidUIAutomator(uiAutomator));
+            // Strategy 0: Check visible truoc
+            if (driver.findElements(getEffectLocator(effectName)).size() > 0) {
+                click(getEffectLocator(effectName));
+                Thread.sleep(500);
+                return;
+            }
+
+            // Strategy 1: Smart swipe (xuong + len thong minh)
+            if (smartSwipeToFind(effectName)) {
+                click(getEffectLocator(effectName));
+                Thread.sleep(500);
+                return;
+            }
+
+            throw new RuntimeException("Khong tim thay effect: " + effectName);
         } catch (Exception e) {
-            logger.warn("Cannot scroll to effect " + effectName + ": " + e.getMessage());
-        }
-
-        // Click effect
-        click(getEffectLocator(effectName));
-
-        // Doi effect apply
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+            logger.error("clickEffect failed for " + effectName + ": " + e.getMessage());
+            throw new RuntimeException("Cannot click effect: " + effectName, e);
         }
     }
 
     public boolean isEffectDisplayed(String effectName) {
-        try {
-            // Thu scroll de tim
-            String uiAutomator = String.format(
-                    "new UiScrollable(new UiSelector()" +
-                            ".resourceId(\"com.bluesoftware.voicechanger:id/rvEffects\"))" +
-                            ".scrollIntoView(new UiSelector().text(\"%s\"))",
-                    effectName);
-            driver.findElement(io.appium.java_client.AppiumBy.androidUIAutomator(uiAutomator));
+        if (driver.findElements(getEffectLocator(effectName)).size() > 0) {
             return true;
-        } catch (Exception e) {
-            return false;
         }
+        return smartSwipeToFind(effectName);
+    }
+
+    /**
+     * Smart swipe - tu dong quyet dinh scroll len hay xuong.
+     *
+     * Logic:
+     * 1. Lay snapshot effects dang visible
+     * 2. Swipe XUONG, sau moi swipe so sanh snapshot
+     * 3. Neu 2 swipes lien tiep ma list KHONG thay doi -> dang o CUOI list
+     *    -> Chuyen sang swipe LEN
+     * 4. Swipe LEN den khi tim thay effect
+     */
+    private boolean smartSwipeToFind(String effectName) {
+        By locator = getEffectLocator(effectName);
+        Dimension size = driver.manage().window().getSize();
+
+        int centerX = size.getWidth() / 2;
+        int yDown = (int) (size.getHeight() * 0.75);   // Gan duoi grid
+        int yUp = (int) (size.getHeight() * 0.35);     // Gan tren grid
+
+        String snapshotBefore = String.join(",", getVisibleEffectNames());
+        int unchangedCount = 0;
+
+        // ===== Phase 1: Swipe XUONG =====
+        for (int i = 0; i < 30; i++) {
+            // Check tim thay chua
+            if (driver.findElements(locator).size() > 0) {
+                logger.info("Found " + effectName + " sau " + i + " swipes XUONG");
+                return true;
+            }
+
+            try {
+                // Swipe tu duoi len tren -> grid scroll xuong
+                GestureUtils.swipe(driver, centerX, yDown, centerX, yUp, 500);
+                Thread.sleep(400);
+
+                // Check list co thay doi khong (detect stuck)
+                String snapshotAfter = String.join(",", getVisibleEffectNames());
+                if (snapshotAfter.equals(snapshotBefore)) {
+                    unchangedCount++;
+                    if (unchangedCount >= 2) {
+                        // 2 lan lien tiep khong doi -> dang o CUOI list
+                        logger.info("Dang o CUOI list (list khong doi sau 2 swipes), " +
+                                "chuyen sang swipe LEN");
+                        break;
+                    }
+                } else {
+                    unchangedCount = 0;
+                    snapshotBefore = snapshotAfter;
+                }
+            } catch (Exception e) {
+                logger.warn("Swipe XUONG error: " + e.getMessage());
+                return false;
+            }
+        }
+
+        // ===== Phase 2: Swipe LEN =====
+        logger.info("Phase 2: Swipe LEN tim " + effectName);
+        snapshotBefore = String.join(",", getVisibleEffectNames());
+        unchangedCount = 0;
+
+        for (int i = 0; i < 30; i++) {
+            if (driver.findElements(locator).size() > 0) {
+                logger.info("Found " + effectName + " sau " + i + " swipes LEN");
+                return true;
+            }
+
+            try {
+                // Swipe tu tren xuong duoi -> grid scroll len
+                GestureUtils.swipe(driver, centerX, yUp, centerX, yDown, 500);
+                Thread.sleep(400);
+
+                // Check stuck o dau list
+                String snapshotAfter = String.join(",", getVisibleEffectNames());
+                if (snapshotAfter.equals(snapshotBefore)) {
+                    unchangedCount++;
+                    if (unchangedCount >= 2) {
+                        logger.warn("Dang o DAU list, khong the swipe them");
+                        break;
+                    }
+                } else {
+                    unchangedCount = 0;
+                    snapshotBefore = snapshotAfter;
+                }
+            } catch (Exception e) {
+                logger.warn("Swipe LEN error: " + e.getMessage());
+                return false;
+            }
+        }
+
+        logger.error("Khong tim thay " + effectName +
+                " sau khi smart swipe ca XUONG va LEN");
+        return false;
+    }
+
+    /**
+     * Dem so effect dang hien thi tren man (chua scroll).
+     */
+    public int countVisibleEffects() {
+        return driver.findElements(EFFECT_NAME_ITEMS).size();
+    }
+
+    // ========== ACTIONS ==========
+
+    public void clickClose() {
+        logger.info("Click nut X tren Voice Effects");
+        click(CLOSE_BUTTON);
+    }
+
+    public boolean isSaveButtonDisplayed() {
+        return driver.findElements(SAVE_BUTTON).size() > 0;
+    }
+
+    public void clickSave() {
+        logger.info("Click Save");
+        click(SAVE_BUTTON);
+    }
+
+    public boolean isSendButtonDisplayed() {
+        return driver.findElements(SEND_BUTTON).size() > 0;
+    }
+
+    public void clickSendVoiceMessage() {
+        logger.info("Click Send Voice Message");
+        click(SEND_BUTTON);
     }
 
     // ========== DISCARD DIALOG ==========
+    // Khi nhan X tren Voice Effects -> hien dialog Discard
+
+    public DiscardDialog getDiscardDialog() {
+        return new DiscardDialog(driver);
+    }
 
     public boolean isDiscardDialogDisplayed() {
-        try {
-            Thread.sleep(1000);
-            return driver.findElements(DISCARD_DIALOG_TITLE).size() > 0
-                    || driver.findElements(DISCARD_CONFIRM_BTN).size() > 0;
-        } catch (Exception e) {
-            return false;
-        }
+        return new DiscardDialog(driver).isDisplayed();
     }
 
     public void clickDiscardCancel() {
-        logger.info("Click Cancel tren Discard dialog");
-        click(DISCARD_CANCEL_BTN);
+        new DiscardDialog(driver).clickCancel();
     }
 
     public void clickDiscardConfirm() {
-        logger.info("Click Discard confirm");
-        click(DISCARD_CONFIRM_BTN);
+        new DiscardDialog(driver).clickDiscard();
     }
 }

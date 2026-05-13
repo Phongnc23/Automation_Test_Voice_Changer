@@ -19,10 +19,10 @@ public class Record01_Verify_UI_Display extends BaseTest {
      * Can thiet vi class truoc co the de lai state lan
      * (vd: dang o Voice Effects sau Record02).
      */
-    @BeforeClass(dependsOnMethods = "setUp")
-    public void resetBeforeClass() {
-        resetAppToFreshState();
-    }
+//    @BeforeClass(dependsOnMethods = "setUp")
+//    public void resetBeforeClass() {
+//        resetAppToFreshState();
+//    }
 
     @BeforeMethod
     public void navigateToScreen() {

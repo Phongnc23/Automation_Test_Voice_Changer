@@ -1,151 +1,192 @@
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - STARTING SUITE: Home Tests
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260512_163856.html
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - 
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - TEST RESULTS:
-2026-05-12 16:38:56 [Test worker] INFO  RESULT -   Total:   20
-2026-05-12 16:38:56 [Test worker] INFO  RESULT -   Passed:  0
-2026-05-12 16:38:56 [Test worker] INFO  RESULT -   Failed:  0
-2026-05-12 16:38:56 [Test worker] INFO  RESULT -   Skipped: 0
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260512_163856.html
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260512_163856.html
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
-2026-05-12 16:38:56 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - STARTING SUITE: Record Tests
-2026-05-12 16:38:56 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:38:56 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260512_163856.html
-2026-05-12 16:38:56 [Test worker] INFO  Base.BaseTest - SETUP: Record02_Verify_Recording_Actions
-2026-05-12 16:38:56 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
-2026-05-12 16:38:56 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
-2026-05-12 16:39:03 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
-2026-05-12 16:39:03 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
-2026-05-12 16:39:03 [Test worker] INFO  Base.BaseTest - Reset app to fresh state
-2026-05-12 16:39:07 [Test worker] INFO  Base.BaseTest - App is fresh
-2026-05-12 16:39:07 [Test worker] INFO  Base.BaseTest - === SETUP RECORDING SESSION ===
-2026-05-12 16:39:07 [Test worker] INFO  Base.BasePage - Click Record card
-2026-05-12 16:39:07 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
-2026-05-12 16:39:10 [Test worker] INFO  Base.BaseTest - Initial timer: 00:00:00
-2026-05-12 16:39:10 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
-2026-05-12 16:39:10 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
-2026-05-12 16:39:10 [Test worker] INFO  Base.BaseTest - Started recording
-2026-05-12 16:39:10 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-12 16:39:10 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_02_01_start_recording
-2026-05-12 16:39:10 [Test worker] INFO  Listeners.TestListener - Description: REC_02_01: Bat dau ghi am khi nhan microphone
-2026-05-12 16:39:10 [Test worker] INFO  RESULT - 
-2026-05-12 16:39:10 [Test worker] INFO  RESULT - ▶ Running: test_REC_02_01_start_recording
-2026-05-12 16:39:10 [Test worker] INFO  RESULT -   Description: REC_02_01: Bat dau ghi am khi nhan microphone
-2026-05-12 16:39:12 [Test worker] INFO  Listeners.TestListener - PASSED: test_REC_02_01_start_recording
-2026-05-12 16:39:12 [Test worker] INFO  RESULT -   ✓ PASSED
-2026-05-12 16:39:12 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-12 16:39:12 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_02_03_waveform_appears
-2026-05-12 16:39:12 [Test worker] INFO  Listeners.TestListener - Description: REC_02_03: Waveform xuat hien khi ghi am
-2026-05-12 16:39:12 [Test worker] INFO  RESULT - 
-2026-05-12 16:39:12 [Test worker] INFO  RESULT - ▶ Running: test_REC_02_03_waveform_appears
-2026-05-12 16:39:12 [Test worker] INFO  RESULT -   Description: REC_02_03: Waveform xuat hien khi ghi am
-2026-05-12 16:39:12 [Test worker] INFO  Listeners.TestListener - PASSED: test_REC_02_03_waveform_appears
-2026-05-12 16:39:12 [Test worker] INFO  RESULT -   ✓ PASSED
-2026-05-12 16:39:12 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-12 16:39:12 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_02_02_timer_starts_counting
-2026-05-12 16:39:12 [Test worker] INFO  Listeners.TestListener - Description: REC_02_02: Timer bat dau dem khi ghi am
-2026-05-12 16:39:12 [Test worker] INFO  RESULT - 
-2026-05-12 16:39:12 [Test worker] INFO  RESULT - ▶ Running: test_REC_02_02_timer_starts_counting
-2026-05-12 16:39:12 [Test worker] INFO  RESULT -   Description: REC_02_02: Timer bat dau dem khi ghi am
-2026-05-12 16:39:14 [Test worker] INFO  Listeners.TestListener - PASSED: test_REC_02_02_timer_starts_counting
-2026-05-12 16:39:14 [Test worker] INFO  RESULT -   ✓ PASSED
-2026-05-12 16:39:14 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-12 16:39:14 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_02_06_timer_accuracy
-2026-05-12 16:39:14 [Test worker] INFO  Listeners.TestListener - Description: REC_02_06: Timer dem chinh xac thoi gian
-2026-05-12 16:39:14 [Test worker] INFO  RESULT - 
-2026-05-12 16:39:14 [Test worker] INFO  RESULT - ▶ Running: test_REC_02_06_timer_accuracy
-2026-05-12 16:39:14 [Test worker] INFO  RESULT -   Description: REC_02_06: Timer dem chinh xac thoi gian
-2026-05-12 16:39:15 [Test worker] INFO  Listeners.TestListener - PASSED: test_REC_02_06_timer_accuracy
-2026-05-12 16:39:15 [Test worker] INFO  RESULT -   ✓ PASSED
-2026-05-12 16:39:15 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-12 16:39:15 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_02_04_waveform_responds_to_sound
-2026-05-12 16:39:15 [Test worker] INFO  Listeners.TestListener - Description: REC_02_04: Waveform phan ung am thanh - SKIP
-2026-05-12 16:39:15 [Test worker] INFO  RESULT - 
-2026-05-12 16:39:15 [Test worker] INFO  RESULT - ▶ Running: test_REC_02_04_waveform_responds_to_sound
-2026-05-12 16:39:15 [Test worker] INFO  RESULT -   Description: REC_02_04: Waveform phan ung am thanh - SKIP
-2026-05-12 16:39:15 [Test worker] WARN  Listeners.TestListener - SKIPPED: test_REC_02_04_waveform_responds_to_sound
-2026-05-12 16:39:15 [Test worker] INFO  RESULT -   ⊘ SKIPPED
-2026-05-12 16:39:15 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-12 16:39:15 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_02_05_long_recording_1_minute
-2026-05-12 16:39:15 [Test worker] INFO  Listeners.TestListener - Description: REC_02_05: Ghi am 1 phut khong crash
-2026-05-12 16:39:15 [Test worker] INFO  RESULT - 
-2026-05-12 16:39:15 [Test worker] INFO  RESULT - ▶ Running: test_REC_02_05_long_recording_1_minute
-2026-05-12 16:39:15 [Test worker] INFO  RESULT -   Description: REC_02_05: Ghi am 1 phut khong crash
-2026-05-12 16:39:16 [Test worker] INFO  Utils.RecordFlowHelper - Recorder dang ghi am -> click X
-2026-05-12 16:39:17 [Test worker] INFO  Utils.RecordFlowHelper - Discard dialog -> click Discard
-2026-05-12 16:39:17 [Test worker] INFO  Base.BasePage - Click Discard tren Discard dialog
-2026-05-12 16:39:17 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnConfirm
-2026-05-12 16:39:20 [Test worker] INFO  Base.BasePage - Click Record card
-2026-05-12 16:39:20 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
-2026-05-12 16:39:23 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
-2026-05-12 16:39:23 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
-2026-05-12 16:40:28 [Test worker] INFO  Listeners.TestListener - PASSED: test_REC_02_05_long_recording_1_minute
-2026-05-12 16:40:28 [Test worker] INFO  RESULT -   ✓ PASSED
-2026-05-12 16:40:28 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-12 16:40:28 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_02_07_stop_recording_navigates_to_voice_effects
-2026-05-12 16:40:28 [Test worker] INFO  Listeners.TestListener - Description: REC_02_07: Stop ghi am chuyen sang Voice Effects
-2026-05-12 16:40:28 [Test worker] INFO  RESULT - 
-2026-05-12 16:40:28 [Test worker] INFO  RESULT - ▶ Running: test_REC_02_07_stop_recording_navigates_to_voice_effects
-2026-05-12 16:40:28 [Test worker] INFO  RESULT -   Description: REC_02_07: Stop ghi am chuyen sang Voice Effects
-2026-05-12 16:40:29 [Test worker] INFO  Utils.RecordFlowHelper - Recorder dang ghi am -> click X
-2026-05-12 16:40:30 [Test worker] INFO  Utils.RecordFlowHelper - Discard dialog -> click Discard
-2026-05-12 16:40:30 [Test worker] INFO  Base.BasePage - Click Discard tren Discard dialog
-2026-05-12 16:40:30 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnConfirm
-2026-05-12 16:40:36 [Test worker] INFO  Base.BasePage - Click Record card
-2026-05-12 16:40:36 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
-2026-05-12 16:40:41 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
-2026-05-12 16:40:41 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
-2026-05-12 16:40:44 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
-2026-05-12 16:40:45 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
-2026-05-12 16:40:54 [Test worker] INFO  Listeners.TestListener - PASSED: test_REC_02_07_stop_recording_navigates_to_voice_effects
-2026-05-12 16:40:54 [Test worker] INFO  RESULT -   ✓ PASSED
-2026-05-12 16:40:54 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-12 16:40:54 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_02_08_recorded_file_has_correct_format
-2026-05-12 16:40:54 [Test worker] INFO  Listeners.TestListener - Description: REC_02_08: Ten file dung format record_xxx.m4a
-2026-05-12 16:40:54 [Test worker] INFO  RESULT - 
-2026-05-12 16:40:54 [Test worker] INFO  RESULT - ▶ Running: test_REC_02_08_recorded_file_has_correct_format
-2026-05-12 16:40:54 [Test worker] INFO  RESULT -   Description: REC_02_08: Ten file dung format record_xxx.m4a
-2026-05-12 16:40:54 [Test worker] INFO  Listeners.TestListener - PASSED: test_REC_02_08_recorded_file_has_correct_format
-2026-05-12 16:40:54 [Test worker] INFO  RESULT -   ✓ PASSED
-2026-05-12 16:40:54 [Test worker] INFO  Base.BaseTest - === CLEANUP AFTER CLASS ===
-2026-05-12 16:40:54 [Test worker] INFO  Utils.RecordFlowHelper - Voice Effects -> click X
-2026-05-12 16:40:56 [Test worker] INFO  Utils.RecordFlowHelper - Discard dialog -> click Discard
-2026-05-12 16:40:56 [Test worker] INFO  Base.BasePage - Click Discard tren Discard dialog
-2026-05-12 16:40:56 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnConfirm
-2026-05-12 16:40:58 [Test worker] INFO  Base.BaseTest - TEARDOWN: Record02_Verify_Recording_Actions
-2026-05-12 16:41:00 [Test worker] INFO  Base.BaseTest - App terminated
-2026-05-12 16:41:00 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
-2026-05-12 16:41:00 [Test worker] INFO  Base.BaseTest - Driver quit completed
-2026-05-12 16:41:00 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-12 16:41:00 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
-2026-05-12 16:41:00 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 7, Failed: 0, Skipped: 1
-2026-05-12 16:41:00 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-12 16:41:00 [Test worker] INFO  RESULT - 
-2026-05-12 16:41:00 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:41:00 [Test worker] INFO  RESULT - TEST RESULTS:
-2026-05-12 16:41:00 [Test worker] INFO  RESULT -   Total:   18
-2026-05-12 16:41:00 [Test worker] INFO  RESULT -   Passed:  7
-2026-05-12 16:41:00 [Test worker] INFO  RESULT -   Failed:  0
-2026-05-12 16:41:00 [Test worker] INFO  RESULT -   Skipped: 1
-2026-05-12 16:41:00 [Test worker] INFO  RESULT - ==========================================
-2026-05-12 16:41:00 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260512_163856.html
-2026-05-12 16:41:00 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260512_163856.html
-2026-05-12 16:41:00 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
-2026-05-12 16:41:00 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:27 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:27 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-13 17:29:27 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:27 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:27 [Test worker] INFO  RESULT - STARTING SUITE: Home Tests
+2026-05-13 17:29:27 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - 
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Total:   20
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - STARTING SUITE: Record Tests
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - 
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Total:   18
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - STARTING SUITE: Voice Effects Tests
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - 
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Total:   46
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - STARTING SUITE: Audio Saved Tests
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - 
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Total:   28
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-13 17:29:28 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - STARTING SUITE: Ringtone Tests
+2026-05-13 17:29:28 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:29:28 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:29:28 [Test worker] INFO  Base.BaseTest - SETUP: Ringtone01_Verify_Set_Ringtone
+2026-05-13 17:29:28 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-13 17:29:28 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-13 17:29:35 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-13 17:29:35 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-13 17:29:36 [Test worker] INFO  Base.BasePage - Click Record card
+2026-05-13 17:29:36 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
+2026-05-13 17:29:39 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
+2026-05-13 17:29:39 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
+2026-05-13 17:29:40 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
+2026-05-13 17:29:40 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
+2026-05-13 17:29:45 [Test worker] INFO  Base.BasePage - Click Save
+2026-05-13 17:29:45 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnSave
+2026-05-13 17:29:48 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-13 17:29:48 [Test worker] INFO  Listeners.TestListener - START TEST: test_RT_01_01_open_settings_and_verify_ui
+2026-05-13 17:29:48 [Test worker] INFO  Listeners.TestListener - Description: RT_01_01: Mo Settings - verify UI + toggle
+2026-05-13 17:29:48 [Test worker] INFO  RESULT - 
+2026-05-13 17:29:48 [Test worker] INFO  RESULT - ▶ Running: test_RT_01_01_open_settings_and_verify_ui
+2026-05-13 17:29:48 [Test worker] INFO  RESULT -   Description: RT_01_01: Mo Settings - verify UI + toggle
+2026-05-13 17:29:48 [Test worker] WARN  Listeners.TestListener - SKIPPED: test_RT_01_01_open_settings_and_verify_ui
+2026-05-13 17:29:48 [Test worker] INFO  RESULT -   ⊘ SKIPPED
+2026-05-13 17:29:50 [Test worker] INFO  Base.BasePage - Click Record card
+2026-05-13 17:29:50 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
+2026-05-13 17:29:53 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
+2026-05-13 17:29:53 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
+2026-05-13 17:29:54 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
+2026-05-13 17:29:54 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
+2026-05-13 17:29:57 [Test worker] INFO  Base.BasePage - Click Save
+2026-05-13 17:29:59 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnSave
+2026-05-13 17:30:02 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-13 17:30:02 [Test worker] INFO  Listeners.TestListener - START TEST: test_RT_01_02_grant_permission_and_set_ringtone
+2026-05-13 17:30:02 [Test worker] INFO  Listeners.TestListener - Description: RT_01_02: Cap quyen + Set Ringtone success
+2026-05-13 17:30:02 [Test worker] INFO  RESULT - 
+2026-05-13 17:30:02 [Test worker] INFO  RESULT - ▶ Running: test_RT_01_02_grant_permission_and_set_ringtone
+2026-05-13 17:30:02 [Test worker] INFO  RESULT -   Description: RT_01_02: Cap quyen + Set Ringtone success
+2026-05-13 17:30:02 [Test worker] WARN  Listeners.TestListener - SKIPPED: test_RT_01_02_grant_permission_and_set_ringtone
+2026-05-13 17:30:02 [Test worker] INFO  RESULT -   ⊘ SKIPPED
+2026-05-13 17:30:06 [Test worker] INFO  Base.BasePage - Click Record card
+2026-05-13 17:30:06 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
+2026-05-13 17:30:09 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
+2026-05-13 17:30:09 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
+2026-05-13 17:30:10 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
+2026-05-13 17:30:10 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
+2026-05-13 17:30:13 [Test worker] INFO  Base.BasePage - Click Save
+2026-05-13 17:30:15 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnSave
+2026-05-13 17:30:17 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-13 17:30:17 [Test worker] INFO  Listeners.TestListener - START TEST: test_RT_01_03_deny_permission
+2026-05-13 17:30:17 [Test worker] INFO  Listeners.TestListener - Description: RT_01_03: Tu choi cap quyen - back ve app
+2026-05-13 17:30:17 [Test worker] INFO  RESULT - 
+2026-05-13 17:30:17 [Test worker] INFO  RESULT - ▶ Running: test_RT_01_03_deny_permission
+2026-05-13 17:30:17 [Test worker] INFO  RESULT -   Description: RT_01_03: Tu choi cap quyen - back ve app
+2026-05-13 17:30:18 [Test worker] WARN  Listeners.TestListener - SKIPPED: test_RT_01_03_deny_permission
+2026-05-13 17:30:18 [Test worker] INFO  RESULT -   ⊘ SKIPPED
+2026-05-13 17:30:23 [Test worker] INFO  Base.BasePage - Click Record card
+2026-05-13 17:30:23 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
+2026-05-13 17:30:25 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
+2026-05-13 17:30:25 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
+2026-05-13 17:30:26 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
+2026-05-13 17:30:27 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
+2026-05-13 17:30:31 [Test worker] INFO  Base.BasePage - Click Save
+2026-05-13 17:30:32 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnSave
+2026-05-13 17:30:35 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-13 17:30:35 [Test worker] INFO  Listeners.TestListener - START TEST: test_RT_01_04_set_ringtone_with_permission
+2026-05-13 17:30:35 [Test worker] INFO  Listeners.TestListener - Description: RT_01_04: Set Ringtone thanh cong (da co quyen)
+2026-05-13 17:30:35 [Test worker] INFO  RESULT - 
+2026-05-13 17:30:35 [Test worker] INFO  RESULT - ▶ Running: test_RT_01_04_set_ringtone_with_permission
+2026-05-13 17:30:35 [Test worker] INFO  RESULT -   Description: RT_01_04: Set Ringtone thanh cong (da co quyen)
+2026-05-13 17:30:35 [Test worker] INFO  Base.BasePage - Click Set as Ringtone
+2026-05-13 17:30:48 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnSetRingtone
+2026-05-13 17:30:48 [Test worker] INFO  Base.BasePage - Wait for ringtone success toast (max 3500ms)
+2026-05-13 17:31:01 [Test worker] WARN  Base.BasePage - Khong phat hien toast trong 3500ms
+2026-05-13 17:31:02 [Test worker] INFO  Listeners.TestListener - PASSED: test_RT_01_04_set_ringtone_with_permission
+2026-05-13 17:31:02 [Test worker] INFO  RESULT -   ✓ PASSED
+2026-05-13 17:31:04 [Test worker] INFO  Base.BaseTest - TEARDOWN: Ringtone01_Verify_Set_Ringtone
+2026-05-13 17:31:05 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-13 17:31:05 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-13 17:31:05 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-13 17:31:05 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:31:05 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-13 17:31:05 [Test worker] INFO  Listeners.TestListener - Total: 4, Passed: 1, Failed: 0, Skipped: 3
+2026-05-13 17:31:05 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-13 17:31:05 [Test worker] INFO  RESULT - 
+2026-05-13 17:31:05 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:31:05 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-13 17:31:05 [Test worker] INFO  RESULT -   Total:   4
+2026-05-13 17:31:05 [Test worker] INFO  RESULT -   Passed:  1
+2026-05-13 17:31:05 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-13 17:31:05 [Test worker] INFO  RESULT -   Skipped: 3
+2026-05-13 17:31:05 [Test worker] INFO  RESULT - ==========================================
+2026-05-13 17:31:05 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260513_172927.html
+2026-05-13 17:31:05 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260513_172927.html
+2026-05-13 17:31:05 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-13 17:31:05 [Test worker] INFO  RESULT - ==========================================

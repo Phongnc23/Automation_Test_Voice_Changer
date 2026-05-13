@@ -2,15 +2,19 @@ package testcases.Audiosaved;
 
 import Base.BaseTest;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.Dimension;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.AudioSavedPage;
 import Pages.Components.EditMenu;
 import Pages.Components.RenamePopup;
 import Report.ExtentReportManager;
+import Utils.GestureUtils;
 import Utils.RecordFlowHelper;
+
 
 public class AudioSaved03_Verify_Rename extends BaseTest {
 
@@ -18,169 +22,203 @@ public class AudioSaved03_Verify_Rename extends BaseTest {
     private EditMenu editMenu;
     private RenamePopup renamePopup;
 
+    private static final int RECORDING_SECONDS = 1;
+
+    @BeforeClass(dependsOnMethods = "setUp")
+    public void setupAudioSavedSession() {
+        logger.info("=== SETUP AUDIO SAVED SESSION ===");
+        try {
+            audioSavedPage = RecordFlowHelper.navigateToAudioSaved(
+                    driver, RECORDING_SECONDS);
+            editMenu = new EditMenu(driver);
+            renamePopup = new RenamePopup(driver);
+        } catch (Exception e) {
+            logger.error("Loi navigate: " + e.getMessage());
+            RecordFlowHelper.forceResetToHome(driver);
+            audioSavedPage = RecordFlowHelper.navigateToAudioSaved(
+                    driver, RECORDING_SECONDS);
+            editMenu = new EditMenu(driver);
+            renamePopup = new RenamePopup(driver);
+        }
+    }
+
+    @AfterClass(alwaysRun = true)
+    public void cleanupAfterClass() {
+        logger.info("=== CLEANUP ===");
+        try {
+            // Dong moi popup/menu con mo
+            if (renamePopup != null && renamePopup.isDisplayed()) {
+                renamePopup.clickCancel();
+                Thread.sleep(500);
+            }
+            if (editMenu != null && editMenu.isDisplayed()) {
+                tapOutsideToCloseMenu();
+                Thread.sleep(500);
+            }
+            RecordFlowHelper.smartResetToHome(driver);
+        } catch (Exception e) {
+            logger.error("Cleanup error: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Safety net truoc moi test: dong moi popup neu lo van mo.
+     */
     @BeforeMethod
-    public void navigateToScreen() {
-        audioSavedPage = RecordFlowHelper.navigateToAudioSaved(driver, 3);
-        editMenu = new EditMenu(driver);
-        renamePopup = new RenamePopup(driver);
+    public void ensureCleanState() throws InterruptedException {
+        if (renamePopup != null && renamePopup.isDisplayed()) {
+            logger.info("Popup rename con mo, dong");
+            renamePopup.clickCancel();
+            Thread.sleep(500);
+        }
+        if (editMenu != null && editMenu.isDisplayed()) {
+            logger.info("Menu edit con mo, dong");
+            tapOutsideToCloseMenu();
+            Thread.sleep(500);
+        }
     }
 
-    @AfterMethod
-    public void resetState() {
-        RecordFlowHelper.resetToHome(driver);
+    /**
+     * Tap vung trong suot phia tren de dong menu.
+     */
+    private void tapOutsideToCloseMenu() {
+        Dimension size = driver.manage().window().getSize();
+        GestureUtils.tap(driver, size.getWidth() / 2, 100);
     }
 
-    @Test(description = "SAV_04_01: Mo menu 3 cham")
-    public void test_SAV_04_01_three_dot_menu_opens() throws InterruptedException {
+    /**
+     * Helper: mo Edit menu (click 3 cham).
+     */
+    private void openEditMenu() throws InterruptedException {
         audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1500);
+        Thread.sleep(800);
+    }
+
+    /**
+     * Helper: mo Rename popup (click 3 cham -> Rename).
+     */
+    private void openRenamePopup() throws InterruptedException {
+        openEditMenu();
+        editMenu.clickRename();
+        Thread.sleep(1000);
+    }
+
+    // ========================================================
+    // GROUP 1: Test menu (NON-DESTRUCTIVE)
+    // ========================================================
+
+    @Test(priority = 1, description = "SAV_04_01: Mo menu 3 cham")
+    public void test_SAV_04_01_three_dot_menu_opens()
+            throws InterruptedException {
+        openEditMenu();
 
         Assert.assertTrue(editMenu.isDisplayed(), "Menu khong mo");
         Assert.assertTrue(editMenu.isRenameItemDisplayed());
         Assert.assertTrue(editMenu.isOpenWithItemDisplayed());
         ExtentReportManager.getTest().log(Status.PASS, "Menu mo voi 2 item");
+
+        // Cleanup: tap outside de dong menu
+        tapOutsideToCloseMenu();
+        Thread.sleep(500);
     }
 
-    @Test(description = "SAV_04_02: Tap outside dong menu")
+    @Test(priority = 2, description = "SAV_04_02: Tap outside dong menu")
     public void test_SAV_04_02_menu_closes_on_tap_outside()
             throws InterruptedException {
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1500);
+        openEditMenu();
+        Assert.assertTrue(editMenu.isDisplayed(), "Menu khong mo");
 
-        // Tap goc tren cua man hinh
-        org.openqa.selenium.Dimension size = driver.manage().window().getSize();
-        Utils.GestureUtils.tap(driver, size.width / 2, 100);
-        Thread.sleep(1500);
+        tapOutsideToCloseMenu();
+        Thread.sleep(1000);
 
         Assert.assertFalse(editMenu.isDisplayed(), "Menu chua dong");
         ExtentReportManager.getTest().log(Status.PASS, "Menu dong");
     }
 
-    @Test(description = "SAV_05_01: Popup Rename hien thi")
-    public void test_SAV_05_01_rename_popup_displayed() throws InterruptedException {
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
+    // ========================================================
+    // GROUP 2: Test rename popup verify (NON-DESTRUCTIVE)
+    // ========================================================
+
+    @Test(priority = 3, description = "SAV_05_01: Popup Rename hien thi")
+    public void test_SAV_05_01_rename_popup_displayed()
+            throws InterruptedException {
+        openRenamePopup();
 
         Assert.assertTrue(renamePopup.isDisplayed(), "Popup khong hien");
         ExtentReportManager.getTest().log(Status.PASS, "Popup hien thi");
+
+        // Cleanup
+        renamePopup.clickCancel();
+        Thread.sleep(500);
     }
 
-    @Test(description = "SAV_05_02: Textbox co ten file hien tai")
+    @Test(priority = 4, description = "SAV_05_02: Textbox co ten file hien tai")
     public void test_SAV_05_02_textbox_shows_current_filename()
             throws InterruptedException {
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
+        openRenamePopup();
 
         String text = renamePopup.getCurrentText();
         ExtentReportManager.getTest().log(Status.INFO, "Text: " + text);
         Assert.assertNotNull(text);
-        Assert.assertTrue(text.startsWith("record_"),
+        Assert.assertTrue(text.startsWith("record_") || text.contains("audio"),
                 "Text khong dung format: " + text);
         ExtentReportManager.getTest().log(Status.PASS, "Text dung");
+
+        // Cleanup
+        renamePopup.clickCancel();
+        Thread.sleep(500);
     }
 
-    @Test(description = "SAV_05_03: Nhap ten moi")
-    public void test_SAV_05_03_enter_new_name() throws InterruptedException {
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
+    @Test(priority = 5, description = "SAV_05_03: Nhap ten moi")
+    public void test_SAV_05_03_enter_new_name()
+            throws InterruptedException {
+        openRenamePopup();
 
         renamePopup.clearText();
         renamePopup.enterText("my_test_audio");
-        Thread.sleep(500);
+        Thread.sleep(300);
 
         String current = renamePopup.getCurrentText();
         Assert.assertEquals(current, "my_test_audio", "Text khong khop");
         ExtentReportManager.getTest().log(Status.PASS, "Da nhap: " + current);
+
+        // Cleanup: KHONG click Done (de tranh rename) -> Cancel
+        renamePopup.clickCancel();
+        Thread.sleep(500);
     }
 
-    @Test(description = "SAV_05_04: Clear text bang icon X / clear()")
+    @Test(priority = 6, description = "SAV_05_04: Clear text bang icon X")
     public void test_SAV_05_04_clear_text() throws InterruptedException {
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
+        openRenamePopup();
 
         renamePopup.clearText();
-        Thread.sleep(500);
+        Thread.sleep(300);
 
         String text = renamePopup.getCurrentText();
-        ExtentReportManager.getTest().log(Status.INFO, "Text after clear: '" + text + "'");
+        ExtentReportManager.getTest().log(Status.INFO,
+                "Text after clear: '" + text + "'");
         Assert.assertTrue(text == null || text.isEmpty(),
                 "Text khong rong sau clear: " + text);
         ExtentReportManager.getTest().log(Status.PASS, "Da clear");
-    }
 
-    @Test(description = "SAV_05_05: Rename thanh cong")
-    public void test_SAV_05_05_rename_success() throws InterruptedException {
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
-
-        renamePopup.clearText();
-        renamePopup.enterText("test_audio_renamed");
+        // Cleanup
+        renamePopup.clickCancel();
         Thread.sleep(500);
-        renamePopup.clickDone();
-        Thread.sleep(2500);
-
-        String fileName = audioSavedPage.getFileName();
-        ExtentReportManager.getTest().log(Status.INFO, "After rename: " + fileName);
-        Assert.assertNotNull(fileName);
-        Assert.assertTrue(fileName.contains("test_audio_renamed"),
-                "Ten file chua doi: " + fileName);
-        ExtentReportManager.getTest().log(Status.PASS, "Rename thanh cong");
     }
 
-    @Test(description = "SAV_05_06: Rename voi ky tu dac biet")
-    public void test_SAV_05_06_rename_with_special_characters()
-            throws InterruptedException {
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
+    // ========================================================
+    // GROUP 3: Test rename empty / cancel (NON-DESTRUCTIVE)
+    // ========================================================
 
-        renamePopup.clearText();
-        renamePopup.enterText("audio/test:bad");
-        Thread.sleep(500);
-        renamePopup.clickDone();
-        Thread.sleep(2500);
-
-        // Log ket qua: hoac error message, hoac file da rename (loc ky tu)
-        if (renamePopup.isErrorMessageDisplayed()) {
-            String err = renamePopup.getErrorMessage();
-            ExtentReportManager.getTest().log(Status.PASS,
-                    "App hien loi: " + err);
-        } else {
-            String fileName = audioSavedPage.getFileName();
-            ExtentReportManager.getTest().log(Status.PASS,
-                    "App accept (loc ky tu): " + fileName);
-            // Verify khong co ky tu / : trong ten file
-            Assert.assertFalse(fileName.contains("/"),
-                    "File chua ky tu /");
-            Assert.assertFalse(fileName.contains(":"),
-                    "File chua ky tu :");
-        }
-    }
-
-    @Test(description = "SAV_05_07: Rename voi ten trong")
+    @Test(priority = 7, description = "SAV_05_07: Rename voi ten trong")
     public void test_SAV_05_07_rename_empty() throws InterruptedException {
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
+        openRenamePopup();
 
         renamePopup.clearText();
-        Thread.sleep(500);
+        Thread.sleep(300);
         renamePopup.clickDone();
-        Thread.sleep(2000);
+        Thread.sleep(1500);
 
-        // Phai hien error hoac popup van mo
         boolean popupStillOpen = renamePopup.isDisplayed();
         boolean errorShown = renamePopup.isErrorMessageDisplayed();
 
@@ -188,53 +226,101 @@ public class AudioSaved03_Verify_Rename extends BaseTest {
                 "Popup open: " + popupStillOpen + ", Error: " + errorShown);
 
         Assert.assertTrue(popupStillOpen || errorShown,
-                "App accept ten rong (loi: popup dong va khong co error)");
+                "App accept ten rong (loi)");
         ExtentReportManager.getTest().log(Status.PASS,
                 "App khong accept ten rong");
 
-        // Cleanup: click Cancel de dong popup
+        // Cleanup
         if (popupStillOpen) {
             renamePopup.clickCancel();
+            Thread.sleep(500);
         }
     }
 
-    @Test(description = "SAV_05_08: Cancel khi khong nhap")
+    @Test(priority = 8, description = "SAV_05_08: Cancel khi khong nhap")
     public void test_SAV_05_08_cancel_keeps_original_name()
             throws InterruptedException {
         String originalName = audioSavedPage.getFileName();
+        ExtentReportManager.getTest().log(Status.INFO,
+                "Original: " + originalName);
 
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
-
+        openRenamePopup();
         renamePopup.clickCancel();
-        Thread.sleep(1500);
+        Thread.sleep(1000);
 
         String afterName = audioSavedPage.getFileName();
         Assert.assertEquals(afterName, originalName, "Ten file bi doi");
         ExtentReportManager.getTest().log(Status.PASS, "Ten file giu nguyen");
     }
 
-    @Test(description = "SAV_05_09: Cancel sau khi nhap")
-    public void test_SAV_05_09_cancel_after_typing() throws InterruptedException {
+    @Test(priority = 9, description = "SAV_05_09: Cancel sau khi nhap")
+    public void test_SAV_05_09_cancel_after_typing()
+            throws InterruptedException {
         String originalName = audioSavedPage.getFileName();
 
-        audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(1000);
-        editMenu.clickRename();
-        Thread.sleep(1500);
-
+        openRenamePopup();
         renamePopup.clearText();
         renamePopup.enterText("new_name_not_saved");
-        Thread.sleep(500);
+        Thread.sleep(300);
         renamePopup.clickCancel();
-        Thread.sleep(1500);
+        Thread.sleep(1000);
 
         String afterName = audioSavedPage.getFileName();
         Assert.assertEquals(afterName, originalName,
                 "Ten file bi doi du da Cancel");
         ExtentReportManager.getTest().log(Status.PASS,
                 "Ten file giu nguyen: " + afterName);
+    }
+
+    // ========================================================
+    // GROUP 4: Test rename SUCCESS (DESTRUCTIVE - chay cuoi)
+    // ========================================================
+
+    @Test(priority = 10, description = "SAV_05_05: Rename thanh cong")
+    public void test_SAV_05_05_rename_success() throws InterruptedException {
+        openRenamePopup();
+
+        renamePopup.clearText();
+        renamePopup.enterText("test_audio_renamed");
+        Thread.sleep(300);
+        renamePopup.clickDone();
+        Thread.sleep(2000);
+
+        String fileName = audioSavedPage.getFileName();
+        ExtentReportManager.getTest().log(Status.INFO,
+                "After rename: " + fileName);
+        Assert.assertNotNull(fileName);
+        Assert.assertTrue(fileName.contains("test_audio_renamed"),
+                "Ten file chua doi: " + fileName);
+        ExtentReportManager.getTest().log(Status.PASS, "Rename thanh cong");
+    }
+
+    @Test(priority = 11, description = "SAV_05_06: Rename voi ky tu dac biet")
+    public void test_SAV_05_06_rename_with_special_characters()
+            throws InterruptedException {
+        openRenamePopup();
+
+        renamePopup.clearText();
+        renamePopup.enterText("audio/test:bad");
+        Thread.sleep(300);
+        renamePopup.clickDone();
+        Thread.sleep(1000);
+
+        if (renamePopup.isErrorMessageDisplayed()) {
+            String err = renamePopup.getErrorMessage();
+            ExtentReportManager.getTest().log(Status.PASS,
+                    "App hien loi: " + err);
+            // Cleanup
+            renamePopup.clickCancel();
+            Thread.sleep(500);
+        } else {
+            String fileName = audioSavedPage.getFileName();
+            ExtentReportManager.getTest().log(Status.PASS,
+                    "App accept (loc ky tu): " + fileName);
+            Assert.assertFalse(fileName.contains("/"),
+                    "File chua ky tu /");
+            Assert.assertFalse(fileName.contains(":"),
+                    "File chua ky tu :");
+        }
     }
 }

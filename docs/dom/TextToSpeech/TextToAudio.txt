@@ -1,0 +1,17 @@
+<android.widget.FrameLayout>
+<android.widget.LinearLayout>
+<android.widget.FrameLayout>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/action_bar_root">
+<android.widget.FrameLayout resource-id="android:id/content">
+<androidx.drawerlayout.widget.DrawerLayout resource-id="com.bluesoftware.voicechanger:id/main">
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment">
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/btnBack">
+<android.widget.TextView text="Text to Audio" resource-id="com.bluesoftware.voicechanger:id/tvTitle">
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/btnLanguage">
+<android.widget.TextView text="Tiếng Việt" resource-id="com.bluesoftware.voicechanger:id/tvLanguage">
+<android.widget.ImageView>
+<android.widget.TextView text="Enter text" resource-id="com.bluesoftware.voicechanger:id/labelEnterText">
+<android.widget.EditText text="Enter text to generate audio, then add effects" resource-id="com.bluesoftware.voicechanger:id/edtText">
+<android.widget.TextView text="Next" resource-id="com.bluesoftware.voicechanger:id/btnNext">

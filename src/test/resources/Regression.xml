@@ -48,4 +48,13 @@
         </classes>
     </test>
 
+    <test name="Text to Speech Tests">
+        <classes>
+            <class name="testcases.TextToSpeech.TextToAudio01_Verify_UI_Display"/>
+            <class name="testcases.TextToSpeech.TextToAudio02_Verify_Language_Selection"/>
+            <class name="testcases.TextToSpeech.TextToAudio03_Verify_Text_Input"/>
+            <class name="testcases.TextToSpeech.TextToAudio04_Verify_TTS_File_Name"/>
+        </classes>
+    </test>
+
 </suite>

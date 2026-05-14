@@ -1,0 +1,9 @@
+<android.widget.FrameLayout>
+<android.widget.FrameLayout>
+<android.widget.LinearLayout>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/itemRename">
+<android.widget.ImageView>
+<android.widget.TextView text="Rename">
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/itemOpenWith">
+<android.widget.ImageView>
+<android.widget.TextView text="Open with…">

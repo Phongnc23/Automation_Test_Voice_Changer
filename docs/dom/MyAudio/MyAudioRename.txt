@@ -1,0 +1,9 @@
+<android.widget.FrameLayout>
+<android.widget.FrameLayout>
+<android.widget.FrameLayout resource-id="android:id/content">
+<android.widget.LinearLayout>
+<android.widget.TextView text="Rename" resource-id="com.bluesoftware.voicechanger:id/tvTitle">
+<android.widget.EditText text="record_1778747349650" resource-id="com.bluesoftware.voicechanger:id/edtName">
+<android.widget.LinearLayout>
+<android.widget.TextView text="Cancel" resource-id="com.bluesoftware.voicechanger:id/btnCancel">
+<android.widget.TextView text="Done" resource-id="com.bluesoftware.voicechanger:id/btnDone">

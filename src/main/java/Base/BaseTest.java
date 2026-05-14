@@ -21,7 +21,7 @@ public class BaseTest {
     protected DriverManager driverManager;
 
     @BeforeClass
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         logger.info("SETUP: " + this.getClass().getSimpleName());
 
         driverManager = DriverFactory.getDriverManager(AppConstants.PLATFORM_NAME);
@@ -34,7 +34,7 @@ public class BaseTest {
     }
 
     @AfterClass(alwaysRun = true)
-    public void tearDown() {
+    public void tearDown() throws InterruptedException {
         logger.info("TEARDOWN: " + this.getClass().getSimpleName());
 
         // Buoc 1: Terminate app de dam bao app khong con chay tren device

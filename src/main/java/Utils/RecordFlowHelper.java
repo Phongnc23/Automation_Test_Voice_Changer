@@ -4,6 +4,8 @@ import Constants.AppConstants;
 import Constants.TimeOutConstants;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -15,6 +17,7 @@ import Pages.RecorderPage;
 import Pages.VoiceEffectsPage;
 import Pages.Components.DiscardDialog;
 import Pages.Components.PermissionDialog;
+import Pages.TextToAudioPage;
 
 import java.time.Duration;
 
@@ -159,6 +162,30 @@ public class RecordFlowHelper {
             if (isAtHome(driver)) return;
         }
 
+        // O man Text to Audio -> click Back ve Home
+        if (isAtTextToAudio(driver)) {
+            try {
+                driver.findElement(By.id(
+                        "com.bluesoftware.voicechanger:id/btnBack")).click();
+                sleep(1500);
+            } catch (Exception e) {
+                logger.warn("Loi: " + e.getMessage());
+            }
+            if (isAtHome(driver)) return;
+        }
+
+        // O man Language Selection -> press BACK
+        if (isAtLanguageSelection(driver)) {
+            try {
+                ((AndroidDriver) driver).pressKey(
+                        new KeyEvent(AndroidKey.BACK));
+                sleep(1500);
+            } catch (Exception e) {
+                logger.warn("Loi: " + e.getMessage());
+            }
+            if (isAtHome(driver)) return;
+        }
+
         // Khong o Voice Changer
         if (!isAtVoiceChanger(driver)) {
             forceResetToHome(driver);
@@ -239,6 +266,78 @@ public class RecordFlowHelper {
             Thread.sleep(ms);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+        }
+    }
+
+    public static TextToAudioPage navigateToTextToAudio(AppiumDriver driver) {
+        logger.info("=== Navigate to Text to Audio ===");
+
+        // Bao dam dang o Home
+        if (!isAtHome(driver)) {
+            smartResetToHome(driver);
+            sleep(1000);
+        }
+
+        // Click card Text to Speech
+        HomePage homePage = new HomePage(driver);
+        homePage.clickTextToSpeech();
+        sleep(2000);
+
+        return new TextToAudioPage(driver);
+    }
+
+    /**
+     * Navigate tu Home -> Text to Audio -> nhap text -> Next -> Voice Effects.
+     */
+    public static VoiceEffectsPage navigateToVoiceEffectsFromTTS(
+            AppiumDriver driver, String text) {
+        logger.info("=== Navigate to Voice Effects via TTS ===");
+
+        TextToAudioPage ttsPage = navigateToTextToAudio(driver);
+
+        ttsPage.clickEditText();
+        sleep(500);
+        ttsPage.enterText(text);
+        sleep(500);
+        ttsPage.hideKeyboard();
+        sleep(500);
+        ttsPage.clickNext();
+        sleep(4000);
+
+        return new VoiceEffectsPage(driver);
+    }
+
+    /**
+     * Navigate tu Home -> Text to Audio -> ... -> Audio Saved.
+     */
+    public static AudioSavedPage navigateToAudioSavedFromTTS(
+            AppiumDriver driver, String text) {
+        logger.info("=== Navigate to Audio Saved via TTS ===");
+
+        VoiceEffectsPage vePage = navigateToVoiceEffectsFromTTS(driver, text);
+        vePage.clickSave();
+        sleep(3000);
+
+        return new AudioSavedPage(driver);
+    }
+
+    public static boolean isAtTextToAudio(AppiumDriver driver) {
+        try {
+            return driver.findElements(By.id(
+                    "com.bluesoftware.voicechanger:id/edtText")).size() > 0
+                    && driver.findElements(By.id(
+                    "com.bluesoftware.voicechanger:id/btnNext")).size() > 0;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static boolean isAtLanguageSelection(AppiumDriver driver) {
+        try {
+            return driver.findElements(By.id(
+                    "com.bluesoftware.voicechanger:id/container")).size() > 0;
+        } catch (Exception e) {
+            return false;
         }
     }
 }

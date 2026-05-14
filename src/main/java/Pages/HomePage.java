@@ -21,7 +21,7 @@ public class HomePage extends BasePage {
     // Text to Speech card
     private final By textToSpeechCard = By.id("com.bluesoftware.voicechanger:id/layout_text_to_speech");
     private final By textToSpeechLabel = By.xpath("//android.widget.TextView[@text='Text to speech']");
-
+    private static final By LAYOUT_TEXT_TO_SPEECH = By.id("com.bluesoftware.voicechanger:id/layout_text_to_speech");
     // My Audio card
     private final By myAudioCard = By.id("com.bluesoftware.voicechanger:id/layout_my_audio");
     private final By myAudioLabel = By.xpath("//android.widget.TextView[@text='My audio']");
@@ -74,7 +74,7 @@ public class HomePage extends BasePage {
 
     // Text to Speech
     public boolean isTextToSpeechCardDisplayed() {
-        return isDisplayed(textToSpeechCard);
+        return driver.findElements(LAYOUT_TEXT_TO_SPEECH).size() > 0;
     }
 
     public boolean isTextToSpeechLabelDisplayed() {
@@ -167,4 +167,5 @@ public class HomePage extends BasePage {
         logger.info("Click Import Audio card");
         click(importAudioCard);
     }
+
 }

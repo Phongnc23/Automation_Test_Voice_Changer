@@ -1,0 +1,16 @@
+<android.widget.FrameLayout>
+<android.widget.FrameLayout>
+<android.widget.FrameLayout resource-id="android:id/content">
+<android.widget.LinearLayout resource-id="android:id/parentPanel">
+<android.widget.LinearLayout resource-id="android:id/topPanel">
+<android.widget.LinearLayout resource-id="android:id/title_template">
+<android.widget.TextView text="Delete file" resource-id="android:id/alertTitle">
+<android.view.View resource-id="android:id/titleDividerNoCustom">
+<android.widget.FrameLayout resource-id="android:id/contentPanel">
+<android.widget.ScrollView resource-id="android:id/scrollView">
+<android.widget.LinearLayout>
+<android.widget.TextView text="Are you sure you want to delete file from device?" resource-id="android:id/message">
+<android.widget.ScrollView resource-id="android:id/buttonPanel">
+<android.widget.LinearLayout>
+<android.widget.Button text="CANCEL" resource-id="android:id/button2">
+<android.widget.Button text="DELETE" resource-id="android:id/button1">

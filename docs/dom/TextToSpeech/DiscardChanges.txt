@@ -1,0 +1,9 @@
+<android.widget.FrameLayout>
+<android.widget.FrameLayout>
+<android.widget.FrameLayout resource-id="android:id/content">
+<android.widget.LinearLayout>
+<android.widget.TextView text="Discard changes?" resource-id="com.bluesoftware.voicechanger:id/tvTitle">
+<android.widget.TextView text="Are you sure you want to exit? Your unsaved audio will be lost." resource-id="com.bluesoftware.voicechanger:id/tvMessage">
+<android.widget.LinearLayout>
+<android.widget.TextView text="Cancel" resource-id="com.bluesoftware.voicechanger:id/btnCancel">
+<android.widget.TextView text="Discard" resource-id="com.bluesoftware.voicechanger:id/btnConfirm">

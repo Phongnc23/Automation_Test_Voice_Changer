@@ -1,0 +1,12 @@
+<android.widget.FrameLayout>
+<android.widget.FrameLayout>
+<android.widget.LinearLayout>
+<android.widget.ScrollView>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/container">
+<android.widget.TextView text="Tiếng Albania (Albania)">
+<android.widget.TextView text="Tiếng Anh (Australia)">
+<android.widget.TextView text="Tiếng Anh (Hoa Kỳ)">
+<android.widget.TextView text="Tiếng Anh (Nigeria)">
+<android.widget.TextView text="Tiếng Anh (Vương quốc Anh)">
+<android.widget.TextView text="Tiếng Anh (Ấn Độ)">
+<android.widget.TextView text="Tiếng Assam (Ấn Độ)">

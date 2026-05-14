@@ -1,0 +1,36 @@
+<android.widget.FrameLayout>
+<android.widget.LinearLayout>
+<android.widget.FrameLayout>
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/action_bar_root">
+<android.widget.FrameLayout resource-id="android:id/content">
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/container">
+<android.view.ViewGroup resource-id="com.bluesoftware.voicechanger:id/coordinator">
+<android.view.View resource-id="com.bluesoftware.voicechanger:id/touch_outside">
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/design_bottom_sheet">
+<android.widget.LinearLayout>
+<android.view.View>
+<android.widget.LinearLayout>
+<android.widget.ImageView>
+<android.widget.LinearLayout>
+<android.widget.TextView text="tts_1778747413892.wav.m4a" resource-id="com.bluesoftware.voicechanger:id/tvName">
+<android.widget.TextView text="00:01 · 60 KB" resource-id="com.bluesoftware.voicechanger:id/tvInfo">
+<android.widget.LinearLayout>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_voice_message">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
+<android.widget.TextView text="Send Voice Message" resource-id="com.bluesoftware.voicechanger:id/tvAction">
+<android.view.View>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_share">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
+<android.widget.TextView text="Share" resource-id="com.bluesoftware.voicechanger:id/tvAction">
+<android.view.View>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_rename">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
+<android.widget.TextView text="Rename" resource-id="com.bluesoftware.voicechanger:id/tvAction">
+<android.widget.LinearLayout>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_set_as_ringtone">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
+<android.widget.TextView text="Set as ringtone" resource-id="com.bluesoftware.voicechanger:id/tvAction">
+<android.view.View>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_delete">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
+<android.widget.TextView text="Delete" resource-id="com.bluesoftware.voicechanger:id/tvAction">

@@ -3028,3 +3028,912 @@ Session ID: e7f59dd1-2fcc-454b-9593-d8cae56a0fe3
 2026-05-14 11:11:55 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
 2026-05-14 11:11:55 [Test worker] INFO  Listeners.TestListener - ==========================================
 2026-05-14 11:11:55 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_111132.html
+2026-05-14 14:49:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:44 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-14 14:49:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:44 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_144944.html
+2026-05-14 14:49:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:44 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-14 14:49:44 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:49:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-14 14:49:45 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:49:45 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_144944.html
+2026-05-14 14:49:45 [Test worker] INFO  Base.BaseTest - SETUP: TextToAudio01_Verify_UI_Display
+2026-05-14 14:49:45 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-14 14:49:45 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-14 14:49:54 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-14 14:49:54 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-14 14:49:54 [Test worker] INFO  Base.BaseTest - === SETUP TEXT TO AUDIO SESSION ===
+2026-05-14 14:49:54 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:49:55 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:49:55 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:49:57 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:49:57 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_07_verify_placeholder_behavior
+2026-05-14 14:49:57 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_07: Verify placeholder/text behavior
+2026-05-14 14:49:57 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 14:49:57 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 14:49:58 [Test worker] INFO  Base.BasePage - Nhap text: test
+2026-05-14 14:50:00 [Test worker] INFO  Base.BasePage - Clear edit text
+2026-05-14 14:50:01 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_07_verify_placeholder_behavior
+2026-05-14 14:50:04 [Test worker] INFO  Base.BaseTest - TEARDOWN: TextToAudio01_Verify_UI_Display
+2026-05-14 14:50:05 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-14 14:50:05 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-14 14:50:06 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-14 14:50:06 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:06 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-14 14:50:06 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 1, Failed: 0, Skipped: 0
+2026-05-14 14:50:06 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:06 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_144944.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145035.html
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-14 14:50:35 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:35 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145035.html
+2026-05-14 14:50:36 [Test worker] INFO  Base.BaseTest - SETUP: TextToAudio01_Verify_UI_Display
+2026-05-14 14:50:36 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-14 14:50:36 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-14 14:50:42 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-14 14:50:42 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-14 14:50:42 [Test worker] INFO  Base.BaseTest - === SETUP TEXT TO AUDIO SESSION ===
+2026-05-14 14:50:42 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:50:43 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:50:43 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_01_navigate_to_text_to_audio
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_01: Mo man Text to Audio tu Home
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_01_navigate_to_text_to_audio
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_02_verify_back_button
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_02: Verify nut Back goc tren trai
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_02_verify_back_button
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_03_verify_title
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_03: Verify title 'Text to Audio'
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_03_verify_title
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_04_verify_default_language
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_04: Verify dropdown ngon ngu mac dinh
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_04_verify_default_language
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_05_verify_label_and_edit_text
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_05: Verify label 'Enter text' va edit text
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_05_verify_label_and_edit_text
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_06_verify_next_button
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_06: Verify nut Next phia duoi
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_06_verify_next_button
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_07_verify_placeholder_behavior
+2026-05-14 14:50:45 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_07: Verify placeholder/text behavior
+2026-05-14 14:50:45 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 14:50:45 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 14:50:46 [Test worker] INFO  Base.BasePage - Nhap text: test
+2026-05-14 14:50:48 [Test worker] INFO  Base.BasePage - Clear edit text
+2026-05-14 14:50:49 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_07_verify_placeholder_behavior
+2026-05-14 14:50:49 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:50:49 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_08_back_to_home
+2026-05-14 14:50:49 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_08: Verify nhan Back tu man Text to Audio
+2026-05-14 14:50:49 [Test worker] INFO  Base.BasePage - Click nut Back tren Text to Audio
+2026-05-14 14:50:49 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnBack
+2026-05-14 14:50:51 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_08_back_to_home
+2026-05-14 14:50:51 [Test worker] INFO  Utils.RecordFlowHelper - Da o Home, skip
+2026-05-14 14:50:51 [Test worker] INFO  Base.BaseTest - TEARDOWN: TextToAudio01_Verify_UI_Display
+2026-05-14 14:50:53 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-14 14:50:53 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-14 14:50:53 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-14 14:50:53 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:53 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-14 14:50:53 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 8, Failed: 0, Skipped: 0
+2026-05-14 14:50:53 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:50:53 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145035.html
+2026-05-14 14:52:18 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:18 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-14 14:52:18 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-14 14:52:19 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:19 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145218.html
+2026-05-14 14:52:19 [Test worker] INFO  Base.BaseTest - SETUP: TextToAudio01_Verify_UI_Display
+2026-05-14 14:52:19 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-14 14:52:19 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-14 14:52:26 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-14 14:52:26 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-14 14:52:26 [Test worker] INFO  Base.BaseTest - === SETUP TEXT TO AUDIO SESSION ===
+2026-05-14 14:52:26 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:52:26 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:52:26 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_01_navigate_to_text_to_audio
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_01: Mo man Text to Audio tu Home
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_01_navigate_to_text_to_audio
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_02_verify_back_button
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_02: Verify nut Back goc tren trai
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_02_verify_back_button
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_03_verify_title
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_03: Verify title 'Text to Audio'
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_03_verify_title
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_04_verify_default_language
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_04: Verify dropdown ngon ngu mac dinh
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_04_verify_default_language
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_05_verify_label_and_edit_text
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_05: Verify label 'Enter text' va edit text
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_05_verify_label_and_edit_text
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_06_verify_next_button
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_06: Verify nut Next phia duoi
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_06_verify_next_button
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_07_verify_placeholder_behavior
+2026-05-14 14:52:29 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_07: Verify placeholder/text behavior
+2026-05-14 14:52:29 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 14:52:29 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 14:52:30 [Test worker] INFO  Base.BasePage - Nhap text: test
+2026-05-14 14:52:32 [Test worker] INFO  Base.BasePage - Clear edit text
+2026-05-14 14:52:33 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_07_verify_placeholder_behavior
+2026-05-14 14:52:33 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:52:33 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_08_back_to_home
+2026-05-14 14:52:33 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_08: Verify nhan Back tu man Text to Audio
+2026-05-14 14:52:33 [Test worker] INFO  Base.BasePage - Click nut Back tren Text to Audio
+2026-05-14 14:52:34 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnBack
+2026-05-14 14:52:36 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_08_back_to_home
+2026-05-14 14:52:36 [Test worker] INFO  Utils.RecordFlowHelper - Da o Home, skip
+2026-05-14 14:52:36 [Test worker] INFO  Base.BaseTest - TEARDOWN: TextToAudio01_Verify_UI_Display
+2026-05-14 14:52:37 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-14 14:52:37 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-14 14:52:38 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-14 14:52:38 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:38 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-14 14:52:38 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 8, Failed: 0, Skipped: 0
+2026-05-14 14:52:38 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:38 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145218.html
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145255.html
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145255.html
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145255.html
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145255.html
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145255.html
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:55 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145255.html
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145255.html
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145255.html
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145255.html
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145255.html
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-14 14:52:56 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:52:56 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145255.html
+2026-05-14 14:52:56 [Test worker] INFO  Base.BaseTest - SETUP: TextToAudio02_Verify_Language_Selection
+2026-05-14 14:52:56 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-14 14:52:56 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-14 14:53:02 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-14 14:53:02 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-14 14:53:02 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:53:03 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:53:03 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:53:05 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:53:05 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_02_01_open_language_dropdown
+2026-05-14 14:53:05 [Test worker] INFO  Listeners.TestListener - Description: TTS_02_01: Mo dropdown ngon ngu
+2026-05-14 14:53:05 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:53:05 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:53:07 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_02_01_open_language_dropdown
+2026-05-14 14:53:11 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 14:53:12 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:53:13 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:53:13 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:53:15 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:53:15 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_02_02_verify_languages_listed
+2026-05-14 14:53:15 [Test worker] INFO  Listeners.TestListener - Description: TTS_02_02: Verify danh sach ngon ngu hien thi
+2026-05-14 14:53:15 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:53:15 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:53:18 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_02_02_verify_languages_listed
+2026-05-14 14:53:22 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 14:53:24 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:53:24 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:53:24 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:53:26 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:53:26 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_02_03_select_english_us
+2026-05-14 14:53:26 [Test worker] INFO  Listeners.TestListener - Description: TTS_02_03: Chon ngon ngu Tieng Anh (Hoa Ky)
+2026-05-14 14:53:26 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:53:26 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:53:28 [Test worker] INFO  Base.BasePage - Chon ngon ngu chua: Anh (Hoa K
+2026-05-14 14:53:31 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_02_03_select_english_us
+2026-05-14 14:53:36 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:53:36 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:53:36 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:53:38 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:53:38 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_02_04_select_multiple_languages
+2026-05-14 14:53:38 [Test worker] INFO  Listeners.TestListener - Description: TTS_02_04: Chon nhieu ngon ngu khac nhau
+2026-05-14 14:53:38 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:53:38 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:53:40 [Test worker] INFO  Base.BasePage - Chon ngon ngu chua: Australia
+2026-05-14 14:54:01 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:54:01 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:54:02 [Test worker] INFO  Base.BasePage - Chon ngon ngu chua: Việt
+2026-05-14 14:54:03 [Test worker] ERROR Base.BasePage - Select language contains error: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [18b9be0f-2c98-4731-9de8-4f9797d7cb64, findElement {using=xpath, value=//android.widget.TextView[contains(@text, 'Việt')]}]
+Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 18b9be0f-2c98-4731-9de8-4f9797d7cb64
+2026-05-14 14:54:06 [Test worker] WARN  Base.BasePage - Cannot get language: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [18b9be0f-2c98-4731-9de8-4f9797d7cb64, findElement {using=id, value=com.bluesoftware.voicechanger:id/tvLanguage}]
+Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 18b9be0f-2c98-4731-9de8-4f9797d7cb64
+2026-05-14 14:54:06 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_02_04_select_multiple_languages
+2026-05-14 14:54:15 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 14:54:17 [Test worker] INFO  Base.BaseTest - TEARDOWN: TextToAudio02_Verify_Language_Selection
+2026-05-14 14:54:18 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-14 14:54:18 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-14 14:54:18 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-14 14:54:18 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:18 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-14 14:54:18 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 4, Failed: 0, Skipped: 0
+2026-05-14 14:54:18 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:18 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145255.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-14 14:54:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:54:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145443.html
+2026-05-14 14:54:43 [Test worker] INFO  Base.BaseTest - SETUP: TextToAudio02_Verify_Language_Selection
+2026-05-14 14:54:43 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-14 14:54:43 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-14 14:54:49 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-14 14:54:49 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-14 14:54:49 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:54:50 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:54:50 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:54:52 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:54:52 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_02_01_open_language_dropdown
+2026-05-14 14:54:52 [Test worker] INFO  Listeners.TestListener - Description: TTS_02_01: Mo dropdown ngon ngu
+2026-05-14 14:54:52 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:54:52 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:54:54 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_02_01_open_language_dropdown
+2026-05-14 14:54:59 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 14:55:01 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:55:01 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:55:01 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:55:03 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:55:03 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_02_02_verify_languages_listed
+2026-05-14 14:55:03 [Test worker] INFO  Listeners.TestListener - Description: TTS_02_02: Verify danh sach ngon ngu hien thi
+2026-05-14 14:55:03 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:55:04 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:55:07 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_02_02_verify_languages_listed
+2026-05-14 14:55:11 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 14:55:17 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 14:55:37 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:55:37 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:55:37 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:55:39 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:55:39 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_02_03_select_english_us
+2026-05-14 14:55:39 [Test worker] INFO  Listeners.TestListener - Description: TTS_02_03: Chon ngon ngu Tieng Anh (Hoa Ky)
+2026-05-14 14:55:39 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:55:39 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:55:42 [Test worker] INFO  Base.BasePage - Chon ngon ngu chua: Anh (Hoa K
+2026-05-14 14:55:46 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_02_03_select_english_us
+2026-05-14 14:55:48 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:55:48 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:55:48 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:55:50 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:55:50 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_02_04_select_multiple_languages
+2026-05-14 14:55:50 [Test worker] INFO  Listeners.TestListener - Description: TTS_02_04: Chon nhieu ngon ngu khac nhau
+2026-05-14 14:55:50 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:55:58 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:56:00 [Test worker] INFO  Base.BasePage - Chon ngon ngu chua: Australia
+2026-05-14 14:56:03 [Test worker] INFO  Base.BasePage - Click dropdown ngon ngu
+2026-05-14 14:56:03 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnLanguage
+2026-05-14 14:56:04 [Test worker] INFO  Base.BasePage - Chon ngon ngu chua: Việt
+2026-05-14 14:56:07 [Test worker] ERROR Base.BasePage - Select language contains error: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [2e0f1fad-a1a3-441f-9b9e-15db041d7907, findElement {value=//android.widget.TextView[contains(@text, 'Việt')], using=xpath}]
+Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 2e0f1fad-a1a3-441f-9b9e-15db041d7907
+2026-05-14 14:56:09 [Test worker] WARN  Base.BasePage - Cannot get language: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [2e0f1fad-a1a3-441f-9b9e-15db041d7907, findElement {value=com.bluesoftware.voicechanger:id/tvLanguage, using=id}]
+Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 2e0f1fad-a1a3-441f-9b9e-15db041d7907
+2026-05-14 14:56:09 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_02_04_select_multiple_languages
+2026-05-14 14:56:16 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 14:56:18 [Test worker] INFO  Base.BaseTest - TEARDOWN: TextToAudio02_Verify_Language_Selection
+2026-05-14 14:56:19 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-14 14:56:19 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-14 14:56:20 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-14 14:56:20 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:20 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-14 14:56:20 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 4, Failed: 0, Skipped: 0
+2026-05-14 14:56:20 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:20 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145443.html
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145643.html
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145643.html
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145643.html
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145643.html
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145643.html
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:56:43 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145643.html
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145643.html
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145643.html
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145643.html
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145643.html
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-14 14:56:44 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:56:44 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145643.html
+2026-05-14 14:56:44 [Test worker] INFO  Base.BaseTest - SETUP: TextToAudio03_Verify_Text_Input
+2026-05-14 14:56:44 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-14 14:56:44 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-14 14:56:50 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-14 14:56:50 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-14 14:56:50 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:56:51 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:56:51 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:56:53 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:56:53 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_03_01_enter_text_and_click_next
+2026-05-14 14:56:53 [Test worker] INFO  Listeners.TestListener - Description: TTS_03_01: Nhap text va nhan Next
+2026-05-14 14:56:53 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 14:56:53 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 14:56:54 [Test worker] INFO  Base.BasePage - Nhap text: Xin chao, toi la tro ly ao
+2026-05-14 14:56:56 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 14:56:57 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 14:57:03 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_03_01_enter_text_and_click_next
+2026-05-14 14:57:03 [Test worker] INFO  Utils.RecordFlowHelper - Voice Effects -> click X
+2026-05-14 14:57:04 [Test worker] INFO  Utils.RecordFlowHelper - Discard dialog -> click Discard
+2026-05-14 14:57:04 [Test worker] INFO  Base.BasePage - Click Discard tren Discard dialog
+2026-05-14 14:57:04 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnConfirm
+2026-05-14 14:57:09 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:57:09 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:57:09 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:57:11 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:57:11 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_03_02_click_next_with_empty_text
+2026-05-14 14:57:11 [Test worker] INFO  Listeners.TestListener - Description: TTS_03_02: Nhan Next khi text rong
+2026-05-14 14:57:11 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 14:57:11 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 14:57:17 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_03_02_click_next_with_empty_text
+2026-05-14 14:57:20 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:57:20 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:57:20 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:57:22 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:57:22 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_03_03_enter_vietnamese_text
+2026-05-14 14:57:22 [Test worker] INFO  Listeners.TestListener - Description: TTS_03_03: Nhap text co dau tieng Viet
+2026-05-14 14:57:22 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 14:57:22 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 14:57:22 [Test worker] INFO  Base.BasePage - Nhap text: Tieng Viet co o, u, a, a, e, o
+2026-05-14 14:57:25 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 14:57:25 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 14:57:38 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_03_03_enter_vietnamese_text
+2026-05-14 14:57:38 [Test worker] INFO  Utils.RecordFlowHelper - Voice Effects -> click X
+2026-05-14 14:57:40 [Test worker] INFO  Utils.RecordFlowHelper - Discard dialog -> click Discard
+2026-05-14 14:57:40 [Test worker] INFO  Base.BasePage - Click Discard tren Discard dialog
+2026-05-14 14:57:40 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnConfirm
+2026-05-14 14:57:48 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:57:48 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:57:49 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:57:51 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:57:51 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_03_04_enter_long_text
+2026-05-14 14:57:51 [Test worker] INFO  Listeners.TestListener - Description: TTS_03_04: Nhap text dai (>200 ky tu)
+2026-05-14 14:57:51 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 14:58:01 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 14:58:01 [Test worker] INFO  Base.BasePage - Nhap text: Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. Day la text thu nghiem rat dai. 
+2026-05-14 14:58:04 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 14:58:04 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 14:58:12 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_03_04_enter_long_text
+2026-05-14 14:58:12 [Test worker] INFO  Utils.RecordFlowHelper - Voice Effects -> click X
+2026-05-14 14:58:16 [Test worker] INFO  Utils.RecordFlowHelper - Discard dialog -> click Discard
+2026-05-14 14:58:16 [Test worker] INFO  Base.BasePage - Click Discard tren Discard dialog
+2026-05-14 14:58:16 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnConfirm
+2026-05-14 14:58:25 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:58:25 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:58:25 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:58:27 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:58:27 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_03_05_enter_text_with_numbers
+2026-05-14 14:58:27 [Test worker] INFO  Listeners.TestListener - Description: TTS_03_05: Nhap text chua so va ky tu dac biet
+2026-05-14 14:58:27 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 14:58:27 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 14:58:27 [Test worker] INFO  Base.BasePage - Nhap text: Goi 0912345678 hoac email test@email.com
+2026-05-14 14:58:31 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 14:58:31 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 14:58:59 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_03_05_enter_text_with_numbers
+2026-05-14 14:59:00 [Test worker] INFO  Utils.RecordFlowHelper - Voice Effects -> click X
+2026-05-14 14:59:01 [Test worker] INFO  Utils.RecordFlowHelper - Discard dialog -> click Discard
+2026-05-14 14:59:01 [Test worker] INFO  Base.BasePage - Click Discard tren Discard dialog
+2026-05-14 14:59:01 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnConfirm
+2026-05-14 14:59:07 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:59:07 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:59:07 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 14:59:09 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 14:59:09 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_03_06_clear_text_then_next
+2026-05-14 14:59:09 [Test worker] INFO  Listeners.TestListener - Description: TTS_03_06: Clear text + nhan Next (text rong)
+2026-05-14 14:59:09 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 14:59:09 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 14:59:10 [Test worker] INFO  Base.BasePage - Nhap text: Test text se bi xoa
+2026-05-14 14:59:11 [Test worker] INFO  Base.BasePage - Clear edit text
+2026-05-14 14:59:18 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 14:59:18 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 14:59:20 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_03_06_clear_text_then_next
+2026-05-14 14:59:23 [Test worker] INFO  Base.BaseTest - TEARDOWN: TextToAudio03_Verify_Text_Input
+2026-05-14 14:59:24 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-14 14:59:24 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-14 14:59:24 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-14 14:59:24 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:24 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-14 14:59:24 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 6, Failed: 0, Skipped: 0
+2026-05-14 14:59:24 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:24 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145643.html
+2026-05-14 14:59:50 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:50 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-14 14:59:50 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:50 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145950.html
+2026-05-14 14:59:50 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:50 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-14 14:59:50 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:59:50 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-14 14:59:51 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 14:59:51 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_145950.html
+2026-05-14 14:59:51 [Test worker] INFO  Base.BaseTest - SETUP: TextToAudio04_Verify_TTS_File_Name
+2026-05-14 14:59:51 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-14 14:59:51 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-14 14:59:57 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-14 14:59:57 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-14 14:59:57 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 14:59:58 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 14:59:58 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 15:00:00 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:00:00 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_04_01_verify_filename_on_voice_effects
+2026-05-14 15:00:00 [Test worker] INFO  Listeners.TestListener - Description: TTS_04_01: Verify ten file tren Voice Effects la 'tts_'
+2026-05-14 15:00:00 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 15:00:00 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 15:00:01 [Test worker] INFO  Base.BasePage - Nhap text: Xin chao test
+2026-05-14 15:00:03 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 15:00:04 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 15:00:10 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_04_01_verify_filename_on_voice_effects
+2026-05-14 15:00:10 [Test worker] INFO  Utils.RecordFlowHelper - Voice Effects -> click X
+2026-05-14 15:00:12 [Test worker] INFO  Utils.RecordFlowHelper - Discard dialog -> click Discard
+2026-05-14 15:00:12 [Test worker] INFO  Base.BasePage - Click Discard tren Discard dialog
+2026-05-14 15:00:12 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnConfirm
+2026-05-14 15:00:16 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 15:00:17 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 15:00:17 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 15:00:19 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:00:19 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_04_02_verify_filename_on_audio_saved
+2026-05-14 15:00:19 [Test worker] INFO  Listeners.TestListener - Description: TTS_04_02: Verify ten file tren Audio Saved la 'tts_'
+2026-05-14 15:00:19 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 15:00:42 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 15:00:42 [Test worker] INFO  Base.BasePage - Nhap text: Xin chao test
+2026-05-14 15:00:45 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 15:00:45 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 15:00:54 [Test worker] INFO  Base.BasePage - Click Save
+2026-05-14 15:00:54 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnSave
+2026-05-14 15:01:01 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_04_02_verify_filename_on_audio_saved
+2026-05-14 15:01:03 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 15:01:06 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 15:01:08 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 15:01:12 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 15:01:12 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 15:01:12 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 15:01:14 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:01:14 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_04_03_rename_preserves_extension
+2026-05-14 15:01:14 [Test worker] INFO  Listeners.TestListener - Description: TTS_04_03: Verify Rename TTS file giu extension
+2026-05-14 15:01:14 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 15:01:14 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 15:01:15 [Test worker] INFO  Base.BasePage - Nhap text: Xin chao test
+2026-05-14 15:01:17 [Test worker] INFO  Base.BasePage - Click nut Next
+2026-05-14 15:01:17 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnNext
+2026-05-14 15:01:23 [Test worker] INFO  Base.BasePage - Click Save
+2026-05-14 15:01:33 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnSave
+2026-05-14 15:01:36 [Test worker] INFO  Base.BasePage - Click 3 cham (more icon)
+2026-05-14 15:01:36 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_more
+2026-05-14 15:01:37 [Test worker] INFO  Base.BasePage - Click Rename item
+2026-05-14 15:01:37 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/itemRename
+2026-05-14 15:01:42 [Test worker] INFO  Base.BasePage - Clear text bang EditText.clear()
+2026-05-14 15:01:43 [Test worker] INFO  Base.BasePage - Nhap ten: my_tts_test_audio
+2026-05-14 15:01:44 [Test worker] INFO  Base.BasePage - Click Done
+2026-05-14 15:01:44 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnDone
+2026-05-14 15:01:57 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_04_03_rename_preserves_extension
+2026-05-14 15:01:59 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 15:02:01 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-14 15:02:16 [Test worker] INFO  Base.BaseTest - TEARDOWN: TextToAudio04_Verify_TTS_File_Name
+2026-05-14 15:02:18 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-14 15:02:18 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-14 15:02:18 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-14 15:02:18 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:02:18 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-14 15:02:18 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 3, Failed: 0, Skipped: 0
+2026-05-14 15:02:18 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:02:18 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_145950.html
+2026-05-14 15:13:36 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:36 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-14 15:13:36 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-14 15:13:37 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:13:37 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260514_151336.html
+2026-05-14 15:13:37 [Test worker] INFO  Base.BaseTest - SETUP: TextToAudio01_Verify_UI_Display
+2026-05-14 15:13:37 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-14 15:13:37 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-14 15:13:50 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-14 15:13:50 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-14 15:13:50 [Test worker] INFO  Base.BaseTest - === SETUP TEXT TO AUDIO SESSION ===
+2026-05-14 15:13:50 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to Text to Audio ===
+2026-05-14 15:13:51 [Test worker] INFO  Base.BasePage - Click Text to Speech card
+2026-05-14 15:13:51 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_text_to_speech
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_01_navigate_to_text_to_audio
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_01: Mo man Text to Audio tu Home
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_01_navigate_to_text_to_audio
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_02_verify_back_button
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_02: Verify nut Back goc tren trai
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_02_verify_back_button
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_03_verify_title
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_03: Verify title 'Text to Audio'
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_03_verify_title
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_04_verify_default_language
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_04: Verify dropdown ngon ngu mac dinh
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_04_verify_default_language
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_05_verify_label_and_edit_text
+2026-05-14 15:13:53 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_05: Verify label 'Enter text' va edit text
+2026-05-14 15:13:54 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_05_verify_label_and_edit_text
+2026-05-14 15:13:54 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:13:54 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_06_verify_next_button
+2026-05-14 15:13:54 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_06: Verify nut Next phia duoi
+2026-05-14 15:13:54 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_06_verify_next_button
+2026-05-14 15:13:54 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:13:54 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_07_verify_placeholder_behavior
+2026-05-14 15:13:54 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_07: Verify placeholder/text behavior
+2026-05-14 15:13:54 [Test worker] INFO  Base.BasePage - Click edit text de focus
+2026-05-14 15:13:54 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/edtText
+2026-05-14 15:13:54 [Test worker] INFO  Base.BasePage - Nhap text: test
+2026-05-14 15:13:56 [Test worker] INFO  Base.BasePage - Clear edit text
+2026-05-14 15:13:58 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_07_verify_placeholder_behavior
+2026-05-14 15:13:58 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-14 15:13:58 [Test worker] INFO  Listeners.TestListener - START TEST: test_TTS_01_08_back_to_home
+2026-05-14 15:13:58 [Test worker] INFO  Listeners.TestListener - Description: TTS_01_08: Verify nhan Back tu Text to Audio
+2026-05-14 15:13:58 [Test worker] INFO  Base.BasePage - Click nut Back tren Text to Audio
+2026-05-14 15:13:58 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/btnBack
+2026-05-14 15:13:59 [Test worker] INFO  Listeners.TestListener - PASSED: test_TTS_01_08_back_to_home
+2026-05-14 15:13:59 [Test worker] INFO  Utils.RecordFlowHelper - Da o Home, skip
+2026-05-14 15:13:59 [Test worker] INFO  Base.BaseTest - TEARDOWN: TextToAudio01_Verify_UI_Display
+2026-05-14 15:14:00 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-14 15:14:00 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-14 15:14:01 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-14 15:14:01 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:14:01 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-14 15:14:01 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 8, Failed: 0, Skipped: 0
+2026-05-14 15:14:01 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-14 15:14:01 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260514_151336.html

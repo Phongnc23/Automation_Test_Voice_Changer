@@ -1,0 +1,51 @@
+
+0
+<android.widget.FrameLayout>
+<android.widget.LinearLayout>
+<android.widget.FrameLayout>
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/action_bar_root">
+<android.widget.FrameLayout resource-id="android:id/content">
+<androidx.drawerlayout.widget.DrawerLayout resource-id="com.bluesoftware.voicechanger:id/main">
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment">
+<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment">
+<android.view.ViewGroup>
+<android.view.ViewGroup resource-id="com.bluesoftware.voicechanger:id/layoutHeader">
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/btnClose">
+<android.widget.TextView text="Voice Effects" resource-id="com.bluesoftware.voicechanger:id/tvTitle">
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layoutAudio">
+<android.widget.LinearLayout>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/image_wave">
+<android.widget.TextView text="tts_1778733430253.wav" resource-id="com.bluesoftware.voicechanger:id/tvAudioName">
+<android.widget.LinearLayout>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/btnPlayPause">
+<android.widget.SeekBar text="0.0" resource-id="com.bluesoftware.voicechanger:id/seekBar">
+<android.widget.TextView text="00:00 / 00:00" resource-id="com.bluesoftware.voicechanger:id/tvTime">
+<androidx.recyclerview.widget.RecyclerView resource-id="com.bluesoftware.voicechanger:id/rvEffects">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.widget.TextView text="Normal" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.widget.TextView text="Man" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.widget.TextView text="Woman" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.widget.TextView text="Child" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.widget.TextView text="Penguin" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.widget.TextView text="Monster" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.view.ViewGroup>
+<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layoutBottom">
+<android.widget.TextView text="Send Voice Message" resource-id="com.bluesoftware.voicechanger:id/btnSend">
+<android.widget.TextView text="Save" resource-id="com.bluesoftware.voicechanger:id/btnSave">
+<android.view.View resource-id="android:id/navigationBarBackground">

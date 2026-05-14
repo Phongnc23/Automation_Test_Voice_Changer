@@ -121,4 +121,5 @@ public class GestureUtils {
                         PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(Arrays.asList(swipe));
     }
+
 }

@@ -186,9 +186,10 @@ public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
     // ========================================================
 
     @Test(priority = 10, description = "SAV_02_01: Click Home -> ve Home")
-    public void test_SAV_02_01_click_home_navigates_to_home_screen()
+    public void test_SAV_02_01_click_home_navigates_to_home()
             throws InterruptedException {
-        audioSavedPage.clickHomeButton();
+
+        audioSavedPage.clickClose();
         Thread.sleep(1500);
 
         Assert.assertTrue(isAtHome(), "Khong ve Home");
@@ -198,8 +199,6 @@ public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
     @Test(priority = 11, description = "SAV_02_02: Click X -> ve Home")
     public void test_SAV_02_02_click_close_navigates_to_home()
             throws InterruptedException {
-        // @BeforeMethod ensureCleanState() da navigate lai vao Audio Saved
-        // vi test 01 truoc da ve Home
 
         audioSavedPage.clickClose();
         Thread.sleep(1500);

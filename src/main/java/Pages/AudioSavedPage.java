@@ -4,6 +4,8 @@ import Base.BasePage;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -135,12 +137,8 @@ public class AudioSavedPage extends BasePage {
     }
 
     public void clickHomeButton() {
-        logger.info("Click nut Home");
+        logger.info("Click icon home");
         click(HOME_BUTTON);
-    }
-
-    public void clickHome() {
-        clickHomeButton();
     }
 
     public void clickThreeDotMenu() {
@@ -162,15 +160,10 @@ public class AudioSavedPage extends BasePage {
         click(SHARE_BUTTON);
     }
 
+
     // ========== TOAST DETECTION ==========
 
-    /**
-     * Wait va check toast "Ringtone set successfully" hien thi.
-     * Toast hien thi ~2s, can poll de bat duoc.
-     *
-     * @param timeoutMs max wait time (ms)
-     * @return true neu phat hien toast trong thoi gian poll
-     */
+
     public boolean waitForRingtoneSuccessToast(int timeoutMs) {
         logger.info("Wait for ringtone success toast (max " + timeoutMs + "ms)");
         long startTime = System.currentTimeMillis();

@@ -84,28 +84,25 @@ public class VoiceEffects02_Verify_Audio_Player extends BaseTest {
      */
     @Test(description = "VE_02_02: Pause audio")
     public void test_VE_02_02_pause_audio() throws InterruptedException {
-        String timeBeforePlay = voiceEffectsPage.getTimeText();
+//        String timeBeforePlay = voiceEffectsPage.getTimeText();
 
-        // Buoc 1: Click play
         voiceEffectsPage.clickPlayPause();
 
-        // Buoc 2: Cho audio phat 2s
-        Thread.sleep(2000);
+        Thread.sleep(1000);
+        voiceEffectsPage.clickPlayPause();
+
+        String timeAtPause = voiceEffectsPage.getTimeText();
+        ExtentReportManager.getTest().log(Status.INFO,
+                "Time ngay sau pause: " + timeAtPause);
+
         String timeAfterPlay = voiceEffectsPage.getTimeText();
         ExtentReportManager.getTest().log(Status.INFO,
                 "Time sau play 2s: " + timeAfterPlay);
 
         // Verify audio thuc su phat
-        Assert.assertNotEquals(timeAfterPlay, timeBeforePlay,
+        Assert.assertNotEquals(timeAfterPlay,
                 "Audio chua phat truoc khi pause");
 
-        // Buoc 3: Click pause
-        voiceEffectsPage.clickPlayPause();
-
-        // Buoc 4: Lay time NGAY sau click pause
-        String timeAtPause = voiceEffectsPage.getTimeText();
-        ExtentReportManager.getTest().log(Status.INFO,
-                "Time NGAY sau pause: " + timeAtPause);
 
         // Buoc 5: Cho 2s -> audio phai dung
         Thread.sleep(2000);

@@ -1,70 +1,314 @@
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - STARTING SUITE: Home Tests
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_155641.html
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - 
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - TEST RESULTS:
-2026-05-15 15:56:41 [Test worker] INFO  RESULT -   Total:   20
-2026-05-15 15:56:41 [Test worker] INFO  RESULT -   Passed:  0
-2026-05-15 15:56:41 [Test worker] INFO  RESULT -   Failed:  0
-2026-05-15 15:56:41 [Test worker] INFO  RESULT -   Skipped: 0
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_155641.html
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_155641.html
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
-2026-05-15 15:56:41 [Test worker] INFO  Listeners.TestListener - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - STARTING SUITE: Record Tests
-2026-05-15 15:56:41 [Test worker] INFO  RESULT - ==========================================
-2026-05-15 15:56:41 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_155641.html
-2026-05-15 15:56:41 [Test worker] INFO  Base.BaseTest - SETUP: Record04_Verify_Permission
-2026-05-15 15:56:41 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
-2026-05-15 15:56:41 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
-2026-05-15 15:56:48 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
-2026-05-15 15:56:48 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
-2026-05-15 15:56:48 [Test worker] INFO  Base.BaseTest - === SETUP PERMISSION SUITE ===
-2026-05-15 15:56:49 [Test worker] INFO  Utils.RecordFlowHelper - Da o Home, skip
-2026-05-15 15:56:49 [Test worker] INFO  Utils.RecordFlowHelper - Da o Home, skip
-2026-05-15 15:56:50 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
-2026-05-15 15:56:50 [Test worker] INFO  Listeners.TestListener - START TEST: test_REC_04_02_verify_dialog_content
-2026-05-15 15:56:50 [Test worker] INFO  Listeners.TestListener - Description: REC_04_02: Verify noi dung permission dialog
-2026-05-15 15:56:50 [Test worker] INFO  RESULT - 
-2026-05-15 15:56:50 [Test worker] INFO  RESULT - ▶ Running: test_REC_04_02_verify_dialog_content
-2026-05-15 15:56:50 [Test worker] INFO  RESULT -   Description: REC_04_02: Verify noi dung permission dialog
-2026-05-15 15:56:51 [Test worker] WARN  Base.BaseTest - Revoke permission error: An unknown server-side error occurred while processing the command. Original error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [39cd45db-b6e0-4d12-b7cc-4c9a2e2564bd, executeScript {args=[{args=[revoke, com.bluesoftware.voicechanger, android.permission.RECORD_AUDIO], command=pm}], script=mobile: shell}]
-Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 39cd45db-b6e0-4d12-b7cc-4c9a2e2564bd
-2026-05-15 15:56:55 [Test worker] INFO  Base.BasePage - Click Record card
-2026-05-15 15:56:55 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_record
-2026-05-15 15:56:56 [Test worker] INFO  Base.BasePage - Click nut microphone (record/stop)
-2026-05-15 15:56:56 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/image_record
-2026-05-15 15:56:59 [Test worker] ERROR Listeners.TestListener - FAILED: test_REC_04_02_verify_dialog_content
-2026-05-15 15:56:59 [Test worker] ERROR Listeners.TestListener - Reason: Thieu 'Khong cho phep' expected [true] but found [false]
-2026-05-15 15:56:59 [Test worker] INFO  RESULT -   ✗ FAILED
-2026-05-15 15:56:59 [Test worker] INFO  RESULT -     Reason: Thieu 'Khong cho phep' expected [true] but found [false]
-2026-05-15 15:56:59 [Test worker] INFO  Listeners.TestListener - Capturing screenshot for failed test: test_REC_04_02_verify_dialog_content
-2026-05-15 15:56:59 [Test worker] INFO  Report.ExtentReportManager - Screenshot saved: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\screenshots\test_REC_04_02_verify_dialog_content_20260515_155659.png
-2026-05-15 15:56:59 [Test worker] INFO  Base.BasePage - Click 'Khong cho phep'
-2026-05-15 15:57:07 [Test worker] WARN  Base.BaseTest - Grant permission error: An unknown server-side error occurred while processing the command. Original error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [39cd45db-b6e0-4d12-b7cc-4c9a2e2564bd, executeScript {args=[{args=[grant, com.bluesoftware.voicechanger, android.permission.RECORD_AUDIO], command=pm}], script=mobile: shell}]
-Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 39cd45db-b6e0-4d12-b7cc-4c9a2e2564bd
-2026-05-15 15:57:09 [Test worker] INFO  Utils.RecordFlowHelper - O File Picker, activate app
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - START SUITE: Home Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - STARTING SUITE: Home Tests
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - END SUITE: Home Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - Total: 20, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - 
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Total:   20
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - START SUITE: Record Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - STARTING SUITE: Record Tests
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - END SUITE: Record Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - Total: 18, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - 
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Total:   18
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - START SUITE: Voice Effects Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - STARTING SUITE: Voice Effects Tests
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - END SUITE: Voice Effects Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - Total: 46, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - 
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Total:   46
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - START SUITE: Audio Saved Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - STARTING SUITE: Audio Saved Tests
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - END SUITE: Audio Saved Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - Total: 28, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - 
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Total:   28
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - START SUITE: Ringtone Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - STARTING SUITE: Ringtone Tests
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - END SUITE: Ringtone Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - Total: 2, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - 
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Total:   2
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - START SUITE: Text to Speech Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - STARTING SUITE: Text to Speech Tests
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - END SUITE: Text to Speech Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - Total: 21, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - 
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Total:   21
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - START SUITE: My Audio Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - STARTING SUITE: My Audio Tests
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - END SUITE: My Audio Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - Total: 34, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - 
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Total:   34
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - START SUITE: Import Audio Tests
+2026-05-15 17:39:33 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - STARTING SUITE: Import Audio Tests
+2026-05-15 17:39:33 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:39:33 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:39:33 [Test worker] INFO  Base.BaseTest - SETUP: ImportAudio01_Verify_File_Picker
+2026-05-15 17:39:33 [Test worker] INFO  Driver.DriverFactory - Getting driver manager for platform: Android
+2026-05-15 17:39:33 [Test worker] INFO  Driver.AndroidDriverManager - Creating Android driver for Oppo Pad Neo
+2026-05-15 17:39:39 [Test worker] INFO  Driver.AndroidDriverManager - Android driver created successfully
+2026-05-15 17:39:39 [Test worker] INFO  Base.BaseTest - Driver created, app launched fresh
+2026-05-15 17:39:40 [Test worker] INFO  Utils.RecordFlowHelper - Da o Home, skip
+2026-05-15 17:39:40 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-15 17:39:40 [Test worker] INFO  Listeners.TestListener - START TEST: test_IA_01_01_open_file_picker
+2026-05-15 17:39:40 [Test worker] INFO  Listeners.TestListener - Description: IA_01_01: Mo File Picker tu Home
+2026-05-15 17:39:40 [Test worker] INFO  RESULT - 
+2026-05-15 17:39:40 [Test worker] INFO  RESULT - ▶ Running: test_IA_01_01_open_file_picker
+2026-05-15 17:39:40 [Test worker] INFO  RESULT -   Description: IA_01_01: Mo File Picker tu Home
+2026-05-15 17:39:40 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to File Picker (Import Audio) ===
+2026-05-15 17:39:41 [Test worker] INFO  Base.BasePage - Click card Import Audio
+2026-05-15 17:39:41 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_choose_file
+2026-05-15 17:39:43 [Test worker] INFO  Base.BasePage - Current package: com.google.android.documentsui
+2026-05-15 17:39:43 [Test worker] INFO  Listeners.TestListener - PASSED: test_IA_01_01_open_file_picker
+2026-05-15 17:39:43 [Test worker] INFO  RESULT -   ✓ PASSED
+2026-05-15 17:39:48 [Test worker] INFO  Utils.RecordFlowHelper - O File Picker, activate app
+2026-05-15 17:39:50 [Test worker] INFO  Utils.RecordFlowHelper - Khong o Voice Changer, activate
+2026-05-15 17:39:52 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:39:54 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:39:56 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:39:58 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:40:00 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-15 17:40:00 [Test worker] INFO  Listeners.TestListener - START TEST: test_IA_01_02_file_picker_is_system_app
+2026-05-15 17:40:00 [Test worker] INFO  Listeners.TestListener - Description: IA_01_02: File Picker la system app
+2026-05-15 17:40:00 [Test worker] INFO  RESULT - 
+2026-05-15 17:40:00 [Test worker] INFO  RESULT - ▶ Running: test_IA_01_02_file_picker_is_system_app
+2026-05-15 17:40:00 [Test worker] INFO  RESULT -   Description: IA_01_02: File Picker la system app
+2026-05-15 17:40:00 [Test worker] INFO  Base.BasePage - Current package: com.bluesoftware.voicechanger
+2026-05-15 17:40:00 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to File Picker (Import Audio) ===
+2026-05-15 17:40:00 [Test worker] INFO  Base.BasePage - Click card Import Audio
+2026-05-15 17:40:00 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_choose_file
+2026-05-15 17:40:03 [Test worker] INFO  Listeners.TestListener - PASSED: test_IA_01_02_file_picker_is_system_app
+2026-05-15 17:40:03 [Test worker] INFO  RESULT -   ✓ PASSED
+2026-05-15 17:40:16 [Test worker] INFO  Utils.RecordFlowHelper - O File Picker, activate app
+2026-05-15 17:40:18 [Test worker] INFO  Utils.RecordFlowHelper - Khong o Voice Changer, activate
+2026-05-15 17:40:25 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:40:27 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:40:29 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:40:34 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-15 17:40:34 [Test worker] INFO  Listeners.TestListener - START TEST: test_IA_01_03_back_from_file_picker
+2026-05-15 17:40:34 [Test worker] INFO  Listeners.TestListener - Description: IA_01_03: Back tu File Picker ve Voice Changer
+2026-05-15 17:40:34 [Test worker] INFO  RESULT - 
+2026-05-15 17:40:34 [Test worker] INFO  RESULT - ▶ Running: test_IA_01_03_back_from_file_picker
+2026-05-15 17:40:34 [Test worker] INFO  RESULT -   Description: IA_01_03: Back tu File Picker ve Voice Changer
+2026-05-15 17:40:34 [Test worker] INFO  Base.BasePage - Current package: com.bluesoftware.voicechanger
+2026-05-15 17:40:34 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to File Picker (Import Audio) ===
+2026-05-15 17:40:34 [Test worker] INFO  Base.BasePage - Click card Import Audio
+2026-05-15 17:40:34 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_choose_file
+2026-05-15 17:40:37 [Test worker] INFO  Base.BasePage - Current package: com.google.android.documentsui
+2026-05-15 17:40:37 [Test worker] INFO  Base.BasePage - Press BACK toi da 3 lan de ve Voice Changer
+2026-05-15 17:40:51 [Test worker] INFO  Base.BasePage - Sau 3 lan BACK, current package: com.bluesoftware.voicechanger
+2026-05-15 17:40:52 [Test worker] INFO  Listeners.TestListener - PASSED: test_IA_01_03_back_from_file_picker
+2026-05-15 17:40:52 [Test worker] INFO  RESULT -   ✓ PASSED
+2026-05-15 17:40:55 [Test worker] INFO  Listeners.TestListener - ------------------------------------------
+2026-05-15 17:40:55 [Test worker] INFO  Listeners.TestListener - START TEST: test_IA_01_04_reopen_file_picker_after_back
+2026-05-15 17:40:55 [Test worker] INFO  Listeners.TestListener - Description: IA_01_04: Re-open File Picker sau khi back
+2026-05-15 17:40:55 [Test worker] INFO  RESULT - 
+2026-05-15 17:40:55 [Test worker] INFO  RESULT - ▶ Running: test_IA_01_04_reopen_file_picker_after_back
+2026-05-15 17:40:55 [Test worker] INFO  RESULT -   Description: IA_01_04: Re-open File Picker sau khi back
+2026-05-15 17:40:55 [Test worker] INFO  Base.BasePage - Current package: com.bluesoftware.voicechanger
+2026-05-15 17:40:55 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to File Picker (Import Audio) ===
+2026-05-15 17:40:55 [Test worker] INFO  Base.BasePage - Click card Import Audio
+2026-05-15 17:40:55 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_choose_file
+2026-05-15 17:40:58 [Test worker] INFO  Base.BasePage - Current package: com.google.android.documentsui
+2026-05-15 17:40:58 [Test worker] INFO  Base.BasePage - Press BACK toi da 3 lan de ve Voice Changer
+2026-05-15 17:41:23 [Test worker] INFO  Base.BasePage - Sau 3 lan BACK, current package: com.bluesoftware.voicechanger
+2026-05-15 17:41:23 [Test worker] INFO  Utils.RecordFlowHelper - === Navigate to File Picker (Import Audio) ===
+2026-05-15 17:41:31 [Test worker] INFO  Base.BasePage - Click card Import Audio
+2026-05-15 17:41:32 [Test worker] INFO  Base.BasePage - Click element: By.id: com.bluesoftware.voicechanger:id/layout_choose_file
+2026-05-15 17:41:34 [Test worker] INFO  Base.BasePage - Current package: com.google.android.documentsui
+2026-05-15 17:41:34 [Test worker] INFO  Listeners.TestListener - PASSED: test_IA_01_04_reopen_file_picker_after_back
+2026-05-15 17:41:34 [Test worker] INFO  RESULT -   ✓ PASSED
+2026-05-15 17:41:37 [Test worker] INFO  Utils.RecordFlowHelper - O File Picker, activate app
+2026-05-15 17:41:39 [Test worker] INFO  Utils.RecordFlowHelper - Khong o Voice Changer, activate
+2026-05-15 17:41:56 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:41:58 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:42:00 [Test worker] INFO  Utils.GestureUtils - Swipe back from left edge
+2026-05-15 17:42:11 [Test worker] INFO  Base.BaseTest - TEARDOWN: ImportAudio01_Verify_File_Picker
+2026-05-15 17:42:12 [Test worker] INFO  Base.BaseTest - App terminated
+2026-05-15 17:42:12 [Test worker] INFO  Driver.AndroidDriverManager - Quitting Android driver
+2026-05-15 17:42:12 [Test worker] INFO  Base.BaseTest - Driver quit completed
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - END SUITE: Import Audio Tests
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - Total: 12, Passed: 4, Failed: 0, Skipped: 0
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - 
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Total:   12
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Passed:  4
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - START SUITE: Drawer Menu Tests
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - STARTING SUITE: Drawer Menu Tests
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - END SUITE: Drawer Menu Tests
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - Total: 16, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - 
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Total:   16
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - START SUITE: Settings Tests
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - STARTING SUITE: Settings Tests
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Report.ExtentReportManager - ExtentReport initialized: test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - END SUITE: Settings Tests
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - Total: 13, Passed: 0, Failed: 0, Skipped: 0
+2026-05-15 17:42:12 [Test worker] INFO  Listeners.TestListener - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - 
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - TEST RESULTS:
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Total:   13
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Passed:  0
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Failed:  0
+2026-05-15 17:42:12 [Test worker] INFO  RESULT -   Skipped: 0
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================
+2026-05-15 17:42:12 [Test worker] INFO  Report.ExtentReportManager - Report saved at: D:\Phong\AutomationTest\Automation_Test_Claude_AI\test-output\ExtentReport_20260515_173933.html
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - Report:       test-output/ExtentReport_20260515_173933.html
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - Log file:     test-output/automation.log
+2026-05-15 17:42:12 [Test worker] INFO  RESULT - ==========================================

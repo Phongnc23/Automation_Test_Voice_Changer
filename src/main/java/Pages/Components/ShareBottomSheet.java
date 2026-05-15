@@ -47,7 +47,17 @@ public class ShareBottomSheet extends BasePage {
         try {
             return driver.findElement(PREVIEW_FILENAME).getText();
         } catch (Exception e) {
+            logger.warn("Cannot get preview file name: " + e.getMessage());
             return null;
+        }
+    }
+
+    public int getAppsCount() {
+        try {
+            return driver.findElements(RESOLVER_ITEMS).size();
+        } catch (Exception e) {
+            logger.warn("Cannot count apps: " + e.getMessage());
+            return 0;
         }
     }
 

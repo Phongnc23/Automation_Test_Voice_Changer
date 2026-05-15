@@ -150,11 +150,15 @@ public class VoiceEffectsPage extends BasePage {
         return driver.findElements(TIME_TEXT).size() > 0;
     }
 
-    /**
-     * Click Play/Pause button.
-     * Dung UiAutomator selector de tim element TUOI MOI moi lan click,
-     * tranh stale element exception khi icon doi tu Play sang Pause.
-     */
+    public String getCurrentTime() {
+        try {
+            return driver.findElement(TIME_TEXT).getText();
+        } catch (Exception e) {
+            logger.warn("Get current time error: " + e.getMessage());
+            return null;
+        }
+    }
+
     public void clickPlayPause() {
         logger.info("Click Play/Pause button");
 

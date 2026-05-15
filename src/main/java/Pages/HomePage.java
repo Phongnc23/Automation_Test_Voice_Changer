@@ -3,6 +3,7 @@ package Pages;
 import Base.BasePage;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+import Pages.DrawerMenuPage;
 
 public class HomePage extends BasePage {
 
@@ -11,6 +12,9 @@ public class HomePage extends BasePage {
     private final By hamburgerMenuIcon = By.id("com.bluesoftware.voicechanger:id/image_menu");
     private final By welcomeText = By.id("com.bluesoftware.voicechanger:id/text_welcome");
     private final By voiceChangerTitle = By.id("com.bluesoftware.voicechanger:id/text_app_name");
+    private static final By HAMBURGER_BUTTON = By.id("com.bluesoftware.voicechanger:id/image_menu");
+    private static final By DRAWER_VIEW = By.id("com.bluesoftware.voicechanger:id/drawer_view");
+    private static final By DRAWER_SETTINGS = By.id("com.bluesoftware.voicechanger:id/layout_setting");
 
     // Record card
     private final By recordCard = By.id("com.bluesoftware.voicechanger:id/layout_record");
@@ -23,14 +27,14 @@ public class HomePage extends BasePage {
     private final By textToSpeechLabel = By.xpath("//android.widget.TextView[@text='Text to speech']");
     private static final By LAYOUT_TEXT_TO_SPEECH = By.id("com.bluesoftware.voicechanger:id/layout_text_to_speech");
     // My Audio card
-    private final By myAudioCard = By.id("com.bluesoftware.voicechanger:id/layout_my_audio");
     private final By myAudioLabel = By.xpath("//android.widget.TextView[@text='My audio']");
+    private static final By LAYOUT_MY_AUDIO = By.id("com.bluesoftware.voicechanger:id/layout_my_audio");
 
     // Import Audio card
-    private final By importAudioCard = By.id("com.bluesoftware.voicechanger:id/layout_choose_file");
     private final By importAudioIcon = By.id("com.bluesoftware.voicechanger:id/image_file");
     private final By importAudioText = By.id("com.bluesoftware.voicechanger:id/text_folder");
     private final By importAudioSubtitle = By.xpath("//android.widget.TextView[@text='Transform your voice with effects']");
+    private static final By LAYOUT_CHOOSE_FILE = By.id("com.bluesoftware.voicechanger:id/layout_choose_file");
 
     public HomePage(AppiumDriver driver) {
         super(driver);
@@ -73,26 +77,21 @@ public class HomePage extends BasePage {
     }
 
     // Text to Speech
-    public boolean isTextToSpeechCardDisplayed() {
-        return driver.findElements(LAYOUT_TEXT_TO_SPEECH).size() > 0;
-    }
+    public boolean isTextToSpeechCardDisplayed() {return driver.findElements(LAYOUT_TEXT_TO_SPEECH).size() > 0;}
 
     public boolean isTextToSpeechLabelDisplayed() {
         return isDisplayed(textToSpeechLabel);
     }
 
     // My Audio
-    public boolean isMyAudioCardDisplayed() {
-        return isDisplayed(myAudioCard);
-    }
-
+    public boolean isMyAudioCardDisplayed() {return driver.findElements(LAYOUT_MY_AUDIO).size() > 0;}
     public boolean isMyAudioLabelDisplayed() {
         return isDisplayed(myAudioLabel);
     }
 
     // Import Audio
     public boolean isImportAudioCardDisplayed() {
-        return isDisplayed(importAudioCard);
+        return driver.findElements(LAYOUT_CHOOSE_FILE).size() > 0;
     }
 
     public boolean isImportAudioIconDisplayed() {
@@ -148,6 +147,36 @@ public class HomePage extends BasePage {
         click(hamburgerMenuIcon);
     }
 
+    public void clickHamburger() {
+        logger.info("Click icon hamburger mo drawer");
+        click(HAMBURGER_BUTTON);
+    }
+
+    public boolean isDrawerDisplayed() {
+        try {
+            return driver.findElements(DRAWER_SETTINGS).size() > 0;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickDrawerSettings() {
+        logger.info("Click 'Settings' trong drawer");
+        click(DRAWER_SETTINGS);
+    }
+
+    public void openSettingsViaDrawer() {
+        logger.info("Mo drawer + click Settings");
+        clickHamburger();
+        try {
+            Thread.sleep(1000);  // Cho drawer slide
+        } catch (InterruptedException e) {
+            // skip
+        }
+        clickDrawerSettings();
+    }
+
+
     public void clickRecord() {
         logger.info("Click Record card");
         click(recordCard);
@@ -159,13 +188,24 @@ public class HomePage extends BasePage {
     }
 
     public void clickMyAudio() {
-        logger.info("Click My Audio card");
-        click(myAudioCard);
+        logger.info("Click card My Audio");
+        click(LAYOUT_MY_AUDIO);
     }
+
 
     public void clickImportAudio() {
-        logger.info("Click Import Audio card");
-        click(importAudioCard);
+        logger.info("Click card Import Audio");
+        click(LAYOUT_CHOOSE_FILE);
     }
 
+    public DrawerMenuPage openDrawer() {
+        logger.info("Mo drawer menu");
+        clickHamburger();
+        try {
+            Thread.sleep(1500);  // Cho drawer slide
+        } catch (InterruptedException e) {
+            // skip
+        }
+        return new DrawerMenuPage(driver);
+    }
 }

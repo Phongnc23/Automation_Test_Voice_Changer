@@ -59,6 +59,15 @@ public class RenamePopup extends BasePage {
         }
     }
 
+    public String getCurrentName() {
+        try {
+            return driver.findElement(EDIT_NAME).getText();
+        } catch (Exception e) {
+            logger.warn("Cannot get current name: " + e.getMessage());
+            return null;
+        }
+    }
+
     /**
      * Xoa toan bo text trong textbox.
      * Uu tien click icon X, fallback dung EditText.clear().

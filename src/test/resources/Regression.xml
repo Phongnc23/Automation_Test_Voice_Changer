@@ -57,4 +57,45 @@
         </classes>
     </test>
 
+    <test name="My Audio Tests">
+        <classes>
+            <class name="testcases.MyAudio.MyAudio01_Verify_UI_Display"/>
+            <class name="testcases.MyAudio.MyAudio02_Verify_Search"/>
+            <class name="testcases.MyAudio.MyAudio03_Verify_Edit_Menu"/>
+            <class name="testcases.MyAudio.MyAudio04_Verify_Rename"/>
+            <class name="testcases.MyAudio.MyAudio05_Verify_Delete"/>
+            <class name="testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow"/>
+            <class name="testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu"/>
+            <class name="testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu"/>
+        </classes>
+    </test>
+
+    <test name="Import Audio Tests">
+        <classes>
+            <class name="testcases.ImportAudio.ImportAudio01_Verify_File_Picker"/>
+            <class name="testcases.ImportAudio.ImportAudio02_Verify_Select_File"/>
+            <class name="testcases.ImportAudio.ImportAudio03_Verify_File_Name"/>
+        </classes>
+    </test>
+
+    <test name="Drawer Menu Tests">
+        <classes>
+            <class name="testcases.DrawerMenu.DrawerMenu01_Verify_UI_Display"/>
+            <class name="testcases.DrawerMenu.DrawerMenu02_Verify_Privacy_Policy"/>
+            <class name="testcases.DrawerMenu.DrawerMenu03_Verify_Rate_Us"/>
+            <class name="testcases.DrawerMenu.DrawerMenu04_Verify_Share_App"/>
+            <class name="testcases.DrawerMenu.DrawerMenu05_Verify_Feedback"/>
+            <class name="testcases.DrawerMenu.DrawerMenu06_Verify_Version_Exit"/>
+        </classes>
+    </test>
+
+    <test name="Settings Tests" preserve-order="true">
+        <classes>
+            <class name="testcases.Setting.Setting01_Verify_UI_Display"/>
+            <class name="testcases.Setting.Setting02_Verify_Output_Path"/>
+            <class name="testcases.Setting.Setting03_Verify_Language"/>
+            <class name="testcases.Setting.Setting04_Verify_Version"/>
+        </classes>
+    </test>
+
 </suite>

@@ -1,0 +1,240 @@
+> Task :clean
+
+> Task :compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :processResources
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources
+> Task :testClasses
+
+> Task :test
+
+Gradle Test Executor 3 STANDARD_ERROR
+    SLF4J(W): Class path contains multiple SLF4J providers.
+    SLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@c0c2f8d]
+    SLF4J(W): Found provider [org.apache.logging.slf4j.SLF4JServiceProvider@305b7c14]
+    SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+    SLF4J(I): Actual provider is of type [org.slf4j.simple.SimpleServiceProvider@c0c2f8d]
+
+Voice Changer Regression Suite STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Enable Do Not Disturb (alarms-only)
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd notification set_dnd alarms
+
+Voice Changer Regression Suite > Home Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Home Tests
+    ==========================================
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully STANDARD_OUT
+
+    ▶ Running: test_app_launched_successfully
+      Description: Kiem tra app Voice Changer mo thanh cong
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_get_current_activity STANDARD_OUT
+
+    ▶ Running: test_get_current_activity
+      Description: Kiem tra activity hien tai cua app
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_get_current_activity PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout STANDARD_OUT
+
+    ▶ Running: TC_01_verify_home_layout
+      Description: TC_01: Kiem tra hien thi man hinh Home dung bo cuc
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title STANDARD_OUT
+
+    ▶ Running: TC_02_verify_header_and_title
+      Description: TC_02: Kiem tra hien thi Header va tieu de ung dung
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card STANDARD_OUT
+
+    ▶ Running: TC_03_verify_record_card
+      Description: TC_03: Kiem tra hien thi card Record
+    Element not found: By.xpath: //android.widget.TextView[@text='Tap to record and transform your voice']
+    RETRY 1/1 - TC_03_verify_record_card (reason: Record subtitle khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_03_verify_record_card
+    SKIPPED: TC_03_verify_record_card
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card STANDARD_OUT
+
+    ▶ Running: TC_03_verify_record_card
+      Description: TC_03: Kiem tra hien thi card Record
+    Element not found: By.xpath: //android.widget.TextView[@text='Tap to record and transform your voice']
+    FAILED: TC_03_verify_record_card
+    Reason: Record subtitle khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: Record subtitle khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:63
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_04_verify_text_to_speech_card STANDARD_OUT
+
+    ▶ Running: TC_04_verify_text_to_speech_card
+      Description: TC_04: Kiem tra hien thi card Text to Speech
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_04_verify_text_to_speech_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_05_verify_my_audio_card STANDARD_OUT
+
+    ▶ Running: TC_05_verify_my_audio_card
+      Description: TC_05: Kiem tra hien thi card My Audio
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_05_verify_my_audio_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_06_verify_import_audio_card STANDARD_OUT
+
+    ▶ Running: TC_06_verify_import_audio_card
+      Description: TC_06: Kiem tra hien thi card Import Audio
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_06_verify_import_audio_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_07_verify_two_cards_same_row STANDARD_OUT
+
+    ▶ Running: TC_07_verify_two_cards_same_row
+      Description: TC_07: Kiem tra layout 2 card ngang hang (Text to Speech & My Audio)
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_07_verify_two_cards_same_row PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_10_verify_watermark_icons STANDARD_OUT
+
+    ▶ Running: TC_10_verify_watermark_icons
+      Description: TC_10: Kiem tra icon watermark tren cac card co hien thi
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_10_verify_watermark_icons PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_20_verify_all_texts STANDARD_OUT
+
+    ▶ Running: TC_20_verify_all_texts
+      Description: TC_20: Kiem tra hien thi chinh xac text tren man hinh Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_20_verify_all_texts PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_11_click_hamburger_menu STANDARD_OUT
+
+    ▶ Running: TC_11_click_hamburger_menu
+      Description: TC_11: Kiem tra nhan icon Hamburger Menu mo va dong drawer
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_11_click_hamburger_menu PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_12_click_record_card STANDARD_OUT
+
+    ▶ Running: TC_12_click_record_card
+      Description: TC_12: Click Record card, navigate, back ve Home
+    1 lan swipe chua du, thu swipe them
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_12_click_record_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_13_click_text_to_speech_card STANDARD_OUT
+
+    ▶ Running: TC_13_click_text_to_speech_card
+      Description: TC_13: Click Text to Speech card, navigate, back ve Home
+    1 lan swipe chua du, thu swipe them
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_13_click_text_to_speech_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_14_click_my_audio_card STANDARD_OUT
+
+    ▶ Running: TC_14_click_my_audio_card
+      Description: TC_14: Click My Audio card, navigate, back ve Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_14_click_my_audio_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_15_click_import_audio_card STANDARD_OUT
+
+    ▶ Running: TC_15_click_import_audio_card
+      Description: TC_15: Click Import Audio mo File Picker, back ve Home (3 lan)
+    3 lan swipe chua du, thu swipe them
+    Swipe khong work, force relaunch
+    RETRY 1/1 - TC_15_click_import_audio_card (reason: Khong ve Home sau 3 lan swipe expected [true] but found [false])
+      ↻ RETRY 1/1: TC_15_click_import_audio_card
+    SKIPPED: TC_15_click_import_audio_card
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_15_click_import_audio_card SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_15_click_import_audio_card STANDARD_OUT
+
+    ▶ Running: TC_15_click_import_audio_card
+      Description: TC_15: Click Import Audio mo File Picker, back ve Home (3 lan)

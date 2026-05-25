@@ -199,12 +199,18 @@ public class VoiceEffectsPage extends BasePage {
 
     /**
      * Lay locator cua effect theo ten.
+     *
+     * Dung UiAutomator selector thay vi XPath vi:
+     *  1. UiAutomator native, nhanh hon XPath ~3-5x tren RecyclerView lon
+     *  2. KHONG bi loi "Cannot set AccessibilityNodeInfo's field 'mSealed'"
+     *     tren Android 14 + UiAutomator2 (XPath query reflect lap field mSealed
+     *     ma Android 14 chan reflection).
      */
     public By getEffectLocator(String effectName) {
-        return By.xpath(
-                "//android.widget.TextView[@resource-id=" +
-                        "'com.bluesoftware.voicechanger:id/tv_effect_name' " +
-                        "and @text='" + effectName + "']");
+        return AppiumBy.androidUIAutomator(
+                "new UiSelector()"
+                        + ".resourceId(\"com.bluesoftware.voicechanger:id/tv_effect_name\")"
+                        + ".text(\"" + effectName + "\")");
     }
 
     /**

@@ -1,64 +1,34 @@
 package testcases.DrawerMenu;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.DrawerMenuPage;
 import Report.ExtentReportManager;
 import Utils.GestureUtils;
 import Utils.RecordFlowHelper;
 
+import java.time.Duration;
+
 /**
  * DM_02: Verify Privacy Policy mo browser + back (1 test).
  */
-public class DrawerMenu02_Verify_Privacy_Policy extends BaseTest {  
+public class DrawerMenu02_Verify_Privacy_Policy extends BaseSharedSessionTest {
 
     private DrawerMenuPage drawerMenu;
 
-    @BeforeMethod
-    public void navigateToScreen() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-        } catch (Exception e) {
-            logger.error("Navigate error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        RecordFlowHelper.smartResetToHome(driver);
+        drawerMenu = RecordFlowHelper.openDrawer(driver);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        try {
-            // Swipe back ra khoi browser (toi da 5 lan)
-            for (int i = 1; i <= 5; i++) {
-                String pkg = ((AndroidDriver) driver).getCurrentPackage();
-                if ("com.bluesoftware.voicechanger".equals(pkg)) break;
-                GestureUtils.swipeFromLeftEdgeToBack(driver);
-                Thread.sleep(1000);
-            }
-
-            // Fallback activate neu swipe khong work
-            String pkgFinal = ((AndroidDriver) driver).getCurrentPackage();
-            if (!"com.bluesoftware.voicechanger".equals(pkgFinal)) {
-                ((AndroidDriver) driver).activateApp(
-                        "com.bluesoftware.voicechanger");
-                Thread.sleep(1500);
-            }
-
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            try {
-                RecordFlowHelper.forceResetToHome(driver);
-            } catch (Exception ex) {
-                logger.error("Force reset failed: " + ex.getMessage());
-            }
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isDrawerOpen(driver);
     }
 
     @Test(description = "DM_02_01: Click Privacy Policy mo browser va back ve Voice Changer")
@@ -73,7 +43,14 @@ public class DrawerMenu02_Verify_Privacy_Policy extends BaseTest {
                 "Package truoc click: " + pkgBefore);
 
         drawerMenu.clickPrivacy();
-        Thread.sleep(4000);  // Cho browser mo
+        // M2: Wait package doi (browser mo) thay sleep(4000) co dinh, max 5s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .until(d -> !"com.bluesoftware.voicechanger".equals(
+                            ((AndroidDriver) d).getCurrentPackage()));
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi voi context day du
+        }
 
         // === Buoc 2: Verify mo external app ===
         String pkgBrowser = drawerMenu.getCurrentPackage();

@@ -1,0 +1,464 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+Gradle Test Executor 2 STANDARD_ERROR
+    SLF4J(W): Class path contains multiple SLF4J providers.
+    SLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@63475ace]
+    SLF4J(W): Found provider [org.apache.logging.slf4j.SLF4JServiceProvider@4988d8b8]
+    SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+    SLF4J(I): Actual provider is of type [org.slf4j.simple.SimpleServiceProvider@63475ace]
+
+Voice Changer Regression Suite STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Enable Do Not Disturb (alarms-only)
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd notification set_dnd alarms
+
+Voice Changer Regression Suite > Home Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Home Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   20
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Record Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Record Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   18
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Voice Effects Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Voice Effects Tests
+    ==========================================
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_01_normal STANDARD_OUT
+
+    ▶ Running: test_VE_03_01_normal
+      Description: VE_03_01: Normal
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_01_normal PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_02_man STANDARD_OUT
+
+    ▶ Running: test_VE_03_02_man
+      Description: VE_03_02: Man
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_02_man PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_03_woman STANDARD_OUT
+
+    ▶ Running: test_VE_03_03_woman
+      Description: VE_03_03: Woman
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_03_woman PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_04_child STANDARD_OUT
+
+    ▶ Running: test_VE_03_04_child
+      Description: VE_03_04: Child
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_04_child PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_05_penguin STANDARD_OUT
+
+    ▶ Running: test_VE_03_05_penguin
+      Description: VE_03_05: Penguin
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_05_penguin PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_06_monster STANDARD_OUT
+
+    ▶ Running: test_VE_03_06_monster
+      Description: VE_03_06: Monster
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_06_monster PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_07_fast STANDARD_OUT
+
+    ▶ Running: test_VE_03_07_fast
+      Description: VE_03_07: Fast
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_07_fast PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_08_slow STANDARD_OUT
+
+    ▶ Running: test_VE_03_08_slow
+      Description: VE_03_08: Slow
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_08_slow PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_09_alien STANDARD_OUT
+
+    ▶ Running: test_VE_03_09_alien
+      Description: VE_03_09: Alien
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_09_alien PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_10_zombie STANDARD_OUT
+
+    ▶ Running: test_VE_03_10_zombie
+      Description: VE_03_10: Zombie
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_10_zombie PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_11_drunk STANDARD_OUT
+
+    ▶ Running: test_VE_03_11_drunk
+      Description: VE_03_11: Drunk
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_11_drunk PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_12_helium STANDARD_OUT
+
+    ▶ Running: test_VE_03_12_helium
+      Description: VE_03_12: Helium
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_12_helium PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_13_death STANDARD_OUT
+
+    ▶ Running: test_VE_03_13_death
+      Description: VE_03_13: Death
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_13_death PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_14_robot STANDARD_OUT
+
+    ▶ Running: test_VE_03_14_robot
+      Description: VE_03_14: Robot
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_14_robot PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_15_baby STANDARD_OUT
+
+    ▶ Running: test_VE_03_15_baby
+      Description: VE_03_15: Baby
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_15_baby PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_16_echo STANDARD_OUT
+
+    ▶ Running: test_VE_03_16_echo
+      Description: VE_03_16: Echo
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_16_echo PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_17_underwater STANDARD_OUT
+
+    ▶ Running: test_VE_03_17_underwater
+      Description: VE_03_17: Underwater
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_17_underwater PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_18_telephone STANDARD_OUT
+
+    ▶ Running: test_VE_03_18_telephone
+      Description: VE_03_18: Telephone
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_18_telephone PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_19_parody STANDARD_OUT
+
+    ▶ Running: test_VE_03_19_parody
+      Description: VE_03_19: Parody
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_19_parody PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_20_bass STANDARD_OUT
+
+    ▶ Running: test_VE_03_20_bass
+      Description: VE_03_20: Bass
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_20_bass PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_21_tenor STANDARD_OUT
+
+    ▶ Running: test_VE_03_21_tenor
+      Description: VE_03_21: Tenor
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_21_tenor PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_22_bee STANDARD_OUT
+
+    ▶ Running: test_VE_03_22_bee
+      Description: VE_03_22: Bee
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_22_bee PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_23_fade STANDARD_OUT
+
+    ▶ Running: test_VE_03_23_fade
+      Description: VE_03_23: Fade
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_23_fade PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_24_only_one_selected STANDARD_OUT
+
+    ▶ Running: test_VE_03_24_only_one_selected
+      Description: VE_03_24: Chi 1 effect duoc chon cung luc
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_24_only_one_selected PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_25_switch_back_to_normal STANDARD_OUT
+
+    ▶ Running: test_VE_03_25_switch_back_to_normal
+      Description: VE_03_25: Switch ve Normal
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_25_switch_back_to_normal PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests STANDARD_OUT
+
+    ==========================================
+    TEST RESULTS:
+      Total:   46
+      Passed:  25
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Audio Saved Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Audio Saved Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   28
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Ringtone Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Ringtone Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   2
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Text to Speech Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Text to Speech Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   21
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > My Audio Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: My Audio Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   34
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Import Audio Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Import Audio Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   12
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Drawer Menu Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Drawer Menu Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   16
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Settings Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Settings Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   13
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_112717.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Disable Do Not Disturb
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd notification set_dnd off
+
+BUILD SUCCESSFUL in 3m 39s
+5 actionable tasks: 1 executed, 4 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.0.0/userguide/configuration_cache_enabling.html

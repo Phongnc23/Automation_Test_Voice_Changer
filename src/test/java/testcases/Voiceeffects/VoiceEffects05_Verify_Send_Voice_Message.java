@@ -2,6 +2,7 @@ package testcases.Voiceeffects;
 
 import Base.BaseTest;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -11,6 +12,7 @@ import Pages.Components.ShareBottomSheet;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
 
+import java.time.Duration;
 import java.util.List;
 
 public class VoiceEffects05_Verify_Send_Voice_Message extends BaseTest {
@@ -45,14 +47,28 @@ public class VoiceEffects05_Verify_Send_Voice_Message extends BaseTest {
     private void ensureShareSheetOpen() throws InterruptedException {
         if (!shareSheet.isDisplayed()) {
             voiceEffectsPage.clickSendVoiceMessage();
-            Thread.sleep(3000);
+            // L1: Smart wait thay sleep(3000) co dinh
+            try {
+                new WebDriverWait(driver, Duration.ofSeconds(4))
+                        .ignoring(Exception.class)
+                        .until(d -> shareSheet.isDisplayed());
+            } catch (Exception e) {
+                // se fail o assertion phia duoi neu sheet khong mo
+            }
         }
     }
 
     @Test(description = "VE_06_01: Mo bottom sheet chia se", priority = 1)
     public void test_VE_06_01_open_share_bottom_sheet() throws InterruptedException {
         voiceEffectsPage.clickSendVoiceMessage();
-        Thread.sleep(3000);
+        // M2: Wait share sheet thay sleep(3000) co dinh, max 4s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(4))
+                    .ignoring(Exception.class)
+                    .until(d -> shareSheet.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(shareSheet.isDisplayed(),
                 "Bottom sheet khong mo");
@@ -83,7 +99,14 @@ public class VoiceEffects05_Verify_Send_Voice_Message extends BaseTest {
         ensureShareSheetOpen();
 
         shareSheet.clickCancel();
-        Thread.sleep(2000);
+        // L1: Smart wait thay sleep(2000) co dinh
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> voiceEffectsPage.isDisplayed());
+        } catch (Exception e) {
+            // se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                 "Khong quay lai Voice Effects sau Cancel");

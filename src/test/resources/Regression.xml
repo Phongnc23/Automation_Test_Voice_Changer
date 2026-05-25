@@ -3,7 +3,9 @@
 <suite name="Voice Changer Regression Suite" verbose="1">
 
     <listeners>
+        <listener class-name="Listeners.SuiteListener"/>
         <listener class-name="Listeners.TestListener"/>
+        <listener class-name="Listeners.RetryListener"/>
     </listeners>
 
     <test name="Home Tests">

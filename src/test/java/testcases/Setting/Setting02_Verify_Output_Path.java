@@ -1,11 +1,8 @@
 package testcases.Setting;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.SettingsPage;
 import Report.ExtentReportManager;
@@ -14,40 +11,18 @@ import Utils.RecordFlowHelper;
 /**
  * ST_02: Verify Output Path (2 tests).
  */
-public class Setting02_Verify_Output_Path extends BaseTest {
+public class Setting02_Verify_Output_Path extends BaseSharedSessionTest {
 
     private SettingsPage settingsPage;
 
-    @BeforeClass(dependsOnMethods = "setUp")
-    public void setupSession() {
-        logger.info("=== SETUP OUTPUT PATH SUITE ===");
-        try {
-            settingsPage = RecordFlowHelper.navigateToSettings(driver);
-        } catch (Exception e) {
-            logger.error("Setup error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            settingsPage = RecordFlowHelper.navigateToSettings(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        settingsPage = RecordFlowHelper.navigateToSettings(driver);
     }
 
-    @BeforeMethod
-    public void ensureCleanState() {
-        if (!settingsPage.isDisplayed()) {
-            try {
-                settingsPage = RecordFlowHelper.navigateToSettings(driver);
-            } catch (Exception e) {
-                logger.error("Re-navigate error: " + e.getMessage());
-            }
-        }
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void cleanupAfterClass() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            logger.error("Cleanup error: " + e.getMessage());
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isAtSettings(driver);
     }
 
     @Test(priority = 1, description = "ST_02_01: Verify Output Path hien thi day du")

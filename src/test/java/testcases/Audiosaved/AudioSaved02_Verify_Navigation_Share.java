@@ -3,6 +3,7 @@ package testcases.Audiosaved;
 import Base.BaseTest;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -12,6 +13,8 @@ import Pages.AudioSavedPage;
 import Pages.Components.ShareBottomSheet;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 
 public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
@@ -95,7 +98,14 @@ public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
     public void test_SAV_02_03_click_share_opens_bottom_sheet()
             throws InterruptedException {
         audioSavedPage.clickShare();
-        Thread.sleep(2000);
+        // M1: Wait share sheet thay sleep(2000), max 3s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> shareSheet.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(shareSheet.isDisplayed(),
                 "Bottom sheet chia se khong mo");
@@ -116,7 +126,14 @@ public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
         String expectedFileName = audioSavedPage.getFileName();
 
         audioSavedPage.clickShare();
-        Thread.sleep(2000);
+        // M1: Wait share sheet thay sleep(2000), max 3s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> shareSheet.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(shareSheet.isDisplayed(), "Bottom sheet khong mo");
 
@@ -141,7 +158,14 @@ public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
     public void test_SAV_02_05_share_sheet_lists_apps()
             throws InterruptedException {
         audioSavedPage.clickShare();
-        Thread.sleep(2000);
+        // M1: Wait share sheet thay sleep(2000), max 3s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> shareSheet.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(shareSheet.isDisplayed(), "Bottom sheet khong mo");
 
@@ -165,7 +189,14 @@ public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
     public void test_SAV_02_06_cancel_share_bottom_sheet()
             throws InterruptedException {
         audioSavedPage.clickShare();
-        Thread.sleep(2000);
+        // M1: Wait share sheet thay sleep(2000), max 3s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> shareSheet.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(shareSheet.isDisplayed(), "Bottom sheet khong mo");
 
@@ -190,7 +221,14 @@ public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
             throws InterruptedException {
 
         audioSavedPage.clickClose();
-        Thread.sleep(1500);
+        // M1: Wait Home thay sleep(1500), max 3s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> isAtHome());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(isAtHome(), "Khong ve Home");
         ExtentReportManager.getTest().log(Status.PASS, "Da ve Home");
@@ -201,7 +239,14 @@ public class AudioSaved02_Verify_Navigation_Share extends BaseTest {
             throws InterruptedException {
 
         audioSavedPage.clickClose();
-        Thread.sleep(1500);
+        // M1: Wait Home thay sleep(1500), max 3s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> isAtHome());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(isAtHome(), "Khong ve Home sau click X");
         ExtentReportManager.getTest().log(Status.PASS, "Da ve Home qua X");

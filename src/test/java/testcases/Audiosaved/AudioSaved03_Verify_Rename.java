@@ -91,7 +91,7 @@ public class AudioSaved03_Verify_Rename extends BaseTest {
      */
     private void openEditMenu() throws InterruptedException {
         audioSavedPage.clickThreeDotMenu();
-        Thread.sleep(800);
+        Thread.sleep(500);  // M1: Giam tu 800 - menu xuat hien nhanh
     }
 
     /**
@@ -100,7 +100,7 @@ public class AudioSaved03_Verify_Rename extends BaseTest {
     private void openRenamePopup() throws InterruptedException {
         openEditMenu();
         editMenu.clickRename();
-        Thread.sleep(1000);
+        Thread.sleep(700);  // M1: Giam tu 1000 - popup hien thi nhanh
     }
 
     // ========================================================
@@ -217,7 +217,7 @@ public class AudioSaved03_Verify_Rename extends BaseTest {
         renamePopup.clearText();
         Thread.sleep(300);
         renamePopup.clickDone();
-        Thread.sleep(1500);
+        Thread.sleep(1000);  // M1: Giam tu 1500
 
         boolean popupStillOpen = renamePopup.isDisplayed();
         boolean errorShown = renamePopup.isErrorMessageDisplayed();
@@ -284,7 +284,7 @@ public class AudioSaved03_Verify_Rename extends BaseTest {
         renamePopup.enterText("test_audio_renamed");
         Thread.sleep(300);
         renamePopup.clickDone();
-        Thread.sleep(2000);
+        Thread.sleep(1200);  // M1: Giam tu 2000 - rename xong nhanh
 
         String fileName = audioSavedPage.getFileName();
         ExtentReportManager.getTest().log(Status.INFO,

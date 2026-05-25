@@ -1,0 +1,156 @@
+> Task :clean
+
+> Task :compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :processResources
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources
+> Task :testClasses
+
+> Task :test
+
+Gradle Test Executor 6 STANDARD_ERROR
+    SLF4J(W): Class path contains multiple SLF4J providers.
+    SLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@c0c2f8d]
+    SLF4J(W): Found provider [org.apache.logging.slf4j.SLF4JServiceProvider@305b7c14]
+    SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+    SLF4J(I): Actual provider is of type [org.slf4j.simple.SimpleServiceProvider@c0c2f8d]
+
+Voice Changer Regression Suite STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Enable Do Not Disturb (alarms-only)
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd notification set_dnd alarms
+
+Voice Changer Regression Suite > Home Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Home Tests
+    ==========================================
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully STANDARD_OUT
+
+    ▶ Running: test_app_launched_successfully
+      Description: Kiem tra app Voice Changer mo thanh cong
+    Element not found: By.id: com.bluesoftware.voicechanger:id/text_app_name
+    RETRY 1/1 - test_app_launched_successfully (reason: Man hinh Home khong hien thi! expected [true] but found [false])
+      ↻ RETRY 1/1: test_app_launched_successfully
+    SKIPPED: test_app_launched_successfully
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully STANDARD_OUT
+
+    ▶ Running: test_app_launched_successfully
+      Description: Kiem tra app Voice Changer mo thanh cong
+    Element not found: By.id: com.bluesoftware.voicechanger:id/text_app_name
+    FAILED: test_app_launched_successfully
+    Reason: Man hinh Home khong hien thi! expected [true] but found [false]
+      ✗ FAILED
+        Reason: Man hinh Home khong hien thi! expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully FAILED
+    java.lang.AssertionError at Home01_Verify_App_Launched.java:32
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_get_current_activity STANDARD_OUT
+
+    ▶ Running: test_get_current_activity
+      Description: Kiem tra activity hien tai cua app
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_get_current_activity PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout STANDARD_OUT
+
+    ▶ Running: TC_01_verify_home_layout
+      Description: TC_01: Kiem tra hien thi man hinh Home dung bo cuc
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_menu
+    RETRY 1/1 - TC_01_verify_home_layout (reason: Hamburger menu khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_01_verify_home_layout
+    SKIPPED: TC_01_verify_home_layout
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout STANDARD_OUT
+
+    ▶ Running: TC_01_verify_home_layout
+      Description: TC_01: Kiem tra hien thi man hinh Home dung bo cuc
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_menu
+    FAILED: TC_01_verify_home_layout
+    Reason: Hamburger menu khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: Hamburger menu khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:31
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title STANDARD_OUT
+
+    ▶ Running: TC_02_verify_header_and_title
+      Description: TC_02: Kiem tra hien thi Header va tieu de ung dung
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_menu
+    RETRY 1/1 - TC_02_verify_header_and_title (reason: Hamburger menu khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_02_verify_header_and_title
+    SKIPPED: TC_02_verify_header_and_title
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title STANDARD_OUT
+
+    ▶ Running: TC_02_verify_header_and_title
+      Description: TC_02: Kiem tra hien thi Header va tieu de ung dung
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_menu
+    FAILED: TC_02_verify_header_and_title
+    Reason: Hamburger menu khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: Hamburger menu khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:46
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card STANDARD_OUT
+
+    ▶ Running: TC_03_verify_record_card
+      Description: TC_03: Kiem tra hien thi card Record
+    Element not found: By.id: com.bluesoftware.voicechanger:id/layout_record
+    RETRY 1/1 - TC_03_verify_record_card (reason: Record card khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_03_verify_record_card
+    SKIPPED: TC_03_verify_record_card
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card STANDARD_OUT
+
+    ▶ Running: TC_03_verify_record_card
+      Description: TC_03: Kiem tra hien thi card Record

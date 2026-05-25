@@ -2,6 +2,7 @@ package testcases.MyAudio;
 
 import Base.BaseTest;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -13,6 +14,8 @@ import Pages.Components.RenamePopup;
 import Pages.MyAudioPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 /**
  * MA_04: Test Rename function tu Edit Menu (4 tests).
@@ -28,7 +31,7 @@ public class MyAudio04_Verify_Rename extends BaseTest {
     public void setupSession() {
         logger.info("=== SETUP RENAME SUITE ===");
         try {
-            ensureAtLeastOneFile();
+            RecordFlowHelper.ensureAtLeastOneFile(driver);
             myAudioPage = RecordFlowHelper.navigateToMyAudio(driver);
             editMenu = new MyAudioEditMenu(driver);
             renamePopup = new RenamePopup(driver);
@@ -94,29 +97,34 @@ public class MyAudio04_Verify_Rename extends BaseTest {
         }
     }
 
-    private void ensureAtLeastOneFile() {
-        try {
-            MyAudioPage temp = RecordFlowHelper.navigateToMyAudio(driver);
-            if (temp.hasAtLeastOneFile()) return;
-
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            RecordFlowHelper.navigateToAudioSaved(driver, 1);
-            Thread.sleep(800);
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-        } catch (Exception e) {
-            logger.warn("ensureAtLeastOneFile error: " + e.getMessage());
-        }
-    }
-
     private void openRenamePopup(int itemIndex) throws InterruptedException {
-        myAudioPage.clickMoreAt(itemIndex);
-        Thread.sleep(1000);
+        // Smart wait + retry up to 3 attempts (flaky: bottom sheet animation
+        // sometimes drops click). 500ms settle between attempts.
+        for (int attempt = 1; attempt <= 3; attempt++) {
+            myAudioPage.clickMoreAt(itemIndex);
+            try {
+                new WebDriverWait(driver, Duration.ofSeconds(3))
+                        .ignoring(Exception.class)
+                        .until(d -> editMenu.isDisplayed());
+                break;
+            } catch (Exception e) {
+                if (attempt < 3) {
+                    logger.warn("Edit menu khong mo lan " + attempt
+                            + ", retry sau 500ms");
+                    Thread.sleep(500);
+                }
+            }
+        }
         Assert.assertTrue(editMenu.isDisplayed(), "Edit menu khong mo");
 
         editMenu.clickRename();
-        Thread.sleep(1000);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> renamePopup.isDisplayed());
+        } catch (Exception e) {
+            // Will fail at assertion below
+        }
         Assert.assertTrue(renamePopup.isDisplayed(),
                 "Rename popup khong mo");
     }
@@ -143,7 +151,7 @@ public class MyAudio04_Verify_Rename extends BaseTest {
         renamePopup.clearText();
         Thread.sleep(300);
         renamePopup.clickDone();
-        Thread.sleep(1500);
+        Thread.sleep(1000);  // M1: Giam tu 1500
 
         Assert.assertTrue(renamePopup.isDisplayed(),
                 "Popup phai van mo khi ten rong");
@@ -165,7 +173,7 @@ public class MyAudio04_Verify_Rename extends BaseTest {
         renamePopup.enterText("temp_should_not_save");
         Thread.sleep(300);
         renamePopup.clickCancel();
-        Thread.sleep(1500);
+        Thread.sleep(1000);  // M1: Giam tu 1500
 
         String afterCancel = myAudioPage.getFirstFileName();
         Assert.assertEquals(afterCancel, originalName,
@@ -189,7 +197,7 @@ public class MyAudio04_Verify_Rename extends BaseTest {
         renamePopup.enterText(newName);
         Thread.sleep(300);
         renamePopup.clickDone();
-        Thread.sleep(2000);
+        Thread.sleep(1200);  // M1: Giam tu 2000
 
         Assert.assertFalse(renamePopup.isDisplayed(),
                 "Popup phai dong sau Done");

@@ -3,6 +3,7 @@ package testcases.Ringtone;
 import Base.BaseTest;
 import com.aventstack.extentreports.Status;
 import Constants.AppConstants;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
@@ -13,6 +14,8 @@ import Pages.SystemSettingsPage;
 import Report.ExtentReportManager;
 import Utils.AdbHelper;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 /**
  * Test Set Ringtone tren Audio Saved.
@@ -112,7 +115,14 @@ public class Ringtone01_Verify_Set_Ringtone extends BaseTest {
 
         // ========== Buoc 1: Click Set Ringtone -> Mo Settings ==========
         audioSavedPage.clickSetAsRingtone();
-        Thread.sleep(3000);
+        // M2: Wait System Settings xuat hien thay sleep(3000), max 4s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(4))
+                    .ignoring(Exception.class)
+                    .until(d -> settingsPage.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(settingsPage.isDisplayed(),
                 "Khong vao man System Settings");
@@ -150,7 +160,14 @@ public class Ringtone01_Verify_Set_Ringtone extends BaseTest {
 
         // ========== Buoc 6: Back ve Audio Saved ==========
         settingsPage.clickBack();
-        Thread.sleep(2000);
+        // M1: Wait Audio Saved thay sleep(2000), max 3s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> audioSavedPage.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(audioSavedPage.isDisplayed(),
                 "Khong ve Audio Saved sau khi back");

@@ -1,20 +1,19 @@
 package testcases.ImportAudio;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.Components.DiscardDialog;
 import Pages.ImportAudioFilePickerPage;
 import Pages.VoiceEffectsPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 /**
  * IA_02: Verify chon file audio -> Voice Effects.
@@ -23,58 +22,33 @@ import Utils.RecordFlowHelper;
  * Cac file khong phai audio (.csv, .txt, .pdf...) khong xuat hien trong picker
  * -> KHONG can test "file invalid bi disable".
  */
-public class ImportAudio02_Verify_Select_File extends BaseTest {
+public class ImportAudio02_Verify_Select_File extends BaseSharedSessionTest {
 
     private VoiceEffectsPage voiceEffectsPage;
     private DiscardDialog discardDialog;
 
-    @BeforeMethod
-    public void navigateToScreen() {
-        try {
-            // Quick reset neu khong o Home
-            if (!RecordFlowHelper.isAtHome(driver)) {
-                if (RecordFlowHelper.isAtFilePicker(driver)) {
-                    ((AndroidDriver) driver).activateApp(
-                            "com.bluesoftware.voicechanger");
-                    Thread.sleep(800);
-                }
-                if (!RecordFlowHelper.isAtHome(driver)) {
-                    RecordFlowHelper.smartResetToHome(driver);
-                    Thread.sleep(500);
-                }
-            }
-            voiceEffectsPage = new VoiceEffectsPage(driver);
-            discardDialog = new DiscardDialog(driver);
-        } catch (Exception e) {
-            logger.error("Navigate error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            voiceEffectsPage = new VoiceEffectsPage(driver);
-            discardDialog = new DiscardDialog(driver);
-        }
-    }
-
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        try {
-            // Dong discard dialog neu lo mo
-            if (discardDialog.isDisplayed()) {
-                discardDialog.clickDiscard();
-                Thread.sleep(1200);
-            }
-            // Quick activate app neu o File Picker
-            if (RecordFlowHelper.isAtFilePicker(driver)) {
+    @Override
+    protected void navigateToScreen() {
+        // Quick activate neu o File Picker
+        if (RecordFlowHelper.isAtFilePicker(driver)) {
+            try {
                 ((AndroidDriver) driver).activateApp(
                         "com.bluesoftware.voicechanger");
                 Thread.sleep(800);
-            }
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            try {
-                RecordFlowHelper.forceResetToHome(driver);
-            } catch (Exception ex) {
-                logger.error("Force reset failed: " + ex.getMessage());
+            } catch (Exception e) {
+                // skip
             }
         }
+        if (!RecordFlowHelper.isAtHome(driver)) {
+            RecordFlowHelper.smartResetToHome(driver);
+        }
+        voiceEffectsPage = new VoiceEffectsPage(driver);
+        discardDialog = new DiscardDialog(driver);
+    }
+
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isAtHome(driver);
     }
 
     @Test(priority = 1, description = "IA_02_01: Chon file audio hop le -> Voice Effects")
@@ -93,7 +67,14 @@ public class ImportAudio02_Verify_Select_File extends BaseTest {
                     "Device khong co file .mp3/.m4a/.wav, skip test");
         }
 
-        Thread.sleep(4000);  // Load file mat thoi gian
+        // M2: Wait Voice Effects load thay sleep(4000) co dinh, max 6s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(6))
+                    .ignoring(Exception.class)
+                    .until(d -> voiceEffectsPage.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                 "Khong chuyen sang Voice Effects sau khi chon file");

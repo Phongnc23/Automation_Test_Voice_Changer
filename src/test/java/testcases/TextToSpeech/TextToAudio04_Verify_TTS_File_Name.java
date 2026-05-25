@@ -1,10 +1,8 @@
 package testcases.TextToSpeech;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.AudioSavedPage;
 import Pages.Components.EditMenu;
@@ -14,7 +12,7 @@ import Pages.VoiceEffectsPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
 
-public class TextToAudio04_Verify_TTS_File_Name extends BaseTest {
+public class TextToAudio04_Verify_TTS_File_Name extends BaseSharedSessionTest {
 
     private TextToAudioPage textToAudioPage;
     private VoiceEffectsPage voiceEffectsPage;
@@ -22,42 +20,28 @@ public class TextToAudio04_Verify_TTS_File_Name extends BaseTest {
 
     private static final String DEFAULT_TEXT = "Xin chao test";
 
-    @BeforeMethod
-    public void navigateToScreen() {
-        try {
-            textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-            voiceEffectsPage = new VoiceEffectsPage(driver);
-            audioSavedPage = new AudioSavedPage(driver);
-        } catch (Exception e) {
-            RecordFlowHelper.forceResetToHome(driver);
-            textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-            voiceEffectsPage = new VoiceEffectsPage(driver);
-            audioSavedPage = new AudioSavedPage(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
+        voiceEffectsPage = new VoiceEffectsPage(driver);
+        audioSavedPage = new AudioSavedPage(driver);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            try {
-                RecordFlowHelper.forceResetToHome(driver);
-            } catch (Exception ex) {
-                logger.error("Force reset failed: " + ex.getMessage());
-            }
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isAtTextToAudio(driver);
     }
 
     private void enterTextAndNext(String text) throws InterruptedException {
         textToAudioPage.clickEditText();
-        Thread.sleep(300);  // Giam tu 500
+        Thread.sleep(300);
         textToAudioPage.enterText(text);
-        Thread.sleep(200);  // Giam tu 500
+        Thread.sleep(200);
         textToAudioPage.hideKeyboard();
-        Thread.sleep(300);  // Giam tu 500
+        Thread.sleep(300);
         textToAudioPage.clickNext();
-        Thread.sleep(2500);  // Giam tu 4000
+        // L1: smart wait Voice Effects thay sleep(2500)
+        RecordFlowHelper.waitForVoiceEffects(driver, 5);
     }
 
     @Test(description = "TTS_04_01: Ten file tren Voice Effects la 'tts_'")
@@ -90,7 +74,8 @@ public class TextToAudio04_Verify_TTS_File_Name extends BaseTest {
                 "Khong vao Voice Effects");
 
         voiceEffectsPage.clickSave();
-        Thread.sleep(2000);  // Giam tu 3000
+        // L1: smart wait Audio Saved thay sleep(2000)
+        RecordFlowHelper.waitForAudioSaved(driver, 4);
 
         Assert.assertTrue(audioSavedPage.isDisplayed(),
                 "Khong chuyen Audio Saved");
@@ -117,7 +102,8 @@ public class TextToAudio04_Verify_TTS_File_Name extends BaseTest {
         enterTextAndNext(DEFAULT_TEXT);
 
         voiceEffectsPage.clickSave();
-        Thread.sleep(2000);
+        // L1: smart wait Audio Saved thay sleep(2000)
+        RecordFlowHelper.waitForAudioSaved(driver, 4);
 
         Assert.assertTrue(audioSavedPage.isDisplayed(),
                 "Khong o Audio Saved");

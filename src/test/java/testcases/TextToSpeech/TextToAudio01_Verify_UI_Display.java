@@ -1,11 +1,9 @@
 package testcases.TextToSpeech;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import Pages.TextToAudioPage;
 import Report.ExtentReportManager;
@@ -14,29 +12,18 @@ import Utils.RecordFlowHelper;
 /**
  * Pattern: Share session - mo man Text to Audio 1 lan, chay 8 test verify UI.
  */
-public class TextToAudio01_Verify_UI_Display extends BaseTest {
+public class TextToAudio01_Verify_UI_Display extends BaseSharedSessionTest {
 
     private TextToAudioPage textToAudioPage;
 
-    @BeforeClass(dependsOnMethods = "setUp")
-    public void setupSession() {
-        logger.info("=== SETUP TEXT TO AUDIO SESSION ===");
-        try {
-            textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-        } catch (Exception e) {
-            logger.error("Loi navigate: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
     }
 
-    @AfterClass(alwaysRun = true)
-    public void cleanupAfterClass() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            logger.error("Cleanup error: " + e.getMessage());
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isAtTextToAudio(driver);
     }
 
     @Test(priority = 1, description = "TTS_01_01: Mo man Text to Audio tu Home")

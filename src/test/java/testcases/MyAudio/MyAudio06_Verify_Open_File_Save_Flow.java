@@ -2,6 +2,7 @@ package testcases.MyAudio;
 
 import Base.BaseTest;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -11,6 +12,8 @@ import Pages.MyAudioPage;
 import Pages.VoiceEffectsPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 /**
  * MA_06: Test luong My Audio -> click -> Voice Effects -> Save (4 tests).
@@ -25,17 +28,9 @@ public class MyAudio06_Verify_Open_File_Save_Flow extends BaseTest {
     @BeforeMethod
     public void navigateToScreen() {
         try {
-            MyAudioPage temp = RecordFlowHelper.navigateToMyAudio(driver);
-            if (!temp.hasAtLeastOneFile()) {
-                RecordFlowHelper.smartResetToHome(driver);
-                Thread.sleep(800);
-                RecordFlowHelper.navigateToAudioSaved(driver, 1);
-                Thread.sleep(800);
-                RecordFlowHelper.smartResetToHome(driver);
-                Thread.sleep(800);
-                temp = RecordFlowHelper.navigateToMyAudio(driver);
-            }
-            myAudioPage = temp;
+            // M6: Dung helper trung tam thay logic inline
+            RecordFlowHelper.ensureAtLeastOneFile(driver);
+            myAudioPage = RecordFlowHelper.navigateToMyAudio(driver);
             voiceEffectsPage = new VoiceEffectsPage(driver);
             audioSavedPage = new AudioSavedPage(driver);
         } catch (Exception e) {
@@ -60,6 +55,32 @@ public class MyAudio06_Verify_Open_File_Save_Flow extends BaseTest {
         }
     }
 
+    /**
+     * M1: Smart wait Voice Effects thay sleep co dinh.
+     */
+    private void waitForVoiceEffects(int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> voiceEffectsPage.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
+    }
+
+    /**
+     * M1: Smart wait Audio Saved thay sleep co dinh.
+     */
+    private void waitForAudioSaved(int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> audioSavedPage.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
+    }
+
     @Test(description = "MA_06_01: Click card -> Voice Effects")
     public void test_MA_06_01_click_item_opens_voice_effects()
             throws InterruptedException {
@@ -71,7 +92,7 @@ public class MyAudio06_Verify_Open_File_Save_Flow extends BaseTest {
                 "Click file: " + fileName);
 
         myAudioPage.clickItemAt(1);
-        Thread.sleep(1500);
+        waitForVoiceEffects(3);
 
         Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                 "Khong chuyen sang Voice Effects");
@@ -88,7 +109,7 @@ public class MyAudio06_Verify_Open_File_Save_Flow extends BaseTest {
                 "Ten goc (file index 1): " + originalName);
 
         myAudioPage.clickItemAt(1);
-        Thread.sleep(2500);  // Tang sleep cho VE load
+        waitForVoiceEffects(5);  // M1: file lon co the load lau hon
 
         Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                 "Khong vao Voice Effects");
@@ -124,13 +145,13 @@ public class MyAudio06_Verify_Open_File_Save_Flow extends BaseTest {
     public void test_MA_06_03_save_navigates_to_audio_saved()
             throws InterruptedException {
         myAudioPage.clickItemAt(1);
-        Thread.sleep(1500);
+        waitForVoiceEffects(3);
 
         Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                 "Khong vao Voice Effects");
 
         voiceEffectsPage.clickSave();
-        Thread.sleep(1000);
+        waitForAudioSaved(3);
 
         Assert.assertTrue(audioSavedPage.isDisplayed(),
                 "Khong chuyen Audio Saved");
@@ -142,10 +163,10 @@ public class MyAudio06_Verify_Open_File_Save_Flow extends BaseTest {
     public void test_MA_06_04_verify_audio_saved_filename()
             throws InterruptedException {
         myAudioPage.clickItemAt(1);
-        Thread.sleep(1500);
+        waitForVoiceEffects(3);  // L1: smart wait thay sleep(1500)
 
         voiceEffectsPage.clickSave();
-        Thread.sleep(1000);
+        waitForAudioSaved(3);
 
         Assert.assertTrue(audioSavedPage.isDisplayed(),
                 "Khong chuyen Audio Saved");

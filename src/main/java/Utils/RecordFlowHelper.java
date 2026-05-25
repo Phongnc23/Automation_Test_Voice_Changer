@@ -36,7 +36,7 @@ import java.util.List;
  *   3. Dialog handlers
  *   4. Reset methods (force/smart)
  *   5. Navigation methods (Record, TTS, MyAudio, Import, Settings, Drawer)
- *   6. Utility methods (sleep)
+ *   6. Utility methods (sleep, smart waits)
  */
 public class RecordFlowHelper {
 
@@ -360,7 +360,7 @@ public class RecordFlowHelper {
         if (isAtRecorder(driver)) {
             try {
                 driver.findElement(RECORDER_CLOSE_BUTTON).click();
-                sleep(1000);
+                waitForHome(driver, 3);
             } catch (Exception e) {
                 logger.warn("Loi close recorder: " + e.getMessage());
             }
@@ -384,7 +384,7 @@ public class RecordFlowHelper {
         if (isAtAudioSaved(driver)) {
             try {
                 driver.findElement(AUDIO_SAVED_HOME_BUTTON).click();
-                sleep(1500);
+                waitForHome(driver, 3);
             } catch (Exception e) {
                 logger.warn("Loi home from AS: " + e.getMessage());
             }
@@ -395,7 +395,7 @@ public class RecordFlowHelper {
         if (isAtTextToAudio(driver)) {
             try {
                 driver.findElement(BACK_BUTTON).click();
-                sleep(1500);
+                waitForHome(driver, 3);
             } catch (Exception e) {
                 logger.warn("Loi back from TTS: " + e.getMessage());
             }
@@ -407,7 +407,7 @@ public class RecordFlowHelper {
             try {
                 ((AndroidDriver) driver).pressKey(
                         new KeyEvent(AndroidKey.BACK));
-                sleep(1500);
+                waitForHome(driver, 3);
             } catch (Exception e) {
                 logger.warn("Loi back from Language: " + e.getMessage());
             }
@@ -418,7 +418,7 @@ public class RecordFlowHelper {
         if (isAtMyAudio(driver)) {
             try {
                 driver.findElement(BACK_BUTTON).click();
-                sleep(1500);
+                waitForHome(driver, 3);
             } catch (Exception e) {
                 logger.warn("Loi back from My Audio: " + e.getMessage());
             }
@@ -429,7 +429,7 @@ public class RecordFlowHelper {
         if (isAtSettings(driver)) {
             try {
                 driver.findElement(BACK_BUTTON).click();
-                sleep(1500);
+                waitForHome(driver, 3);
             } catch (Exception e) {
                 logger.warn("Loi back from Settings: " + e.getMessage());
             }
@@ -445,7 +445,7 @@ public class RecordFlowHelper {
             logger.info("O File Picker, activate app");
             try {
                 ((AndroidDriver) driver).activateApp(AppConstants.APP_PACKAGE);
-                sleep(1500);
+                waitForHome(driver, 5);
             } catch (Exception e) {
                 logger.warn("Activate app error: " + e.getMessage());
             }
@@ -457,7 +457,7 @@ public class RecordFlowHelper {
             try {
                 logger.info("Khong o Voice Changer, activate");
                 ((AndroidDriver) driver).activateApp(AppConstants.APP_PACKAGE);
-                sleep(1500);
+                waitForHome(driver, 5);
             } catch (Exception e) {
                 // skip
             }
@@ -505,8 +505,10 @@ public class RecordFlowHelper {
         }
 
         new HomePage(driver).clickRecord();
-        sleep(1500);
+        // Wait recorder mo, permission dialog co the xuat hien -> handle
+        waitForRecorderOrPermission(driver, 3);
         new PermissionDialog(driver).handlePermissionIfPresent();
+        waitForRecorderOrPermission(driver, 3);
 
         return new RecorderPage(driver);
     }
@@ -521,7 +523,8 @@ public class RecordFlowHelper {
         recorderPage.clickRecordButton();
         sleep(recordSeconds * 1000L);
         recorderPage.clickRecordButton();
-        sleep(2500);
+        // H4: thay sleep(2500) bang smart wait Voice Effects
+        waitForVoiceEffects(driver, 5);
 
         return new VoiceEffectsPage(driver);
     }
@@ -534,7 +537,8 @@ public class RecordFlowHelper {
 
         VoiceEffectsPage vePage = navigateToVoiceEffects(driver, recordSeconds);
         vePage.clickSave();
-        sleep(2500);
+        // H4: thay sleep(2500) bang smart wait Audio Saved
+        waitForAudioSaved(driver, 5);
 
         return new AudioSavedPage(driver);
     }
@@ -544,13 +548,19 @@ public class RecordFlowHelper {
     public static TextToAudioPage navigateToTextToAudio(AppiumDriver driver) {
         logger.info("=== Navigate to Text to Audio ===");
 
+        // L3: idempotent - tan dung neu class truoc da o TTS
+        if (isAtTextToAudio(driver)) {
+            logger.info("Da o Text to Audio, skip nav");
+            return new TextToAudioPage(driver);
+        }
+
         if (!isAtHome(driver)) {
             smartResetToHome(driver);
-            sleep(1000);
         }
 
         new HomePage(driver).clickTextToSpeech();
-        sleep(2000);
+        // H6 (partial): thay sleep(2000) bang smart wait
+        waitForTextToAudio(driver, 4);
         return new TextToAudioPage(driver);
     }
 
@@ -566,7 +576,8 @@ public class RecordFlowHelper {
         ttsPage.hideKeyboard();
         sleep(500);
         ttsPage.clickNext();
-        sleep(4000);
+        // H1: thay sleep(4000) bang smart wait Voice Effects (TTS processing co the cham)
+        waitForVoiceEffects(driver, 6);
 
         return new VoiceEffectsPage(driver);
     }
@@ -577,23 +588,53 @@ public class RecordFlowHelper {
 
         VoiceEffectsPage vePage = navigateToVoiceEffectsFromTTS(driver, text);
         vePage.clickSave();
-        sleep(3000);
+        // H3: thay sleep(3000) bang smart wait Audio Saved
+        waitForAudioSaved(driver, 6);
 
         return new AudioSavedPage(driver);
     }
 
     // -------- My Audio flow --------
 
+    /**
+     * Dam bao My Audio co it nhat 1 file - tao file moi neu chua co.
+     * Side effect: navigate qua Recorder -> VE -> Audio Saved -> Home,
+     * cuoi cung de driver o Home (KHONG mo My Audio).
+     *
+     * Goi tu @BeforeClass cua MyAudio* test classes thay vi viet helper rieng.
+     */
+    public static void ensureAtLeastOneFile(AppiumDriver driver) {
+        try {
+            MyAudioPage temp = navigateToMyAudio(driver);
+            if (temp.hasAtLeastOneFile()) {
+                logger.info("My Audio da co file, skip tao");
+                return;
+            }
+            logger.info("My Audio rong, tao 1 file");
+            smartResetToHome(driver);
+            navigateToAudioSaved(driver, 1);
+            smartResetToHome(driver);
+        } catch (Exception e) {
+            logger.warn("ensureAtLeastOneFile error: " + e.getMessage());
+        }
+    }
+
     public static MyAudioPage navigateToMyAudio(AppiumDriver driver) {
         logger.info("=== Navigate to My Audio ===");
 
+        // L3: idempotent
+        if (isAtMyAudio(driver)) {
+            logger.info("Da o My Audio, skip nav");
+            return new MyAudioPage(driver);
+        }
+
         if (!isAtHome(driver)) {
             smartResetToHome(driver);
-            sleep(1000);
         }
 
         new HomePage(driver).clickMyAudio();
-        sleep(1500);
+        // H6 (partial): thay sleep(1500) bang smart wait
+        waitForMyAudio(driver, 4);
         return new MyAudioPage(driver);
     }
 
@@ -605,11 +646,11 @@ public class RecordFlowHelper {
 
         if (!isAtHome(driver)) {
             smartResetToHome(driver);
-            sleep(1000);
         }
 
         new HomePage(driver).clickImportAudio();
-        sleep(2500);
+        // H5: thay sleep(2500) bang smart wait File Picker (package thay doi)
+        waitForFilePicker(driver, 5);
         return new ImportAudioFilePickerPage(driver);
     }
 
@@ -630,7 +671,8 @@ public class RecordFlowHelper {
             return null;
         }
 
-        sleep(4000);
+        // H2: thay sleep(4000) bang smart wait Voice Effects (file co the lon)
+        waitForVoiceEffects(driver, 8);
         return new VoiceEffectsPage(driver);
     }
 
@@ -639,28 +681,39 @@ public class RecordFlowHelper {
     public static SettingsPage navigateToSettings(AppiumDriver driver) {
         logger.info("=== Navigate to Settings ===");
 
+        // L3: idempotent - tan dung neu class truoc da o Settings
+        if (isAtSettings(driver)) {
+            logger.info("Da o Settings, skip nav");
+            return new SettingsPage(driver);
+        }
+
         if (!isAtHome(driver)) {
             smartResetToHome(driver);
-            sleep(1000);
         }
 
         new HomePage(driver).openSettingsViaDrawer();
-        sleep(1500);
+        // H6 (partial): thay sleep(1500) bang smart wait
+        waitForSettings(driver, 4);
         return new SettingsPage(driver);
     }
 
     public static DrawerMenuPage openDrawer(AppiumDriver driver) {
         logger.info("=== Open Drawer Menu ===");
 
+        // L3: idempotent - tan dung neu class truoc da mo drawer
+        if (isDrawerOpen(driver)) {
+            logger.info("Drawer da mo, skip");
+            return new DrawerMenuPage(driver);
+        }
+
         if (!isAtHome(driver)) {
             smartResetToHome(driver);
-            sleep(500);
         }
         return new HomePage(driver).openDrawer();
     }
 
     // ==========================================================================
-    // 6. UTILITY
+    // 6. UTILITY (sleep, smart waits)
     // ==========================================================================
 
     private static void sleep(long ms) {
@@ -668,6 +721,135 @@ public class RecordFlowHelper {
             Thread.sleep(ms);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+        }
+    }
+
+    // -------- Smart waits (H1-H6: thay sleep co dinh bang wait theo state) --------
+
+    /**
+     * Wait cho ve Home (RECORD_CARD xuat hien).
+     * Max maxSeconds (3-5s tuy context).
+     */
+    public static void waitForHome(AppiumDriver driver, int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> isAtHome((AppiumDriver) d));
+        } catch (Exception e) {
+            logger.warn("Wait timeout: Home khong xuat hien sau " + maxSeconds + "s");
+        }
+    }
+
+    /**
+     * Wait cho Voice Effects (VOICE_EFFECTS_SAVE button xuat hien).
+     */
+    public static void waitForVoiceEffects(AppiumDriver driver, int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(ExpectedConditions.visibilityOfElementLocated(
+                            VOICE_EFFECTS_SAVE));
+        } catch (Exception e) {
+            logger.warn("Wait timeout: Voice Effects khong xuat hien sau "
+                    + maxSeconds + "s");
+        }
+    }
+
+    /**
+     * Wait cho Audio Saved (AUDIO_SAVED_SUCCESS image xuat hien).
+     */
+    public static void waitForAudioSaved(AppiumDriver driver, int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(ExpectedConditions.visibilityOfElementLocated(
+                            AUDIO_SAVED_SUCCESS));
+        } catch (Exception e) {
+            logger.warn("Wait timeout: Audio Saved khong xuat hien sau "
+                    + maxSeconds + "s");
+        }
+    }
+
+    /**
+     * Wait cho File Picker (package doi khac com.bluesoftware.voicechanger).
+     */
+    private static void waitForFilePicker(AppiumDriver driver, int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> {
+                        try {
+                            String pkg = ((AndroidDriver) d).getCurrentPackage();
+                            return pkg != null
+                                    && !pkg.equals(AppConstants.APP_PACKAGE);
+                        } catch (Exception e) {
+                            return false;
+                        }
+                    });
+        } catch (Exception e) {
+            logger.warn("Wait timeout: File Picker khong xuat hien sau "
+                    + maxSeconds + "s");
+        }
+    }
+
+    /**
+     * Wait cho Text to Audio screen.
+     */
+    private static void waitForTextToAudio(AppiumDriver driver, int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> isAtTextToAudio((AppiumDriver) d));
+        } catch (Exception e) {
+            logger.warn("Wait timeout: TTS khong xuat hien sau "
+                    + maxSeconds + "s");
+        }
+    }
+
+    /**
+     * Wait cho My Audio screen.
+     */
+    private static void waitForMyAudio(AppiumDriver driver, int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> isAtMyAudio((AppiumDriver) d));
+        } catch (Exception e) {
+            logger.warn("Wait timeout: My Audio khong xuat hien sau "
+                    + maxSeconds + "s");
+        }
+    }
+
+    /**
+     * Wait cho Settings screen.
+     */
+    private static void waitForSettings(AppiumDriver driver, int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> isAtSettings((AppiumDriver) d));
+        } catch (Exception e) {
+            logger.warn("Wait timeout: Settings khong xuat hien sau "
+                    + maxSeconds + "s");
+        }
+    }
+
+    /**
+     * Wait cho Recorder hoac Permission dialog (cai nao xuat hien truoc).
+     */
+    private static void waitForRecorderOrPermission(AppiumDriver driver,
+                                                     int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> {
+                        AppiumDriver ap = (AppiumDriver) d;
+                        return isAtRecorder(ap)
+                                || new PermissionDialog(ap).isDisplayed();
+                    });
+        } catch (Exception e) {
+            logger.warn("Wait timeout: Recorder/Permission khong xuat hien sau "
+                    + maxSeconds + "s");
         }
     }
 }

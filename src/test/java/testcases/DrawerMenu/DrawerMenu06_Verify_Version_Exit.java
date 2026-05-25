@@ -1,11 +1,8 @@
 package testcases.DrawerMenu;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
-import io.appium.java_client.android.AndroidDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.Components.ExitDialog;
 import Pages.DrawerMenuPage;
@@ -16,51 +13,23 @@ import Utils.RecordFlowHelper;
  * DM_06: Verify Version va Exit App (5 tests).
  *
  * Note: Exit -> dialog confirm "Exit app?" voi Cancel/Exit buttons.
+ * Test 5 destructive (priority 10) - dong app, chay cuoi cung.
  */
-public class DrawerMenu06_Verify_Version_Exit extends BaseTest {
+public class DrawerMenu06_Verify_Version_Exit extends BaseSharedSessionTest {
 
     private DrawerMenuPage drawerMenu;
     private ExitDialog exitDialog;
 
-    @BeforeMethod
-    public void navigateToScreen() {
-        try {
-            // Force activate app neu lo bi exit truoc do
-            try {
-                ((AndroidDriver) driver).activateApp(
-                        "com.bluesoftware.voicechanger");
-                Thread.sleep(1500);
-            } catch (Exception ex) {
-                // skip
-            }
-
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-            exitDialog = new ExitDialog(driver);
-        } catch (Exception e) {
-            logger.error("Navigate error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-            exitDialog = new ExitDialog(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        RecordFlowHelper.smartResetToHome(driver);
+        drawerMenu = RecordFlowHelper.openDrawer(driver);
+        exitDialog = new ExitDialog(driver);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        try {
-            // Activate app neu lo bi exit
-            ((AndroidDriver) driver).activateApp(
-                    "com.bluesoftware.voicechanger");
-            Thread.sleep(2000);
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            try {
-                RecordFlowHelper.forceResetToHome(driver);
-            } catch (Exception ex) {
-                logger.error("Force reset failed: " + ex.getMessage());
-            }
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isDrawerOpen(driver);
     }
 
     @Test(priority = 1, description = "DM_06_01: Verify Version hien thi dung format")
@@ -182,7 +151,7 @@ public class DrawerMenu06_Verify_Version_Exit extends BaseTest {
 
         // Click Exit confirm
         exitDialog.clickExit();
-        Thread.sleep(3000);  // Cho app dong
+        Thread.sleep(1500);  // M2: Giam tu 3000ms - app dong nhanh tren Android
 
         // Verify app khong con o foreground
         String pkgAfter = drawerMenu.getCurrentPackage();

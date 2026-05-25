@@ -1,13 +1,11 @@
 package testcases.DrawerMenu;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.DrawerMenuPage;
 import Report.ExtentReportManager;
@@ -15,37 +13,22 @@ import Utils.RecordFlowHelper;
 
 /**
  * DM_01: Verify Drawer Menu UI (3 tests).
+ *
+ * Shared session: mo drawer 1 lan @BeforeClass, re-mo neu test truoc dong.
  */
-public class DrawerMenu01_Verify_UI_Display extends BaseTest {
+public class DrawerMenu01_Verify_UI_Display extends BaseSharedSessionTest {
 
     private DrawerMenuPage drawerMenu;
 
-    @BeforeMethod
-    public void navigateToScreen() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-        } catch (Exception e) {
-            logger.error("Navigate error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        RecordFlowHelper.smartResetToHome(driver);
+        drawerMenu = RecordFlowHelper.openDrawer(driver);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        try {
-            ((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.BACK));
-            Thread.sleep(800);
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            try {
-                RecordFlowHelper.forceResetToHome(driver);
-            } catch (Exception ex) {
-                logger.error("Force reset failed: " + ex.getMessage());
-            }
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isDrawerOpen(driver);
     }
 
     @Test(priority = 1, description = "DM_01_01: Mo drawer menu tu Home")
@@ -86,11 +69,9 @@ public class DrawerMenu01_Verify_UI_Display extends BaseTest {
         ((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.BACK));
         Thread.sleep(1500);
 
-        // Verify drawer dong - khong con Privacy, Settings hien thi
         Assert.assertFalse(drawerMenu.isDisplayed(),
                 "Drawer van mo sau BACK");
 
-        // Verify ve Home
         boolean atHome = driver.findElements(
                 org.openqa.selenium.By.id(
                         "com.bluesoftware.voicechanger:id/layout_record")

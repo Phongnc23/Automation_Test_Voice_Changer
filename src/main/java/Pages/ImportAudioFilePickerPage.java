@@ -107,40 +107,73 @@ public class ImportAudioFilePickerPage extends BasePage {
     }
 
     /**
-     * Press BACK button de quay ve Voice Changer.
+     * Press BACK key (tuc thi, KHONG phai gesture giu lau) - smart wait.
+     *
+     * Yeu cau: cu chi back PHAI nhanh va dut khoat. Khong nhan giu lau vi
+     * Android co the hieu sai (vd dropdown notification) va out app ve
+     * man hinh he thong.
+     *
+     * Cach tiep can:
+     *   1. Su dung KeyEvent.BACK (key event, KHONG phai swipe gesture)
+     *      -> Khong the bi interpret nham la long-press hay swipe.
+     *   2. Sau moi lan press, poll current package moi 100ms toi da 600ms
+     *      -> Phat hien app da quay ve Voice Changer la dung ngay,
+     *         tranh nhan BACK thua lam out app sang system home.
+     *   3. Toi da 3 lan press (file picker thuong chi can 1-2 lan).
      */
     public void pressBack() {
-        logger.info("Press BACK toi da 3 lan de ve Voice Changer");
+        logger.info("Press BACK (key event - nhanh, dut khoat)");
 
         AndroidDriver androidDriver = (AndroidDriver) driver;
+        final String APP_PKG = "com.bluesoftware.voicechanger";
 
         for (int i = 1; i <= 3; i++) {
-            // Check da ve Voice Changer chua
-            try {
-                String currentPkg = androidDriver.getCurrentPackage();
-                if ("com.bluesoftware.voicechanger".equals(currentPkg)) {
-                    logger.info("Da ve Voice Changer sau " + (i - 1) + " lan BACK");
-                    return;
-                }
-            } catch (Exception e) {
-                // Skip, continue press BACK
+            // Da ve Voice Changer truoc khi press BACK -> dung ngay
+            if (isAtApp(androidDriver, APP_PKG)) {
+                logger.info("Da o Voice Changer (sau " + (i - 1) + " BACK), dung");
+                return;
             }
 
-            // Press BACK
+            // Press BACK key (tuc thi, KHONG giu)
             try {
                 androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
-                Thread.sleep(1200);
             } catch (Exception e) {
                 logger.warn("Press BACK lan " + i + " loi: " + e.getMessage());
+                continue;
+            }
+
+            // Smart poll: cho package change toi da 600ms, kiem tra moi 100ms.
+            // Dung ngay khi app quay ve -> tranh nhan BACK lan tiep theo
+            // dan toi out app sang system home.
+            long deadline = System.currentTimeMillis() + 600;
+            while (System.currentTimeMillis() < deadline) {
+                if (isAtApp(androidDriver, APP_PKG)) {
+                    logger.info("Da ve Voice Changer sau press lan " + i);
+                    return;
+                }
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    return;
+                }
             }
         }
 
-        // Final check
         try {
-            String finalPkg = androidDriver.getCurrentPackage();
-            logger.info("Sau 3 lan BACK, current package: " + finalPkg);
+            logger.info("Sau 3 BACK, current package: "
+                    + androidDriver.getCurrentPackage());
         } catch (Exception e) {
-            // Skip
+            // skip
+        }
+    }
+
+    /** Helper check current package == app pkg, swallow exception. */
+    private boolean isAtApp(AndroidDriver androidDriver, String appPkg) {
+        try {
+            return appPkg.equals(androidDriver.getCurrentPackage());
+        } catch (Exception e) {
+            return false;
         }
     }
 }

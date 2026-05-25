@@ -1,0 +1,453 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+Gradle Test Executor 10 STANDARD_ERROR
+    SLF4J(W): Class path contains multiple SLF4J providers.
+    SLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@c0c2f8d]
+    SLF4J(W): Found provider [org.apache.logging.slf4j.SLF4JServiceProvider@305b7c14]
+    SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+    SLF4J(I): Actual provider is of type [org.slf4j.simple.SimpleServiceProvider@c0c2f8d]
+
+Voice Changer Regression Suite > Home Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Home Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   20
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Record Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Record Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   18
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Voice Effects Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Voice Effects Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   46
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Audio Saved Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Audio Saved Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   28
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Ringtone Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Ringtone Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   2
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Text to Speech Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Text to Speech Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   21
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > My Audio Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: My Audio Tests
+    ==========================================
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_01_navigate_to_my_audio STANDARD_OUT
+
+    ▶ Running: test_MA_01_01_navigate_to_my_audio
+      Description: MA_01_01: Mo My Audio tu Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_01_navigate_to_my_audio PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_02_verify_back_button STANDARD_OUT
+
+    ▶ Running: test_MA_01_02_verify_back_button
+      Description: MA_01_02: Verify nut Back
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_02_verify_back_button PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_03_verify_title STANDARD_OUT
+
+    ▶ Running: test_MA_01_03_verify_title
+      Description: MA_01_03: Verify title 'My audio'
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_03_verify_title PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_04_verify_search_box STANDARD_OUT
+
+    ▶ Running: test_MA_01_04_verify_search_box
+      Description: MA_01_04: Verify thanh search
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_04_verify_search_box PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_05_verify_card_structure STANDARD_OUT
+
+    ▶ Running: test_MA_01_05_verify_card_structure
+      Description: MA_01_05: Verify cau truc card file
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_05_verify_card_structure PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_06_back_to_home STANDARD_OUT
+
+    ▶ Running: test_MA_01_06_back_to_home
+      Description: MA_01_06: Click Back -> ve Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio01_Verify_UI_Display > test_MA_01_06_back_to_home PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio02_Verify_Search > test_MA_02_01_search_with_results STANDARD_OUT
+
+    ▶ Running: test_MA_02_01_search_with_results
+      Description: MA_02_01: Search co ket qua
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio02_Verify_Search > test_MA_02_01_search_with_results PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio02_Verify_Search > test_MA_02_02_search_no_results STANDARD_OUT
+
+    ▶ Running: test_MA_02_02_search_no_results
+      Description: MA_02_02: Search khong co ket qua
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio02_Verify_Search > test_MA_02_02_search_no_results PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio02_Verify_Search > test_MA_02_03_clear_search_restore STANDARD_OUT
+
+    ▶ Running: test_MA_02_03_clear_search_restore
+      Description: MA_02_03: Clear search restore list
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio02_Verify_Search > test_MA_02_03_clear_search_restore PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio02_Verify_Search > test_MA_02_04_search_special_chars STANDARD_OUT
+
+    ▶ Running: test_MA_02_04_search_special_chars
+      Description: MA_02_04: Search ky tu dac biet
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio02_Verify_Search > test_MA_02_04_search_special_chars PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio03_Verify_Edit_Menu > test_MA_03_01_open_edit_menu STANDARD_OUT
+
+    ▶ Running: test_MA_03_01_open_edit_menu
+      Description: MA_03_01: Mo edit menu bang btnMore
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio03_Verify_Edit_Menu > test_MA_03_01_open_edit_menu PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio03_Verify_Edit_Menu > test_MA_03_02_verify_five_actions STANDARD_OUT
+
+    ▶ Running: test_MA_03_02_verify_five_actions
+      Description: MA_03_02: Verify 5 action
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio03_Verify_Edit_Menu > test_MA_03_02_verify_five_actions PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio03_Verify_Edit_Menu > test_MA_03_03_close_by_tap_outside STANDARD_OUT
+
+    ▶ Running: test_MA_03_03_close_by_tap_outside
+      Description: MA_03_03: Dong menu bang tap outside
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio03_Verify_Edit_Menu > test_MA_03_03_close_by_tap_outside PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio03_Verify_Edit_Menu > test_MA_03_04_header_shows_correct_file STANDARD_OUT
+
+    ▶ Running: test_MA_03_04_header_shows_correct_file
+      Description: MA_03_04: Header dung file da chon
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio03_Verify_Edit_Menu > test_MA_03_04_header_shows_correct_file PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio04_Verify_Rename > test_MA_04_01_open_rename_popup STANDARD_OUT
+
+    ▶ Running: test_MA_04_01_open_rename_popup
+      Description: MA_04_01: Mo rename popup
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio04_Verify_Rename > test_MA_04_01_open_rename_popup PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio04_Verify_Rename > test_MA_04_02_rename_empty_name STANDARD_OUT
+
+    ▶ Running: test_MA_04_02_rename_empty_name
+      Description: MA_04_02: Rename voi ten rong
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio04_Verify_Rename > test_MA_04_02_rename_empty_name PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio04_Verify_Rename > test_MA_04_03_rename_cancel STANDARD_OUT
+
+    ▶ Running: test_MA_04_03_rename_cancel
+      Description: MA_04_03: Rename - click Cancel
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio04_Verify_Rename > test_MA_04_03_rename_cancel PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio04_Verify_Rename > test_MA_04_04_rename_success STANDARD_OUT
+
+    ▶ Running: test_MA_04_04_rename_success
+      Description: MA_04_04: Rename thanh cong (DESTRUCTIVE)
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio04_Verify_Rename > test_MA_04_04_rename_success PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio05_Verify_Delete > test_MA_05_01_open_delete_dialog STANDARD_OUT
+
+    ▶ Running: test_MA_05_01_open_delete_dialog
+      Description: MA_05_01: Mo delete dialog
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio05_Verify_Delete > test_MA_05_01_open_delete_dialog PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio05_Verify_Delete > test_MA_05_02_delete_cancel STANDARD_OUT
+
+    ▶ Running: test_MA_05_02_delete_cancel
+      Description: MA_05_02: Delete - click Cancel
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio05_Verify_Delete > test_MA_05_02_delete_cancel PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio05_Verify_Delete > test_MA_05_03_delete_confirm STANDARD_OUT
+
+    ▶ Running: test_MA_05_03_delete_confirm
+      Description: MA_05_03: Confirm DELETE (DESTRUCTIVE)
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio05_Verify_Delete > test_MA_05_03_delete_confirm PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow > test_MA_06_01_click_item_opens_voice_effects STANDARD_OUT
+
+    ▶ Running: test_MA_06_01_click_item_opens_voice_effects
+      Description: MA_06_01: Click card -> Voice Effects
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow > test_MA_06_01_click_item_opens_voice_effects PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow > test_MA_06_02_verify_voice_effects_filename STANDARD_OUT
+
+    ▶ Running: test_MA_06_02_verify_voice_effects_filename
+      Description: MA_06_02: Ten file VE co prefix 'src_'
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow > test_MA_06_02_verify_voice_effects_filename PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow > test_MA_06_03_save_navigates_to_audio_saved STANDARD_OUT
+
+    ▶ Running: test_MA_06_03_save_navigates_to_audio_saved
+      Description: MA_06_03: Save -> Audio Saved
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow > test_MA_06_03_save_navigates_to_audio_saved PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow > test_MA_06_04_verify_audio_saved_filename STANDARD_OUT
+
+    ▶ Running: test_MA_06_04_verify_audio_saved_filename
+      Description: MA_06_04: Ten Audio Saved co prefix 'src_'
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow > test_MA_06_04_verify_audio_saved_filename PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_01_open_share_sheet_via_voice_message STANDARD_OUT
+
+    ▶ Running: test_MA_07_01_open_share_sheet_via_voice_message
+      Description: MA_07_01: Click Send Voice Message -> mo share sheet
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_01_open_share_sheet_via_voice_message PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_02_share_sheet_shows_correct_filename STANDARD_OUT
+
+    ▶ Running: test_MA_07_02_share_sheet_shows_correct_filename
+      Description: MA_07_02: Share sheet hien thi ten file dung
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_02_share_sheet_shows_correct_filename PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_03_share_sheet_lists_apps STANDARD_OUT
+
+    ▶ Running: test_MA_07_03_share_sheet_lists_apps
+      Description: MA_07_03: Share sheet hien thi danh sach app
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_03_share_sheet_lists_apps PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_04_close_share_sheet_with_cancel STANDARD_OUT
+
+    ▶ Running: test_MA_07_04_close_share_sheet_with_cancel
+      Description: MA_07_04: Dong share sheet bang Huy
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_04_close_share_sheet_with_cancel PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_05_share_sheet_correct_file_when_multiple STANDARD_OUT
+
+    ▶ Running: test_MA_07_05_share_sheet_correct_file_when_multiple
+      Description: MA_07_05: Share sheet dung file da chon
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu > test_MA_07_05_share_sheet_correct_file_when_multiple PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu > test_MA_08_01_open_share_sheet_via_share STANDARD_OUT
+
+    ▶ Running: test_MA_08_01_open_share_sheet_via_share
+      Description: MA_08_01: Click Share -> mo share sheet
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu > test_MA_08_01_open_share_sheet_via_share PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu > test_MA_08_02_share_sheet_shows_correct_filename STANDARD_OUT
+
+    ▶ Running: test_MA_08_02_share_sheet_shows_correct_filename
+      Description: MA_08_02: Share sheet hien thi ten file dung
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu > test_MA_08_02_share_sheet_shows_correct_filename PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu > test_MA_08_03_share_sheet_lists_apps STANDARD_OUT
+
+    ▶ Running: test_MA_08_03_share_sheet_lists_apps
+      Description: MA_08_03: Share sheet hien thi danh sach app
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu > test_MA_08_03_share_sheet_lists_apps PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu > test_MA_08_04_close_share_sheet_with_cancel STANDARD_OUT
+
+    ▶ Running: test_MA_08_04_close_share_sheet_with_cancel
+      Description: MA_08_04: Dong share sheet bang Huy
+      ✓ PASSED
+
+Voice Changer Regression Suite > My Audio Tests > testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu > test_MA_08_04_close_share_sheet_with_cancel PASSED
+
+Voice Changer Regression Suite > My Audio Tests STANDARD_OUT
+
+    ==========================================
+    TEST RESULTS:
+      Total:   34
+      Passed:  34
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Import Audio Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Import Audio Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   12
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Drawer Menu Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Drawer Menu Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   16
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Settings Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Settings Tests
+    ==========================================
+
+    ==========================================
+    TEST RESULTS:
+      Total:   13
+      Passed:  0
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260519_104606.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+BUILD SUCCESSFUL in 8m 38s
+5 actionable tasks: 1 executed, 4 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.0.0/userguide/configuration_cache_enabling.html

@@ -2,6 +2,7 @@ package testcases.MyAudio;
 
 import Base.BaseTest;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -13,6 +14,8 @@ import Pages.Components.ShareBottomSheet;
 import Pages.MyAudioPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 /**
  * MA_07: Test Send Voice Message tu Edit Menu (5 tests).
@@ -28,7 +31,7 @@ public class MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu extends BaseTest
     public void setupSession() {
         logger.info("=== SETUP SEND VOICE MESSAGE FROM EDIT MENU ===");
         try {
-            ensureAtLeastOneFile();
+            RecordFlowHelper.ensureAtLeastOneFile(driver);
             myAudioPage = RecordFlowHelper.navigateToMyAudio(driver);
             editMenu = new MyAudioEditMenu(driver);
             shareSheet = new ShareBottomSheet(driver);
@@ -94,30 +97,37 @@ public class MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu extends BaseTest
         }
     }
 
-    private void ensureAtLeastOneFile() {
-        try {
-            MyAudioPage temp = RecordFlowHelper.navigateToMyAudio(driver);
-            if (temp.hasAtLeastOneFile()) return;
-
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            RecordFlowHelper.navigateToAudioSaved(driver, 1);
-            Thread.sleep(800);
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-        } catch (Exception e) {
-            logger.warn("ensureAtLeastOneFile error: " + e.getMessage());
-        }
-    }
 
     private void openSendVoiceMessageSheet(int itemIndex)
             throws InterruptedException {
-        myAudioPage.clickMoreAt(itemIndex);
-        Thread.sleep(1000);
+        // Smart wait + retry up to 3 attempts (flaky: bottom sheet animation
+        // sometimes drops click). 500ms settle between attempts.
+        for (int attempt = 1; attempt <= 3; attempt++) {
+            myAudioPage.clickMoreAt(itemIndex);
+            try {
+                new WebDriverWait(driver, Duration.ofSeconds(3))
+                        .ignoring(Exception.class)
+                        .until(d -> editMenu.isDisplayed());
+                break;
+            } catch (Exception e) {
+                if (attempt < 3) {
+                    logger.warn("Edit menu khong mo lan " + attempt
+                            + ", retry sau 500ms");
+                    Thread.sleep(500);
+                }
+            }
+        }
         Assert.assertTrue(editMenu.isDisplayed(), "Edit menu khong mo");
 
         editMenu.clickVoiceMessage();
-        Thread.sleep(2500);
+        // L1: Smart wait share sheet thay sleep(2500)
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(4))
+                    .ignoring(Exception.class)
+                    .until(d -> shareSheet.isDisplayed());
+        } catch (Exception e) {
+            // se fail o assertion phia duoi neu sheet khong mo
+        }
     }
 
     @Test(priority = 1, description = "MA_07_01: Click Send Voice Message -> mo share sheet")
@@ -141,7 +151,14 @@ public class MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu extends BaseTest
 
         // Buoc 1: Click btnMore tai index 1
         myAudioPage.clickMoreAt(1);
-        Thread.sleep(1500);
+        // L1: Smart wait edit menu thay sleep(1500)
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> editMenu.isDisplayed());
+        } catch (Exception e) {
+            // se fail o assertion phia duoi
+        }
 
         // Buoc 2: Verify edit menu mo bang header text (giong MA_03_04 da pass)
         String headerInMenu = editMenu.getHeaderFileName();
@@ -154,7 +171,14 @@ public class MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu extends BaseTest
 
         // Buoc 3: Click Send Voice Message
         editMenu.clickVoiceMessage();
-        Thread.sleep(2500);
+        // L1: Smart wait share sheet thay sleep(2500)
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(4))
+                    .ignoring(Exception.class)
+                    .until(d -> shareSheet.isDisplayed());
+        } catch (Exception e) {
+            // se fail o assertion phia duoi
+        }
 
         // Buoc 4: Verify share sheet mo bang preview file name
         String fileNameInSheet = shareSheet.getPreviewFileName();
@@ -191,7 +215,14 @@ public class MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu extends BaseTest
         Assert.assertTrue(shareSheet.isDisplayed(), "Share sheet khong mo");
 
         shareSheet.clickCancel();
-        Thread.sleep(1500);
+        // L1: Smart wait sheet close thay sleep(1500)
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> !shareSheet.isDisplayed());
+        } catch (Exception e) {
+            // se fail o assertion phia duoi
+        }
 
         Assert.assertFalse(shareSheet.isDisplayed(),
                 "Sheet KHONG dong");

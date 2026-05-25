@@ -118,6 +118,36 @@ public class AdbHelper {
     }
 
     // ========================================================
+    // PUBLIC API - NOTIFICATION / DND MANAGEMENT
+    // ========================================================
+
+    /**
+     * Bat Do Not Disturb (alarms-only) de chan heads-up notification
+     * trong suot session test. Khong de notification cua app khac
+     * (Teams, Zalo, ...) lam nhieu UiAutomator2 dump UI tree.
+     */
+    public static void enableDnd() {
+        logger.info("Enable Do Not Disturb (alarms-only)");
+        executeAdbShell("cmd notification set_dnd alarms");
+    }
+
+    /**
+     * Tat Do Not Disturb. Goi khi quit driver de tra device ve state cu.
+     */
+    public static void disableDnd() {
+        logger.info("Disable Do Not Disturb");
+        executeAdbShell("cmd notification set_dnd off");
+    }
+
+    /**
+     * Dismiss heads-up notification va collapse status bar shade.
+     * Goi truoc moi test method de dam bao app duoi cung khong bi overlay.
+     */
+    public static void dismissNotifications() {
+        executeAdbShell("cmd statusbar collapse");
+    }
+
+    // ========================================================
     // PUBLIC API - APP MANAGEMENT
     // ========================================================
 

@@ -2,6 +2,7 @@ package testcases.MyAudio;
 
 import Base.BaseTest;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -13,6 +14,8 @@ import Pages.Components.MyAudioEditMenu;
 import Pages.MyAudioPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 /**
  * MA_05: Test Delete function (3 tests).
@@ -116,12 +119,33 @@ public class MyAudio05_Verify_Delete extends BaseTest {
     }
 
     private void openDeleteDialog(int itemIndex) throws InterruptedException {
-        myAudioPage.clickMoreAt(itemIndex);
-        Thread.sleep(1000);
+        // Smart wait + retry up to 3 attempts (flaky: bottom sheet animation
+        // sometimes drops click). 500ms settle between attempts.
+        for (int attempt = 1; attempt <= 3; attempt++) {
+            myAudioPage.clickMoreAt(itemIndex);
+            try {
+                new WebDriverWait(driver, Duration.ofSeconds(3))
+                        .ignoring(Exception.class)
+                        .until(d -> editMenu.isDisplayed());
+                break;
+            } catch (Exception e) {
+                if (attempt < 3) {
+                    logger.warn("Edit menu khong mo lan " + attempt
+                            + ", retry sau 500ms");
+                    Thread.sleep(500);
+                }
+            }
+        }
         Assert.assertTrue(editMenu.isDisplayed(), "Edit menu khong mo");
 
         editMenu.clickDelete();
-        Thread.sleep(1000);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> deleteDialog.isDisplayed());
+        } catch (Exception e) {
+            // Will fail at assertion below
+        }
         Assert.assertTrue(deleteDialog.isDisplayed(),
                 "Delete dialog khong mo");
     }
@@ -197,25 +221,35 @@ public class MyAudio05_Verify_Delete extends BaseTest {
         // Mo dialog delete cho file index 1
         openDeleteDialog(1);
 
+        final String fileToDeleteFinal = fileToDelete;
         deleteDialog.clickDelete();
-        Thread.sleep(2000);
+
+        // Smart wait: doi file da xoa BIEN MAT khoi visible list.
+        // Khong dung count check vi RecyclerView virtualized:
+        // delete 1 item -> item khac tu duoi scroll vao -> count co the GIU NGUYEN.
+        // File existence check moi la authoritative.
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .ignoring(Exception.class)
+                    .until(d -> !myAudioPage.hasFileContaining(fileToDeleteFinal));
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         // Verify dialog dong
         Assert.assertFalse(deleteDialog.isDisplayed(),
                 "Dialog phai dong sau Delete");
 
-        // Verify so file giam 1
-        int countAfter = myAudioPage.getItemCount();
-        ExtentReportManager.getTest().log(Status.INFO,
-                "Tong sau xoa: " + countAfter);
-
-        Assert.assertEquals(countAfter, countBefore - 1,
-                "So file phai giam 1: " + countBefore + " -> " + countAfter);
-
-        // Verify file index 1 da bi xoa
+        // PRIMARY check: file da xoa khoi list
         boolean stillThere = myAudioPage.hasFileContaining(fileToDelete);
         Assert.assertFalse(stillThere,
                 "File van con sau Delete: " + fileToDelete);
+
+        // INFO: count co the giam HOAC giu nguyen (RecyclerView virtualization).
+        int countAfter = myAudioPage.getItemCount();
+        ExtentReportManager.getTest().log(Status.INFO,
+                "Visible items: " + countBefore + " -> " + countAfter
+                        + " (count co the khong giam neu list virtualized)");
 
         ExtentReportManager.getTest().log(Status.PASS,
                 "Delete thanh cong: " + fileToDelete);

@@ -1,62 +1,34 @@
 package testcases.DrawerMenu;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.DrawerMenuPage;
 import Report.ExtentReportManager;
 import Utils.GestureUtils;
 import Utils.RecordFlowHelper;
 
+import java.time.Duration;
+
 /**
  * DM_03: Verify Rate Us mo CH Play + back (1 test).
  */
-public class DrawerMenu03_Verify_Rate_Us extends BaseTest {
+public class DrawerMenu03_Verify_Rate_Us extends BaseSharedSessionTest {
 
     private DrawerMenuPage drawerMenu;
 
-    @BeforeMethod
-    public void navigateToScreen() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-        } catch (Exception e) {
-            logger.error("Navigate error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        RecordFlowHelper.smartResetToHome(driver);
+        drawerMenu = RecordFlowHelper.openDrawer(driver);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        try {
-            for (int i = 1; i <= 5; i++) {
-                String pkg = ((AndroidDriver) driver).getCurrentPackage();
-                if ("com.bluesoftware.voicechanger".equals(pkg)) break;
-                GestureUtils.swipeFromLeftEdgeToBack(driver);
-                Thread.sleep(1000);
-            }
-
-            String pkgFinal = ((AndroidDriver) driver).getCurrentPackage();
-            if (!"com.bluesoftware.voicechanger".equals(pkgFinal)) {
-                ((AndroidDriver) driver).activateApp(
-                        "com.bluesoftware.voicechanger");
-                Thread.sleep(1500);
-            }
-
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            try {
-                RecordFlowHelper.forceResetToHome(driver);
-            } catch (Exception ex) {
-                logger.error("Force reset failed: " + ex.getMessage());
-            }
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isDrawerOpen(driver);
     }
 
     @Test(description = "DM_03_01: Click Rate Us mo CH Play va back ve Voice Changer")
@@ -67,7 +39,14 @@ public class DrawerMenu03_Verify_Rate_Us extends BaseTest {
 
         // Click Rate Us
         drawerMenu.clickRateUs();
-        Thread.sleep(4000);
+        // M2: Wait package doi (CH Play mo) thay sleep(4000) co dinh, max 5s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .until(d -> !"com.bluesoftware.voicechanger".equals(
+                            ((AndroidDriver) d).getCurrentPackage()));
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         // Verify mo external app
         String pkgPlayStore = drawerMenu.getCurrentPackage();

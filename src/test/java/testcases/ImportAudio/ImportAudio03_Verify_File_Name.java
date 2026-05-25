@@ -1,16 +1,17 @@
 package testcases.ImportAudio;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.AudioSavedPage;
 import Pages.VoiceEffectsPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 /**
  * IA_03: Verify file naming format 'import_<timestamp>_<original>.<ext>'.
@@ -18,37 +19,21 @@ import Utils.RecordFlowHelper;
  * Tu DOM: import_1778812016361_Âm Thầm Bên Em..._1775440616123.mp3
  * Day la UNIQUE cua Import Audio (khac record_, tts_, src_).
  */
-public class ImportAudio03_Verify_File_Name extends BaseTest {
+public class ImportAudio03_Verify_File_Name extends BaseSharedSessionTest {
 
     private VoiceEffectsPage voiceEffectsPage;
     private AudioSavedPage audioSavedPage;
 
-    @BeforeMethod
-    public void navigateToScreen() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            voiceEffectsPage = new VoiceEffectsPage(driver);
-            audioSavedPage = new AudioSavedPage(driver);
-        } catch (Exception e) {
-            logger.error("Navigate error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            voiceEffectsPage = new VoiceEffectsPage(driver);
-            audioSavedPage = new AudioSavedPage(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        RecordFlowHelper.smartResetToHome(driver);
+        voiceEffectsPage = new VoiceEffectsPage(driver);
+        audioSavedPage = new AudioSavedPage(driver);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            try {
-                RecordFlowHelper.forceResetToHome(driver);
-            } catch (Exception ex) {
-                logger.error("Force reset failed: " + ex.getMessage());
-            }
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isAtHome(driver);
     }
 
     @Test(priority = 1, description = "IA_03_01: Ten file Voice Effects co prefix 'import_'")
@@ -97,7 +82,14 @@ public class ImportAudio03_Verify_File_Name extends BaseTest {
 
         // Save
         ve.clickSave();
-        Thread.sleep(3000);
+        // M2: Wait Audio Saved thay sleep(3000) co dinh, max 5s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .ignoring(Exception.class)
+                    .until(d -> audioSavedPage.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(audioSavedPage.isDisplayed(),
                 "Khong chuyen sang Audio Saved");
@@ -124,7 +116,14 @@ public class ImportAudio03_Verify_File_Name extends BaseTest {
         }
 
         ve.clickSave();
-        Thread.sleep(3000);
+        // M2: Wait Audio Saved thay sleep(3000) co dinh, max 5s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .ignoring(Exception.class)
+                    .until(d -> audioSavedPage.isDisplayed());
+        } catch (Exception e) {
+            // Timeout - se fail o assertion phia duoi
+        }
 
         Assert.assertTrue(audioSavedPage.isDisplayed(),
                 "Khong o Audio Saved");

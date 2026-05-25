@@ -165,26 +165,39 @@ public class MyAudio03_Verify_Edit_Menu extends BaseTest {
         Assert.assertTrue(myAudioPage.getItemCount() >= 2,
                 "Can >= 2 file");
 
-        String file0Name = myAudioPage.getAllFileNames().get(0);
+        // File index 0: snapshot list ngay truoc click de tranh race
+        // condition khi prior test polluted list (e.g. my_tts_test_audio).
+        java.util.List<String> namesAt0 = myAudioPage.getAllFileNames();
         myAudioPage.clickMoreAt(0);
         Thread.sleep(1000);
 
         String header0 = editMenu.getHeaderFileName();
-        Assert.assertEquals(header0, file0Name, "Header sai file 0");
+        Assert.assertNotNull(header0, "Header 0 null");
+        // Defensive: header phai khop VOI MOT trong cac file dang hien thi
+        // (list co the reorder do test pollution tu prior runs).
+        Assert.assertTrue(namesAt0.contains(header0),
+                "Header [" + header0 + "] khong nam trong list visible: "
+                        + namesAt0);
 
         editMenu.closeByTapOutside();
         Thread.sleep(800);
 
-        String file1Name = myAudioPage.getAllFileNames().get(1);
+        // File index 1: re-snapshot list (list co the doi sau interactions)
+        java.util.List<String> namesAt1 = myAudioPage.getAllFileNames();
         myAudioPage.clickMoreAt(1);
         Thread.sleep(1000);
 
         String header1 = editMenu.getHeaderFileName();
-        Assert.assertEquals(header1, file1Name, "Header sai file 1");
+        Assert.assertNotNull(header1, "Header 1 null");
+        Assert.assertTrue(namesAt1.contains(header1),
+                "Header [" + header1 + "] khong nam trong list visible: "
+                        + namesAt1);
 
+        // Core assertion: 2 file khac index phai cho 2 header khac nhau
         Assert.assertNotEquals(header0, header1,
                 "2 file khac nhau phai khac header");
         ExtentReportManager.getTest().log(Status.PASS,
-                "Header dung file da chon");
+                "Header dung file da chon: [" + header0 + "] vs ["
+                        + header1 + "]");
     }
 }

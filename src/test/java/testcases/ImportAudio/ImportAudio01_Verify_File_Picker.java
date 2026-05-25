@@ -1,81 +1,45 @@
 package testcases.ImportAudio;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.ImportAudioFilePickerPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
 
 /**
- * IA_01: Verify File Picker (4 tests - optimized).
- * Pattern: Reset only when needed (not @BeforeMethod).
+ * IA_01: Verify File Picker (4 tests).
+ *
+ * Expected screen = Home. Moi test tu mo File Picker khi can.
+ * Sau test mo File Picker, @BeforeMethod re-nav neu khong o Home.
  */
-public class ImportAudio01_Verify_File_Picker extends BaseTest {
+public class ImportAudio01_Verify_File_Picker extends BaseSharedSessionTest {
 
     private ImportAudioFilePickerPage filePicker;
 
-    @BeforeClass(dependsOnMethods = "setUp")
-    public void setupSession() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(500);
-            filePicker = new ImportAudioFilePickerPage(driver);
-        } catch (Exception e) {
-            logger.error("Setup error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            filePicker = new ImportAudioFilePickerPage(driver);
-        }
-    }
-
-    @BeforeMethod
-    public void ensureCleanState() {
-        // Chi reset neu KHONG o Home
-        try {
-            if (!RecordFlowHelper.isAtHome(driver)) {
-                if (RecordFlowHelper.isAtFilePicker(driver)) {
-                    // Quick activate app
-                    ((AndroidDriver) driver).activateApp("com.bluesoftware.voicechanger");
-                    Thread.sleep(800);
-                }
-                if (!RecordFlowHelper.isAtHome(driver)) {
-                    RecordFlowHelper.smartResetToHome(driver);
-                    Thread.sleep(500);
-                }
+    @Override
+    protected void navigateToScreen() {
+        // Quick activate neu o File Picker
+        if (RecordFlowHelper.isAtFilePicker(driver)) {
+            try {
+                ((AndroidDriver) driver).activateApp(
+                        "com.bluesoftware.voicechanger");
+                Thread.sleep(800);
+            } catch (Exception e) {
+                // skip
             }
-        } catch (Exception e) {
-            logger.warn("Clean state error: " + e.getMessage());
         }
-    }
-
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        // Chi reset neu KHONG o Home
-        try {
-            if (RecordFlowHelper.isAtFilePicker(driver)) {
-                ((AndroidDriver) driver).activateApp("com.bluesoftware.voicechanger");
-                Thread.sleep(500);
-            }
-        } catch (Exception e) {
-            // skip
-        }
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void cleanupAfterClass() {
-        try {
+        if (!RecordFlowHelper.isAtHome(driver)) {
             RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            logger.error("Cleanup error: " + e.getMessage());
         }
+        filePicker = new ImportAudioFilePickerPage(driver);
+    }
+
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isAtHome(driver);
     }
 
     @Test(priority = 1, description = "IA_01_01: Mo File Picker tu Home")
@@ -120,9 +84,9 @@ public class ImportAudio01_Verify_File_Picker extends BaseTest {
         Assert.assertTrue(filePicker.isDisplayed(),
                 "Khong vao duoc File Picker");
 
-        // Activate app (fast back)
+        // pressBack() da co smart wait noi tai - dung ngay khi ve Voice Changer.
+        // Khong can sleep them de tranh nhan BACK thua va out app ve system home.
         filePicker.pressBack();
-        Thread.sleep(800);  // Giam tu 2000
 
         String currentPkg = ((AndroidDriver) driver).getCurrentPackage();
         ExtentReportManager.getTest().log(Status.INFO,
@@ -145,9 +109,8 @@ public class ImportAudio01_Verify_File_Picker extends BaseTest {
         }
         Assert.assertTrue(filePicker.isDisplayed(), "Lan 1: khong mo duoc");
 
-        // BACK ve Voice Changer
+        // BACK ve Voice Changer (smart wait noi tai cua pressBack)
         filePicker.pressBack();
-        Thread.sleep(800);
 
         // Re-open lan 2
         filePicker = RecordFlowHelper.navigateToFilePicker(driver);

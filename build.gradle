@@ -33,7 +33,7 @@ dependencies {
 
 test {
     useTestNG() {
-        suiteXmlFiles = [file('src/test/resources/regression.xml')]
+        suiteXmlFiles = [file('src/test/resources/Regression.xml')]
     }
 
     testLogging {

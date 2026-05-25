@@ -24,16 +24,9 @@ public class MyAudio02_Verify_Search extends BaseTest {
     public void setupSession() {
         logger.info("=== SETUP SEARCH SUITE ===");
         try {
+            // M6: Dung helper trung tam
+            RecordFlowHelper.ensureAtLeastOneFile(driver);
             myAudioPage = RecordFlowHelper.navigateToMyAudio(driver);
-            if (!myAudioPage.hasAtLeastOneFile()) {
-                RecordFlowHelper.smartResetToHome(driver);
-                Thread.sleep(800);
-                RecordFlowHelper.navigateToAudioSaved(driver, 1);
-                Thread.sleep(800);
-                RecordFlowHelper.smartResetToHome(driver);
-                Thread.sleep(800);
-                myAudioPage = RecordFlowHelper.navigateToMyAudio(driver);
-            }
         } catch (Exception e) {
             logger.error("Setup error: " + e.getMessage());
             RecordFlowHelper.forceResetToHome(driver);

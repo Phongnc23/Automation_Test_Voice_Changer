@@ -24,7 +24,7 @@ public class MyAudio01_Verify_UI_Display extends BaseTest {
     public void setupSession() {
         logger.info("=== SETUP MY AUDIO SESSION ===");
         try {
-            ensureAtLeastOneFile();
+            RecordFlowHelper.ensureAtLeastOneFile(driver);
             myAudioPage = RecordFlowHelper.navigateToMyAudio(driver);
         } catch (Exception e) {
             logger.error("Setup error: " + e.getMessage());
@@ -59,22 +59,6 @@ public class MyAudio01_Verify_UI_Display extends BaseTest {
             RecordFlowHelper.smartResetToHome(driver);
         } catch (Exception e) {
             logger.error("Cleanup error: " + e.getMessage());
-        }
-    }
-
-    private void ensureAtLeastOneFile() {
-        try {
-            MyAudioPage temp = RecordFlowHelper.navigateToMyAudio(driver);
-            if (temp.hasAtLeastOneFile()) return;
-
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            RecordFlowHelper.navigateToAudioSaved(driver, 1);
-            Thread.sleep(800);
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-        } catch (Exception e) {
-            logger.warn("ensureAtLeastOneFile error: " + e.getMessage());
         }
     }
 

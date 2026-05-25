@@ -1,11 +1,8 @@
 package testcases.Setting;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.SettingsPage;
 import Report.ExtentReportManager;
@@ -14,40 +11,18 @@ import Utils.RecordFlowHelper;
 /**
  * ST_04: Verify Version (2 tests).
  */
-public class Setting04_Verify_Version extends BaseTest {
+public class Setting04_Verify_Version extends BaseSharedSessionTest {
 
     private SettingsPage settingsPage;
 
-    @BeforeClass(dependsOnMethods = "setUp")
-    public void setupSession() {
-        logger.info("=== SETUP VERSION SUITE ===");
-        try {
-            settingsPage = RecordFlowHelper.navigateToSettings(driver);
-        } catch (Exception e) {
-            logger.error("Setup error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            settingsPage = RecordFlowHelper.navigateToSettings(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        settingsPage = RecordFlowHelper.navigateToSettings(driver);
     }
 
-    @BeforeMethod
-    public void ensureCleanState() {
-        if (!settingsPage.isDisplayed()) {
-            try {
-                settingsPage = RecordFlowHelper.navigateToSettings(driver);
-            } catch (Exception e) {
-                logger.error("Re-navigate error: " + e.getMessage());
-            }
-        }
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void cleanupAfterClass() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            logger.error("Cleanup error: " + e.getMessage());
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isAtSettings(driver);
     }
 
     @Test(priority = 1, description = "ST_04_01: Verify Version hien thi")

@@ -1,62 +1,38 @@
 package testcases.DrawerMenu;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
-import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import Pages.Components.IntentResolverBottomSheet;
 import Pages.DrawerMenuPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
+
+import java.time.Duration;
 
 /**
  * DM_05: Verify Feedback mo email chooser (3 tests).
  *
  * DOM: com.android.intentresolver chooser voi Gmail, Outlook, etc.
  */
-public class DrawerMenu05_Verify_Feedback extends BaseTest {
-
-    private static final By FEEDBACK_CANCEL =
-            By.id("com.android.intentresolver:id/oplus_resolve_close_icon");
-    private static final By FEEDBACK_APP_ITEMS =
-            By.id("com.android.intentresolver:id/resolver_item_layout");
+public class DrawerMenu05_Verify_Feedback extends BaseSharedSessionTest {
 
     private DrawerMenuPage drawerMenu;
+    private IntentResolverBottomSheet sheet;
 
-    @BeforeMethod
-    public void navigateToScreen() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-            Thread.sleep(800);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-        } catch (Exception e) {
-            logger.error("Navigate error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            drawerMenu = RecordFlowHelper.openDrawer(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        RecordFlowHelper.smartResetToHome(driver);
+        drawerMenu = RecordFlowHelper.openDrawer(driver);
+        sheet = new IntentResolverBottomSheet(driver);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void resetState() {
-        try {
-            if (driver.findElements(FEEDBACK_CANCEL).size() > 0) {
-                driver.findElement(FEEDBACK_CANCEL).click();
-                Thread.sleep(1500);
-            }
-            ((AndroidDriver) driver).activateApp(
-                    "com.bluesoftware.voicechanger");
-            Thread.sleep(1500);
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            try {
-                RecordFlowHelper.forceResetToHome(driver);
-            } catch (Exception ex) {
-                logger.error("Force reset failed: " + ex.getMessage());
-            }
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isDrawerOpen(driver);
     }
 
     @Test(priority = 1, description = "DM_05_01: Click Feedback -> mo email chooser")
@@ -66,12 +42,16 @@ public class DrawerMenu05_Verify_Feedback extends BaseTest {
                 "Drawer khong mo");
 
         drawerMenu.clickFeedback();
-        Thread.sleep(3000);
+        // M2: Wait email chooser xuat hien thay sleep(3000) co dinh, max 4s
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(4))
+                    .until(ExpectedConditions.visibilityOfElementLocated(
+                            IntentResolverBottomSheet.getCancelButtonLocator()));
+        } catch (Exception e) {
+            // Timeout
+        }
 
-        // Verify chooser mo
-        boolean chooserVisible =
-                driver.findElements(FEEDBACK_CANCEL).size() > 0;
-        Assert.assertTrue(chooserVisible,
+        Assert.assertTrue(sheet.isDisplayed(),
                 "Email chooser khong mo");
 
         ExtentReportManager.getTest().log(Status.PASS,
@@ -82,9 +62,15 @@ public class DrawerMenu05_Verify_Feedback extends BaseTest {
     public void test_DM_05_02_email_apps_displayed()
             throws InterruptedException {
         drawerMenu.clickFeedback();
-        Thread.sleep(3000);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(4))
+                    .until(ExpectedConditions.visibilityOfElementLocated(
+                            IntentResolverBottomSheet.getCancelButtonLocator()));
+        } catch (Exception e) {
+            // Timeout
+        }
 
-        int appCount = driver.findElements(FEEDBACK_APP_ITEMS).size();
+        int appCount = sheet.countApps();
         ExtentReportManager.getTest().log(Status.INFO,
                 "So email app: " + appCount);
 
@@ -99,17 +85,23 @@ public class DrawerMenu05_Verify_Feedback extends BaseTest {
     public void test_DM_05_03_cancel_chooser()
             throws InterruptedException {
         drawerMenu.clickFeedback();
-        Thread.sleep(3000);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(4))
+                    .until(ExpectedConditions.visibilityOfElementLocated(
+                            IntentResolverBottomSheet.getCancelButtonLocator()));
+        } catch (Exception e) {
+            // Timeout
+        }
 
-        Assert.assertTrue(driver.findElements(FEEDBACK_CANCEL).size() > 0,
+        Assert.assertTrue(sheet.isDisplayed(),
                 "Chooser khong mo");
 
-        driver.findElement(FEEDBACK_CANCEL).click();
+        sheet.clickCancel();
         Thread.sleep(2000);
 
         // Verify chooser dong
-        boolean closed = driver.findElements(FEEDBACK_CANCEL).size() == 0;
-        Assert.assertTrue(closed, "Chooser khong dong sau Cancel");
+        Assert.assertFalse(sheet.isDisplayed(),
+                "Chooser khong dong sau Cancel");
 
         String pkgAfter = drawerMenu.getCurrentPackage();
         Assert.assertEquals(pkgAfter, "com.bluesoftware.voicechanger",

@@ -1,12 +1,8 @@
 package testcases.TextToSpeech;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import Pages.LanguageDropdownPage;
 import Pages.TextToAudioPage;
@@ -22,28 +18,15 @@ import java.util.List;
  * Test chon ngon ngu - SHARE SESSION pattern.
  * Setup man Text to Audio 1 lan, dam bao state truoc moi test.
  */
-public class TextToAudio02_Verify_Language_Selection extends BaseTest {
+public class TextToAudio02_Verify_Language_Selection extends BaseSharedSessionTest {
 
     private TextToAudioPage textToAudioPage;
     private LanguageDropdownPage langPage;
 
-    @BeforeClass(dependsOnMethods = "setUp")
-    public void setupSession() {
-        logger.info("=== SETUP TTS Language Suite ===");
-        try {
-            textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-            langPage = new LanguageDropdownPage(driver);
-        } catch (Exception e) {
-            RecordFlowHelper.forceResetToHome(driver);
-            textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-            langPage = new LanguageDropdownPage(driver);
-        }
-    }
-
-    @BeforeMethod
-    public void ensureCleanState() {
-        // Neu lo o man Language Selection -> press BACK ve Text to Audio
-        if (langPage.isDisplayed()) {
+    @Override
+    protected void navigateToScreen() {
+        // Neu dang o Language Selection -> press BACK ve TTS
+        if (RecordFlowHelper.isAtLanguageSelection(driver)) {
             try {
                 ((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.BACK));
                 Thread.sleep(800);
@@ -51,25 +34,13 @@ public class TextToAudio02_Verify_Language_Selection extends BaseTest {
                 logger.warn("Back error: " + e.getMessage());
             }
         }
-
-        // Neu khong o Text to Audio -> navigate lai
-        if (!textToAudioPage.isDisplayed()) {
-            try {
-                RecordFlowHelper.smartResetToHome(driver);
-                textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-            } catch (Exception e) {
-                logger.error("Re-navigate error: " + e.getMessage());
-            }
-        }
+        textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
+        langPage = new LanguageDropdownPage(driver);
     }
 
-    @AfterClass(alwaysRun = true)
-    public void cleanupAfterClass() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            logger.error("Cleanup error: " + e.getMessage());
-        }
+    @Override
+    protected boolean isAtExpectedScreen() {
+        return RecordFlowHelper.isAtTextToAudio(driver);
     }
 
     @Test(priority = 1, description = "TTS_02_01: Mo dropdown ngon ngu")
@@ -139,7 +110,7 @@ public class TextToAudio02_Verify_Language_Selection extends BaseTest {
         // Lan 2
         textToAudioPage.clickLanguageDropdown();
         Thread.sleep(800);
-        langPage.selectLanguageContains("Vi\u1ec7t");
+        langPage.selectLanguageContains("Việt");
         Thread.sleep(800);
 
         String lang2 = textToAudioPage.getCurrentLanguage();

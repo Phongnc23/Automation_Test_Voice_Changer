@@ -2,6 +2,7 @@ package Driver;
 
 import Constants.AppConstants;
 import Constants.TimeOutConstants;
+import Utils.AdbHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -40,6 +41,12 @@ public class AndroidDriverManager implements DriverManager {
         // Bypass loi tren Oppo
         options.setCapability("appium:ignoreHiddenApiPolicyError", true);
 
+        // Android 14 + UiAutomator2 fix: tranh loi
+        // "Cannot set AccessibilityNodeInfo's field 'mSealed' to 'true'"
+        // khi query XPath tren RecyclerView lon. Dung XPath1 engine khong
+        // reflect-set field nay.
+        options.setCapability("appium:enforceXPath1", true);
+
         try {
             URL serverUrl = new URL(AppConstants.APPIUM_SERVER_URL);
             driver = new AndroidDriver(serverUrl, options);
@@ -48,6 +55,10 @@ public class AndroidDriverManager implements DriverManager {
             logger.error("Failed to create Android driver: " + e.getMessage());
             throw new RuntimeException("Cannot create Android driver", e);
         }
+
+        // Chan heads-up notification cua app khac (Teams, Zalo, ...) lam
+        // sai lech UiAutomator2 dump UI tree -> flaky xpath lookup.
+        AdbHelper.enableDnd();
 
         return driver;
     }
@@ -61,6 +72,8 @@ public class AndroidDriverManager implements DriverManager {
     public void quitDriver() {
         if (driver != null) {
             logger.info("Quitting Android driver");
+            // Tra device ve state ban dau truoc khi quit
+            AdbHelper.disableDnd();
             driver.quit();
             driver = null;
         }

@@ -53,7 +53,7 @@ public class VoiceEffects04_Verify_Save_Close extends BaseTest {
     @Test(description = "VE_04_01: Save voi effect Normal")
     public void test_VE_04_01_save_with_normal_effect() throws InterruptedException {
         voiceEffectsPage.clickSave();
-        Thread.sleep(1000);
+        RecordFlowHelper.waitForAudioSaved(driver, 3);
 
         AudioSavedPage saved = new AudioSavedPage(driver);
         Assert.assertTrue(saved.isDisplayed(), "Khong chuyen sang Audio Saved");
@@ -63,9 +63,9 @@ public class VoiceEffects04_Verify_Save_Close extends BaseTest {
     @Test(description = "VE_04_02: Save voi effect Robot")
     public void test_VE_04_02_save_with_robot_effect() throws InterruptedException {
         voiceEffectsPage.clickEffect("Robot");
-        Thread.sleep(1000);
+        Thread.sleep(500);
         voiceEffectsPage.clickSave();
-        Thread.sleep(1000);
+        RecordFlowHelper.waitForAudioSaved(driver, 3);
 
         AudioSavedPage saved = new AudioSavedPage(driver);
         Assert.assertTrue(saved.isDisplayed(), "Khong chuyen sang Audio Saved");
@@ -76,7 +76,7 @@ public class VoiceEffects04_Verify_Save_Close extends BaseTest {
     @Test(description = "VE_04_03: Ten file sau Save dung format")
     public void test_VE_04_03_saved_file_name_format() throws InterruptedException {
         voiceEffectsPage.clickSave();
-        Thread.sleep(1000);
+        RecordFlowHelper.waitForAudioSaved(driver, 3);
 
         AudioSavedPage saved = new AudioSavedPage(driver);
         String fileName = saved.getFileName();
@@ -91,7 +91,13 @@ public class VoiceEffects04_Verify_Save_Close extends BaseTest {
     @Test(description = "VE_05_01: Nhan X hien dialog Discard")
     public void test_VE_05_01_close_shows_discard_dialog() throws InterruptedException {
         voiceEffectsPage.clickClose();
-        Thread.sleep(1000);
+        // L1: smart wait dialog mo
+        try {
+            new org.openqa.selenium.support.ui.WebDriverWait(driver,
+                    java.time.Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> voiceEffectsPage.isDiscardDialogDisplayed());
+        } catch (Exception e) { /* se fail o assertion */ }
 
         Assert.assertTrue(voiceEffectsPage.isDiscardDialogDisplayed(),
                 "Dialog Discard khong hien");
@@ -101,11 +107,16 @@ public class VoiceEffects04_Verify_Save_Close extends BaseTest {
     @Test(description = "VE_05_02: Click Cancel tren Discard dialog")
     public void test_VE_05_02_discard_dialog_cancel() throws InterruptedException {
         voiceEffectsPage.clickClose();
-        Thread.sleep(1000);
+        try {
+            new org.openqa.selenium.support.ui.WebDriverWait(driver,
+                    java.time.Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> voiceEffectsPage.isDiscardDialogDisplayed());
+        } catch (Exception e) { /* skip */ }
 
         if (voiceEffectsPage.isDiscardDialogDisplayed()) {
             voiceEffectsPage.clickDiscardCancel();
-            Thread.sleep(1000);
+            Thread.sleep(500);
 
             Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                     "Khong quay lai Voice Effects sau Cancel");
@@ -119,11 +130,16 @@ public class VoiceEffects04_Verify_Save_Close extends BaseTest {
     @Test(description = "VE_05_03: Click Discard tren dialog")
     public void test_VE_05_03_discard_dialog_confirm() throws InterruptedException {
         voiceEffectsPage.clickClose();
-        Thread.sleep(1000);
+        try {
+            new org.openqa.selenium.support.ui.WebDriverWait(driver,
+                    java.time.Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> voiceEffectsPage.isDiscardDialogDisplayed());
+        } catch (Exception e) { /* skip */ }
 
         if (voiceEffectsPage.isDiscardDialogDisplayed()) {
             voiceEffectsPage.clickDiscardConfirm();
-            Thread.sleep(1000);
+            RecordFlowHelper.waitForHome(driver, 3);
 
             boolean atHome = driver.findElements(
                     org.openqa.selenium.By.id(

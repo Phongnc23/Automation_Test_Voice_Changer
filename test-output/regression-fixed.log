@@ -1,0 +1,1451 @@
+> Task :clean
+
+> Task :compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :processResources
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources
+> Task :testClasses
+
+> Task :test
+
+Gradle Test Executor 5 STANDARD_ERROR
+    SLF4J(W): Class path contains multiple SLF4J providers.
+    SLF4J(W): Found provider [org.slf4j.simple.SimpleServiceProvider@c0c2f8d]
+    SLF4J(W): Found provider [org.apache.logging.slf4j.SLF4JServiceProvider@305b7c14]
+    SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+    SLF4J(I): Actual provider is of type [org.slf4j.simple.SimpleServiceProvider@c0c2f8d]
+
+Voice Changer Regression Suite STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Enable Do Not Disturb (alarms-only)
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd notification set_dnd alarms
+
+Voice Changer Regression Suite > Home Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Home Tests
+    ==========================================
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully STANDARD_OUT
+
+    ▶ Running: test_app_launched_successfully
+      Description: Kiem tra app Voice Changer mo thanh cong
+    Element not found: By.id: com.bluesoftware.voicechanger:id/text_app_name
+    RETRY 1/1 - test_app_launched_successfully (reason: Man hinh Home khong hien thi! expected [true] but found [false])
+      ↻ RETRY 1/1: test_app_launched_successfully
+    SKIPPED: test_app_launched_successfully
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully STANDARD_OUT
+
+    ▶ Running: test_app_launched_successfully
+      Description: Kiem tra app Voice Changer mo thanh cong
+    Element not found: By.id: com.bluesoftware.voicechanger:id/text_app_name
+    FAILED: test_app_launched_successfully
+    Reason: Man hinh Home khong hien thi! expected [true] but found [false]
+      ✗ FAILED
+        Reason: Man hinh Home khong hien thi! expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_app_launched_successfully FAILED
+    java.lang.AssertionError at Home01_Verify_App_Launched.java:32
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_get_current_activity STANDARD_OUT
+
+    ▶ Running: test_get_current_activity
+      Description: Kiem tra activity hien tai cua app
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home01_Verify_App_Launched > test_get_current_activity PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout STANDARD_OUT
+
+    ▶ Running: TC_01_verify_home_layout
+      Description: TC_01: Kiem tra hien thi man hinh Home dung bo cuc
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_menu
+    RETRY 1/1 - TC_01_verify_home_layout (reason: Hamburger menu khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_01_verify_home_layout
+    SKIPPED: TC_01_verify_home_layout
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout STANDARD_OUT
+
+    ▶ Running: TC_01_verify_home_layout
+      Description: TC_01: Kiem tra hien thi man hinh Home dung bo cuc
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_menu
+    FAILED: TC_01_verify_home_layout
+    Reason: Hamburger menu khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: Hamburger menu khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_01_verify_home_layout FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:31
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title STANDARD_OUT
+
+    ▶ Running: TC_02_verify_header_and_title
+      Description: TC_02: Kiem tra hien thi Header va tieu de ung dung
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_menu
+    RETRY 1/1 - TC_02_verify_header_and_title (reason: Hamburger menu khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_02_verify_header_and_title
+    SKIPPED: TC_02_verify_header_and_title
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title STANDARD_OUT
+
+    ▶ Running: TC_02_verify_header_and_title
+      Description: TC_02: Kiem tra hien thi Header va tieu de ung dung
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_menu
+    FAILED: TC_02_verify_header_and_title
+    Reason: Hamburger menu khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: Hamburger menu khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_02_verify_header_and_title FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:46
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card STANDARD_OUT
+
+    ▶ Running: TC_03_verify_record_card
+      Description: TC_03: Kiem tra hien thi card Record
+    Element not found: By.id: com.bluesoftware.voicechanger:id/layout_record
+    RETRY 1/1 - TC_03_verify_record_card (reason: Record card khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_03_verify_record_card
+    SKIPPED: TC_03_verify_record_card
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card STANDARD_OUT
+
+    ▶ Running: TC_03_verify_record_card
+      Description: TC_03: Kiem tra hien thi card Record
+    Element not found: By.id: com.bluesoftware.voicechanger:id/layout_record
+    FAILED: TC_03_verify_record_card
+    Reason: Record card khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: Record card khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_03_verify_record_card FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:60
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_04_verify_text_to_speech_card STANDARD_OUT
+
+    ▶ Running: TC_04_verify_text_to_speech_card
+      Description: TC_04: Kiem tra hien thi card Text to Speech
+    RETRY 1/1 - TC_04_verify_text_to_speech_card (reason: Text to Speech card khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_04_verify_text_to_speech_card
+    SKIPPED: TC_04_verify_text_to_speech_card
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_04_verify_text_to_speech_card SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_04_verify_text_to_speech_card STANDARD_OUT
+
+    ▶ Running: TC_04_verify_text_to_speech_card
+      Description: TC_04: Kiem tra hien thi card Text to Speech
+    FAILED: TC_04_verify_text_to_speech_card
+    Reason: Text to Speech card khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: Text to Speech card khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_04_verify_text_to_speech_card FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:81
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_05_verify_my_audio_card STANDARD_OUT
+
+    ▶ Running: TC_05_verify_my_audio_card
+      Description: TC_05: Kiem tra hien thi card My Audio
+    RETRY 1/1 - TC_05_verify_my_audio_card (reason: My Audio card khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_05_verify_my_audio_card
+    SKIPPED: TC_05_verify_my_audio_card
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_05_verify_my_audio_card SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_05_verify_my_audio_card STANDARD_OUT
+
+    ▶ Running: TC_05_verify_my_audio_card
+      Description: TC_05: Kiem tra hien thi card My Audio
+    FAILED: TC_05_verify_my_audio_card
+    Reason: My Audio card khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: My Audio card khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_05_verify_my_audio_card FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:95
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_06_verify_import_audio_card STANDARD_OUT
+
+    ▶ Running: TC_06_verify_import_audio_card
+      Description: TC_06: Kiem tra hien thi card Import Audio
+    RETRY 1/1 - TC_06_verify_import_audio_card (reason: Import Audio card khong hien thi expected [true] but found [false])
+      ↻ RETRY 1/1: TC_06_verify_import_audio_card
+    SKIPPED: TC_06_verify_import_audio_card
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_06_verify_import_audio_card SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_06_verify_import_audio_card STANDARD_OUT
+
+    ▶ Running: TC_06_verify_import_audio_card
+      Description: TC_06: Kiem tra hien thi card Import Audio
+    FAILED: TC_06_verify_import_audio_card
+    Reason: Import Audio card khong hien thi expected [true] but found [false]
+      ✗ FAILED
+        Reason: Import Audio card khong hien thi expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_06_verify_import_audio_card FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:108
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_07_verify_two_cards_same_row STANDARD_OUT
+
+    ▶ Running: TC_07_verify_two_cards_same_row
+      Description: TC_07: Kiem tra layout 2 card ngang hang (Text to Speech & My Audio)
+    RETRY 1/1 - TC_07_verify_two_cards_same_row (reason: An element could not be located on the page using the given search parameters.
+    For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+    Build info: version: '4.27.0', revision: 'd6e718d134'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+    Driver info: io.appium.java_client.android.AndroidDriver
+    Command: [f7fe365a-40ca-4f36-b70a-3046250349c0, findElement {using=id, value=com.bluesoftware.voicechanger:id/layout_text_to_speech}]
+    Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+    Session ID: f7fe365a-40ca-4f36-b70a-3046250349c0)
+      ↻ RETRY 1/1: TC_07_verify_two_cards_same_row
+    SKIPPED: TC_07_verify_two_cards_same_row
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_07_verify_two_cards_same_row SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_07_verify_two_cards_same_row STANDARD_OUT
+
+    ▶ Running: TC_07_verify_two_cards_same_row
+      Description: TC_07: Kiem tra layout 2 card ngang hang (Text to Speech & My Audio)
+    FAILED: TC_07_verify_two_cards_same_row
+    Reason: An element could not be located on the page using the given search parameters.
+    For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+    Build info: version: '4.27.0', revision: 'd6e718d134'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+    Driver info: io.appium.java_client.android.AndroidDriver
+    Command: [f7fe365a-40ca-4f36-b70a-3046250349c0, findElement {using=id, value=com.bluesoftware.voicechanger:id/layout_text_to_speech}]
+    Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+    Session ID: f7fe365a-40ca-4f36-b70a-3046250349c0
+      ✗ FAILED
+        Reason: An element could not be located on the page using the given search parameters.
+    For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+    Build info: version: '4.27.0', revision: 'd6e718d134'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+    Driver info: io.appium.java_client.android.AndroidDriver
+    Command: [f7fe365a-40ca-4f36-b70a-3046250349c0, findElement {using=id, value=com.bluesoftware.voicechanger:id/layout_text_to_speech}]
+    Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+    Session ID: f7fe365a-40ca-4f36-b70a-3046250349c0
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_07_verify_two_cards_same_row FAILED
+    org.openqa.selenium.NoSuchElementException at Home02_Verify_UI_Display.java:134
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_10_verify_watermark_icons STANDARD_OUT
+
+    ▶ Running: TC_10_verify_watermark_icons
+      Description: TC_10: Kiem tra icon watermark tren cac card co hien thi
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_record
+    RETRY 1/1 - TC_10_verify_watermark_icons (reason: Record card thieu icon expected [true] but found [false])
+      ↻ RETRY 1/1: TC_10_verify_watermark_icons
+    SKIPPED: TC_10_verify_watermark_icons
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_10_verify_watermark_icons SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_10_verify_watermark_icons STANDARD_OUT
+
+    ▶ Running: TC_10_verify_watermark_icons
+      Description: TC_10: Kiem tra icon watermark tren cac card co hien thi
+    Element not found: By.id: com.bluesoftware.voicechanger:id/image_record
+    FAILED: TC_10_verify_watermark_icons
+    Reason: Record card thieu icon expected [true] but found [false]
+      ✗ FAILED
+        Reason: Record card thieu icon expected [true] but found [false]
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_10_verify_watermark_icons FAILED
+    java.lang.AssertionError at Home02_Verify_UI_Display.java:154
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_20_verify_all_texts STANDARD_OUT
+
+    ▶ Running: TC_20_verify_all_texts
+      Description: TC_20: Kiem tra hien thi chinh xac text tren man hinh Home
+    Element not found: By.id: com.bluesoftware.voicechanger:id/text_app_name
+    RETRY 1/1 - TC_20_verify_all_texts (reason: Expected condition failed: waiting for visibility of element located by By.id: com.bluesoftware.voicechanger:id/text_app_name (tried for 8 second(s) with 500 milliseconds interval)
+    Build info: version: '4.27.0', revision: 'd6e718d134'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+    Driver info: io.appium.java_client.android.AndroidDriver
+    Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+    Session ID: f7fe365a-40ca-4f36-b70a-3046250349c0)
+      ↻ RETRY 1/1: TC_20_verify_all_texts
+    SKIPPED: TC_20_verify_all_texts
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_20_verify_all_texts SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_20_verify_all_texts STANDARD_OUT
+
+    ▶ Running: TC_20_verify_all_texts
+      Description: TC_20: Kiem tra hien thi chinh xac text tren man hinh Home
+    Element not found: By.id: com.bluesoftware.voicechanger:id/text_app_name
+    FAILED: TC_20_verify_all_texts
+    Reason: Expected condition failed: waiting for visibility of element located by By.id: com.bluesoftware.voicechanger:id/text_app_name (tried for 8 second(s) with 500 milliseconds interval)
+    Build info: version: '4.27.0', revision: 'd6e718d134'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+    Driver info: io.appium.java_client.android.AndroidDriver
+    Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+    Session ID: f7fe365a-40ca-4f36-b70a-3046250349c0
+      ✗ FAILED
+        Reason: Expected condition failed: waiting for visibility of element located by By.id: com.bluesoftware.voicechanger:id/text_app_name (tried for 8 second(s) with 500 milliseconds interval)
+    Build info: version: '4.27.0', revision: 'd6e718d134'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+    Driver info: io.appium.java_client.android.AndroidDriver
+    Capabilities {appium:appActivity: com.bluesoftware.voicechang..., appium:appPackage: com.bluesoftware.voicechanger, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.bluesoftware.voicechang..., appPackage: com.bluesoftware.voicechanger, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Oppo Pad Neo, ignoreHiddenApiPolicyError: true, newCommandTimeout: 120, noReset: true, platformName: ANDROID, platformVersion: 14}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OPPO, appium:deviceModel: OPD2303, appium:deviceName: VSO7UO6DINEQBQPF, appium:deviceScreenDensity: 360, appium:deviceScreenSize: 1720x2408, appium:deviceUDID: VSO7UO6DINEQBQPF, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: true, appium:pixelRatio: 2.25, appium:platformVersion: 14, appium:statBarHeight: 64, appium:takesScreenshot: true, appium:viewportRect: {height: 2344, left: 0, top: 64, width: 1720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+    Session ID: f7fe365a-40ca-4f36-b70a-3046250349c0
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home02_Verify_UI_Display > TC_20_verify_all_texts FAILED
+    org.openqa.selenium.TimeoutException at Home02_Verify_UI_Display.java:167
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_11_click_hamburger_menu STANDARD_OUT
+
+    ▶ Running: TC_11_click_hamburger_menu
+      Description: TC_11: Kiem tra nhan icon Hamburger Menu mo va dong drawer
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_11_click_hamburger_menu PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_12_click_record_card STANDARD_OUT
+
+    ▶ Running: TC_12_click_record_card
+      Description: TC_12: Click Record card, navigate, back ve Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_12_click_record_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_13_click_text_to_speech_card STANDARD_OUT
+
+    ▶ Running: TC_13_click_text_to_speech_card
+      Description: TC_13: Click Text to Speech card, navigate, back ve Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_13_click_text_to_speech_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_14_click_my_audio_card STANDARD_OUT
+
+    ▶ Running: TC_14_click_my_audio_card
+      Description: TC_14: Click My Audio card, navigate, back ve Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_14_click_my_audio_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_15_click_import_audio_card STANDARD_OUT
+
+    ▶ Running: TC_15_click_import_audio_card
+      Description: TC_15: Click Import Audio mo File Picker, back ve Home (3 lan)
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_15_click_import_audio_card PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_17_back_to_home_from_sub_screen STANDARD_OUT
+
+    ▶ Running: TC_17_back_to_home_from_sub_screen
+      Description: TC_17: SKIPPED - Logic da cover trong TC_12-15
+    SKIPPED: TC_17_back_to_home_from_sub_screen
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home03_Verify_Navigation > TC_17_back_to_home_from_sub_screen SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases > TC_19_background_and_resume STANDARD_OUT
+
+    ▶ Running: TC_19_background_and_resume
+      Description: TC_19: Kiem tra ung dung khi chay nen va quay lai
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases > TC_19_background_and_resume PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases > TC_21_cold_start_performance STANDARD_OUT
+
+    ▶ Running: TC_21_cold_start_performance
+      Description: TC_21: Kiem tra toc do tai man hinh Home (cold start)
+      ✓ PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases > TC_21_cold_start_performance PASSED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases > TC_22_landscape_orientation STANDARD_OUT
+
+    ▶ Running: TC_22_landscape_orientation
+      Description: TC_22: Kiem tra xoay ngang man hinh - SKIPPED (app locked portrait)
+    SKIPPED: TC_22_landscape_orientation
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Home Tests > testcases.Home.Home04_Verify_Edge_Cases > TC_22_landscape_orientation SKIPPED
+
+Voice Changer Regression Suite > Home Tests STANDARD_OUT
+
+    ==========================================
+    TEST RESULTS:
+      Total:   20
+      Passed:  8
+      Failed:  10
+      Skipped: 12
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_100204.html
+    Log file:     test-output/automation.log
+    Screenshots:  test-output/screenshots/
+    ==========================================
+
+Voice Changer Regression Suite > Record Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Record Tests
+    ==========================================
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_01_verify_close_button_displayed STANDARD_OUT
+
+    ▶ Running: test_REC_01_01_verify_close_button_displayed
+      Description: REC_01_01: Verify nut X (close) hien thi
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_01_verify_close_button_displayed PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_02_verify_recorder_title_displayed STANDARD_OUT
+
+    ▶ Running: test_REC_01_02_verify_recorder_title_displayed
+      Description: REC_01_02: Verify tieu de 'Recorder'
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_02_verify_recorder_title_displayed PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_03_verify_initial_timer_value STANDARD_OUT
+
+    ▶ Running: test_REC_01_03_verify_initial_timer_value
+      Description: REC_01_03: Verify dong ho ban dau 00:00:00
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_03_verify_initial_timer_value PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_04_verify_ready_to_record_text STANDARD_OUT
+
+    ▶ Running: test_REC_01_04_verify_ready_to_record_text
+      Description: REC_01_04: Verify text 'Ready to record'
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_04_verify_ready_to_record_text PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_05_verify_microphone_button_displayed STANDARD_OUT
+
+    ▶ Running: test_REC_01_05_verify_microphone_button_displayed
+      Description: REC_01_05: Verify nut microphone
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record01_Verify_UI_Display > test_REC_01_05_verify_microphone_button_displayed PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_01_start_recording STANDARD_OUT
+
+    ▶ Running: test_REC_02_01_start_recording
+      Description: REC_02_01: Bat dau ghi am khi nhan microphone
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_01_start_recording PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_03_waveform_appears STANDARD_OUT
+
+    ▶ Running: test_REC_02_03_waveform_appears
+      Description: REC_02_03: Waveform xuat hien khi ghi am
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_03_waveform_appears PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_02_timer_starts_counting STANDARD_OUT
+
+    ▶ Running: test_REC_02_02_timer_starts_counting
+      Description: REC_02_02: Timer bat dau dem khi ghi am
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_02_timer_starts_counting PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_06_timer_accuracy STANDARD_OUT
+
+    ▶ Running: test_REC_02_06_timer_accuracy
+      Description: REC_02_06: Timer dem chinh xac thoi gian
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_06_timer_accuracy PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_04_waveform_responds_to_sound STANDARD_OUT
+
+    ▶ Running: test_REC_02_04_waveform_responds_to_sound
+      Description: REC_02_04: Waveform phan ung am thanh - SKIP
+    SKIPPED: test_REC_02_04_waveform_responds_to_sound
+      ⊘ SKIPPED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_04_waveform_responds_to_sound SKIPPED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_05_long_recording_1_minute STANDARD_OUT
+
+    ▶ Running: test_REC_02_05_long_recording_1_minute
+      Description: REC_02_05: Ghi am 1 phut khong crash
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_05_long_recording_1_minute PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_07_stop_recording_navigates_to_voice_effects STANDARD_OUT
+
+    ▶ Running: test_REC_02_07_stop_recording_navigates_to_voice_effects
+      Description: REC_02_07: Stop ghi am chuyen sang Voice Effects
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_07_stop_recording_navigates_to_voice_effects PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_08_recorded_file_has_correct_format STANDARD_OUT
+
+    ▶ Running: test_REC_02_08_recorded_file_has_correct_format
+      Description: REC_02_08: Ten file dung format record_xxx.m4a
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record02_Verify_Recording_Actions > test_REC_02_08_recorded_file_has_correct_format PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_01_close_recorder_without_recording STANDARD_OUT
+
+    ▶ Running: test_REC_03_01_close_recorder_without_recording
+      Description: REC_03_01: Dong Recorder bang nut X (chua ghi)
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_01_close_recorder_without_recording PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_02_close_recorder_with_swipe_back STANDARD_OUT
+
+    ▶ Running: test_REC_03_02_close_recorder_with_swipe_back
+      Description: REC_03_02: Dong Recorder bang swipe back
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_02_close_recorder_with_swipe_back PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_03_close_during_recording_shows_dialog STANDARD_OUT
+
+    ▶ Running: test_REC_03_03_close_during_recording_shows_dialog
+      Description: REC_03_03: Nhan X khi dang ghi -> hien dialog
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_03_close_during_recording_shows_dialog PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_04_confirm_cancel_recording STANDARD_OUT
+
+    ▶ Running: test_REC_03_04_confirm_cancel_recording
+      Description: REC_03_04: Xac nhan huy ghi am
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_04_confirm_cancel_recording PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_05_dismiss_cancel_dialog STANDARD_OUT
+
+    ▶ Running: test_REC_03_05_dismiss_cancel_dialog
+      Description: REC_03_05: Dismiss dialog huy ghi am
+      ✓ PASSED
+
+Voice Changer Regression Suite > Record Tests > testcases.Record.Record03_Verify_Close_Cancel > test_REC_03_05_dismiss_cancel_dialog PASSED
+
+Voice Changer Regression Suite > Record Tests STANDARD_OUT
+
+    ==========================================
+    TEST RESULTS:
+      Total:   18
+      Passed:  17
+      Failed:  0
+      Skipped: 1
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_100204.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Voice Effects Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Voice Effects Tests
+    ==========================================
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_01_verify_close_button STANDARD_OUT
+
+    ▶ Running: test_VE_01_01_verify_close_button
+      Description: VE_01_01: Verify nut X
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_01_verify_close_button PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_02_verify_title_voice_effects STANDARD_OUT
+
+    ▶ Running: test_VE_01_02_verify_title_voice_effects
+      Description: VE_01_02: Verify title 'Voice Effects'
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_02_verify_title_voice_effects PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_03_verify_audio_player_displayed STANDARD_OUT
+
+    ▶ Running: test_VE_01_03_verify_audio_player_displayed
+      Description: VE_01_03: Verify audio player
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_03_verify_audio_player_displayed PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_04_verify_effects_grid_displayed STANDARD_OUT
+
+    ▶ Running: test_VE_01_04_verify_effects_grid_displayed
+      Description: VE_01_04: Verify grid hieu ung
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_04_verify_effects_grid_displayed PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_05_verify_normal_effect_default_selected STANDARD_OUT
+
+    ▶ Running: test_VE_01_05_verify_normal_effect_default_selected
+      Description: VE_01_05: Verify Normal duoc chon mac dinh
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_05_verify_normal_effect_default_selected PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_06_verify_send_voice_message_button STANDARD_OUT
+
+    ▶ Running: test_VE_01_06_verify_send_voice_message_button
+      Description: VE_01_06: Verify nut Send Voice Message
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_06_verify_send_voice_message_button PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_07_verify_save_button STANDARD_OUT
+
+    ▶ Running: test_VE_01_07_verify_save_button
+      Description: VE_01_07: Verify nut Save
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_07_verify_save_button PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_08_verify_all_23_effects_listed STANDARD_OUT
+
+    ▶ Running: test_VE_01_08_verify_all_23_effects_listed
+      Description: VE_01_08: Verify 23 effects co trong list
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects01_Verify_UI_Display > test_VE_01_08_verify_all_23_effects_listed PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player > test_VE_02_01_play_audio STANDARD_OUT
+
+    ▶ Running: test_VE_02_01_play_audio
+      Description: VE_02_01: Play audio
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player > test_VE_02_01_play_audio PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player > test_VE_02_02_pause_audio STANDARD_OUT
+
+    ▶ Running: test_VE_02_02_pause_audio
+      Description: VE_02_02: Pause audio
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player > test_VE_02_02_pause_audio PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player > test_VE_02_03_resume_after_pause STANDARD_OUT
+
+    ▶ Running: test_VE_02_03_resume_after_pause
+      Description: VE_02_03: Resume after pause
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player > test_VE_02_03_resume_after_pause PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player > test_VE_02_04_audio_auto_stop_at_end STANDARD_OUT
+
+    ▶ Running: test_VE_02_04_audio_auto_stop_at_end
+      Description: VE_02_04: Audio auto stop khi het
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects02_Verify_Audio_Player > test_VE_02_04_audio_auto_stop_at_end PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_01_normal STANDARD_OUT
+
+    ▶ Running: test_VE_03_01_normal
+      Description: VE_03_01: Normal
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_01_normal PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_02_man STANDARD_OUT
+
+    ▶ Running: test_VE_03_02_man
+      Description: VE_03_02: Man
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_02_man PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_03_woman STANDARD_OUT
+
+    ▶ Running: test_VE_03_03_woman
+      Description: VE_03_03: Woman
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_03_woman PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_04_child STANDARD_OUT
+
+    ▶ Running: test_VE_03_04_child
+      Description: VE_03_04: Child
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_04_child PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_05_penguin STANDARD_OUT
+
+    ▶ Running: test_VE_03_05_penguin
+      Description: VE_03_05: Penguin
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_05_penguin PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_06_monster STANDARD_OUT
+
+    ▶ Running: test_VE_03_06_monster
+      Description: VE_03_06: Monster
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_06_monster PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_07_fast STANDARD_OUT
+
+    ▶ Running: test_VE_03_07_fast
+      Description: VE_03_07: Fast
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_07_fast PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_08_slow STANDARD_OUT
+
+    ▶ Running: test_VE_03_08_slow
+      Description: VE_03_08: Slow
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_08_slow PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_09_alien STANDARD_OUT
+
+    ▶ Running: test_VE_03_09_alien
+      Description: VE_03_09: Alien
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_09_alien PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_10_zombie STANDARD_OUT
+
+    ▶ Running: test_VE_03_10_zombie
+      Description: VE_03_10: Zombie
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_10_zombie PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_11_drunk STANDARD_OUT
+
+    ▶ Running: test_VE_03_11_drunk
+      Description: VE_03_11: Drunk
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_11_drunk PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_12_helium STANDARD_OUT
+
+    ▶ Running: test_VE_03_12_helium
+      Description: VE_03_12: Helium
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_12_helium PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_13_death STANDARD_OUT
+
+    ▶ Running: test_VE_03_13_death
+      Description: VE_03_13: Death
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_13_death PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_14_robot STANDARD_OUT
+
+    ▶ Running: test_VE_03_14_robot
+      Description: VE_03_14: Robot
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_14_robot PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_15_baby STANDARD_OUT
+
+    ▶ Running: test_VE_03_15_baby
+      Description: VE_03_15: Baby
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_15_baby PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_16_echo STANDARD_OUT
+
+    ▶ Running: test_VE_03_16_echo
+      Description: VE_03_16: Echo
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_16_echo PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_17_underwater STANDARD_OUT
+
+    ▶ Running: test_VE_03_17_underwater
+      Description: VE_03_17: Underwater
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_17_underwater PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_18_telephone STANDARD_OUT
+
+    ▶ Running: test_VE_03_18_telephone
+      Description: VE_03_18: Telephone
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_18_telephone PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_19_parody STANDARD_OUT
+
+    ▶ Running: test_VE_03_19_parody
+      Description: VE_03_19: Parody
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_19_parody PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_20_bass STANDARD_OUT
+
+    ▶ Running: test_VE_03_20_bass
+      Description: VE_03_20: Bass
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_20_bass PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_21_tenor STANDARD_OUT
+
+    ▶ Running: test_VE_03_21_tenor
+      Description: VE_03_21: Tenor
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_21_tenor PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_22_bee STANDARD_OUT
+
+    ▶ Running: test_VE_03_22_bee
+      Description: VE_03_22: Bee
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_22_bee PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_23_fade STANDARD_OUT
+
+    ▶ Running: test_VE_03_23_fade
+      Description: VE_03_23: Fade
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_23_fade PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_24_only_one_selected STANDARD_OUT
+
+    ▶ Running: test_VE_03_24_only_one_selected
+      Description: VE_03_24: Chi 1 effect duoc chon cung luc
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_24_only_one_selected PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_25_switch_back_to_normal STANDARD_OUT
+
+    ▶ Running: test_VE_03_25_switch_back_to_normal
+      Description: VE_03_25: Switch ve Normal
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects > test_VE_03_25_switch_back_to_normal PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_04_01_save_with_normal_effect STANDARD_OUT
+
+    ▶ Running: test_VE_04_01_save_with_normal_effect
+      Description: VE_04_01: Save voi effect Normal
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_04_01_save_with_normal_effect PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_04_02_save_with_robot_effect STANDARD_OUT
+
+    ▶ Running: test_VE_04_02_save_with_robot_effect
+      Description: VE_04_02: Save voi effect Robot
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_04_02_save_with_robot_effect PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_04_03_saved_file_name_format STANDARD_OUT
+
+    ▶ Running: test_VE_04_03_saved_file_name_format
+      Description: VE_04_03: Ten file sau Save dung format
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_04_03_saved_file_name_format PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_05_01_close_shows_discard_dialog STANDARD_OUT
+
+    ▶ Running: test_VE_05_01_close_shows_discard_dialog
+      Description: VE_05_01: Nhan X hien dialog Discard
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_05_01_close_shows_discard_dialog PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_05_02_discard_dialog_cancel STANDARD_OUT
+
+    ▶ Running: test_VE_05_02_discard_dialog_cancel
+      Description: VE_05_02: Click Cancel tren Discard dialog
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_05_02_discard_dialog_cancel PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_05_03_discard_dialog_confirm STANDARD_OUT
+
+    ▶ Running: test_VE_05_03_discard_dialog_confirm
+      Description: VE_05_03: Click Discard tren dialog
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close > test_VE_05_03_discard_dialog_confirm PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message > test_VE_06_01_open_share_bottom_sheet STANDARD_OUT
+
+    ▶ Running: test_VE_06_01_open_share_bottom_sheet
+      Description: VE_06_01: Mo bottom sheet chia se
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message > test_VE_06_01_open_share_bottom_sheet PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message > test_VE_06_02_share_sheet_lists_apps STANDARD_OUT
+
+    ▶ Running: test_VE_06_02_share_sheet_lists_apps
+      Description: VE_06_02: Hien thi danh sach app
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message > test_VE_06_02_share_sheet_lists_apps PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message > test_VE_06_03_cancel_share_bottom_sheet STANDARD_OUT
+
+    ▶ Running: test_VE_06_03_cancel_share_bottom_sheet
+      Description: VE_06_03: Click Cancel tren bottom sheet
+      ✓ PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests > testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message > test_VE_06_03_cancel_share_bottom_sheet PASSED
+
+Voice Changer Regression Suite > Voice Effects Tests STANDARD_OUT
+
+    ==========================================
+    TEST RESULTS:
+      Total:   46
+      Passed:  46
+      Failed:  0
+      Skipped: 0
+    ==========================================
+    Report:       test-output/ExtentReport_20260525_100204.html
+    Log file:     test-output/automation.log
+    ==========================================
+
+Voice Changer Regression Suite > Audio Saved Tests STANDARD_OUT
+    ==========================================
+    STARTING SUITE: Audio Saved Tests
+    ==========================================
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_01_verify_success_check_icon STANDARD_OUT
+
+    ▶ Running: test_SAV_01_01_verify_success_check_icon
+      Description: SAV_01_01: Icon check xanh la
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_01_verify_success_check_icon PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_02_verify_title STANDARD_OUT
+
+    ▶ Running: test_SAV_01_02_verify_title
+      Description: SAV_01_02: Title 'Audio Saved Successfully'
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_02_verify_title PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_03_verify_file_info_card STANDARD_OUT
+
+    ▶ Running: test_SAV_01_03_verify_file_info_card
+      Description: SAV_01_03: Card thong tin file
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_03_verify_file_info_card PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_04_verify_file_name_format STANDARD_OUT
+
+    ▶ Running: test_SAV_01_04_verify_file_name_format
+      Description: SAV_01_04: Format ten file
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_04_verify_file_name_format PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_05_verify_file_duration STANDARD_OUT
+
+    ▶ Running: test_SAV_01_05_verify_file_duration
+      Description: SAV_01_05: Thoi luong file
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_05_verify_file_duration PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_06_verify_file_size STANDARD_OUT
+
+    ▶ Running: test_SAV_01_06_verify_file_size
+      Description: SAV_01_06: Dung luong file
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_06_verify_file_size PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_07_verify_set_ringtone_button STANDARD_OUT
+
+    ▶ Running: test_SAV_01_07_verify_set_ringtone_button
+      Description: SAV_01_07: Nut Set as ringtone
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_07_verify_set_ringtone_button PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_08_verify_share_button STANDARD_OUT
+
+    ▶ Running: test_SAV_01_08_verify_share_button
+      Description: SAV_01_08: Nut Share
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_08_verify_share_button PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_09_verify_home_icon STANDARD_OUT
+
+    ▶ Running: test_SAV_01_09_verify_home_icon
+      Description: SAV_01_09: Icon Home goc tren phai
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved01_Verify_UI_Display > test_SAV_01_09_verify_home_icon PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_03_click_share_opens_bottom_sheet STANDARD_OUT
+
+    ▶ Running: test_SAV_02_03_click_share_opens_bottom_sheet
+      Description: SAV_02_03: Click Share -> mo bottom sheet
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_03_click_share_opens_bottom_sheet PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_04_share_sheet_shows_filename STANDARD_OUT
+
+    ▶ Running: test_SAV_02_04_share_sheet_shows_filename
+      Description: SAV_02_04: Preview file name
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_04_share_sheet_shows_filename PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_05_share_sheet_lists_apps STANDARD_OUT
+
+    ▶ Running: test_SAV_02_05_share_sheet_lists_apps
+      Description: SAV_02_05: Danh sach app
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_05_share_sheet_lists_apps PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_06_cancel_share_bottom_sheet STANDARD_OUT
+
+    ▶ Running: test_SAV_02_06_cancel_share_bottom_sheet
+      Description: SAV_02_06: Click Cancel -> dong sheet
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_06_cancel_share_bottom_sheet PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_01_click_home_navigates_to_home STANDARD_OUT
+
+    ▶ Running: test_SAV_02_01_click_home_navigates_to_home
+      Description: SAV_02_01: Click Home -> ve Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_01_click_home_navigates_to_home PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_02_click_close_navigates_to_home STANDARD_OUT
+
+    ▶ Running: test_SAV_02_02_click_close_navigates_to_home
+      Description: SAV_02_02: Click X -> ve Home
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved02_Verify_Navigation_Share > test_SAV_02_02_click_close_navigates_to_home PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename > test_SAV_04_01_three_dot_menu_opens STANDARD_OUT
+
+    ▶ Running: test_SAV_04_01_three_dot_menu_opens
+      Description: SAV_04_01: Mo menu 3 cham
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename > test_SAV_04_01_three_dot_menu_opens PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename > test_SAV_04_02_menu_closes_on_tap_outside STANDARD_OUT
+
+    ▶ Running: test_SAV_04_02_menu_closes_on_tap_outside
+      Description: SAV_04_02: Tap outside dong menu
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename > test_SAV_04_02_menu_closes_on_tap_outside PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename > test_SAV_05_01_rename_popup_displayed STANDARD_OUT
+
+    ▶ Running: test_SAV_05_01_rename_popup_displayed
+      Description: SAV_05_01: Popup Rename hien thi
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename > test_SAV_05_01_rename_popup_displayed PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename > test_SAV_05_02_textbox_shows_current_filename STANDARD_OUT
+
+    ▶ Running: test_SAV_05_02_textbox_shows_current_filename
+      Description: SAV_05_02: Textbox co ten file hien tai
+      ✓ PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename > test_SAV_05_02_textbox_shows_current_filename PASSED
+
+Voice Changer Regression Suite > Audio Saved Tests > testcases.Audiosaved.AudioSaved03_Verify_Rename STANDARD_ERROR
+    [Test worker] INFO Utils.AdbHelper - Execute: adb shell cmd statusbar collapse

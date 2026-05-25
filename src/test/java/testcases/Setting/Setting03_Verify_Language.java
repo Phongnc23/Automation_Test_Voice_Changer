@@ -1,47 +1,42 @@
 package testcases.Setting;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import Pages.Components.LanguageDialog;
 import Pages.SettingsPage;
 import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
 
+import java.time.Duration;
 import java.util.List;
 
 /**
  * ST_03: Verify Language selection (4 tests).
  * Test 03 destructive (doi sang English), test 04 cleanup (ve Default).
+ *
+ * @AfterClass restoreDefaultLanguage la safety net - dam bao language
+ * tro ve Default ke ca khi test 04 fail.
  */
-public class Setting03_Verify_Language extends BaseTest {
+public class Setting03_Verify_Language extends BaseSharedSessionTest {
 
     private SettingsPage settingsPage;
     private LanguageDialog languageDialog;
 
-    @BeforeClass(dependsOnMethods = "setUp")
-    public void setupSession() {
-        logger.info("=== SETUP LANGUAGE SUITE ===");
-        try {
-            settingsPage = RecordFlowHelper.navigateToSettings(driver);
-            languageDialog = new LanguageDialog(driver);
-        } catch (Exception e) {
-            logger.error("Setup error: " + e.getMessage());
-            RecordFlowHelper.forceResetToHome(driver);
-            settingsPage = RecordFlowHelper.navigateToSettings(driver);
-            languageDialog = new LanguageDialog(driver);
-        }
+    @Override
+    protected void navigateToScreen() {
+        settingsPage = RecordFlowHelper.navigateToSettings(driver);
+        languageDialog = new LanguageDialog(driver);
     }
 
-    @BeforeMethod
-    public void ensureCleanState() {
+    @Override
+    protected boolean isAtExpectedScreen() {
+        if (!RecordFlowHelper.isAtSettings(driver)) return false;
         // Dong dialog neu lo mo
-        if (languageDialog.isDisplayed()) {
+        if (languageDialog != null && languageDialog.isDisplayed()) {
             try {
                 languageDialog.closeByTapOutside();
                 Thread.sleep(800);
@@ -49,33 +44,14 @@ public class Setting03_Verify_Language extends BaseTest {
                 // skip
             }
         }
-        // Verify dang o Settings
-        if (!settingsPage.isDisplayed()) {
-            try {
-                settingsPage = RecordFlowHelper.navigateToSettings(driver);
-            } catch (Exception e) {
-                logger.error("Re-navigate error: " + e.getMessage());
-            }
-        }
-    }
-
-    @AfterMethod
-    public void closeDialogIfOpen() {
-        if (languageDialog.isDisplayed()) {
-            try {
-                languageDialog.closeByTapOutside();
-                Thread.sleep(600);
-            } catch (Exception e) {
-                // skip
-            }
-        }
+        return true;
     }
 
     @AfterClass(alwaysRun = true)
-    public void cleanupAfterClass() {
+    public void restoreDefaultLanguage() {
         try {
             // Dam bao language ve Default truoc khi roi
-            if (settingsPage.isDisplayed()) {
+            if (settingsPage != null && settingsPage.isDisplayed()) {
                 String currentLang = settingsPage.getLanguageValue();
                 if (currentLang != null && !"Default".equalsIgnoreCase(currentLang)) {
                     logger.info("Khoi phuc language ve Default");
@@ -89,9 +65,19 @@ public class Setting03_Verify_Language extends BaseTest {
                     }
                 }
             }
-            RecordFlowHelper.smartResetToHome(driver);
         } catch (Exception e) {
-            logger.error("Cleanup error: " + e.getMessage());
+            logger.error("Restore default lang error: " + e.getMessage());
+        }
+    }
+
+    /** L1: Smart wait language dialog mo - thay sleep(1500) co dinh. */
+    private void waitForLanguageDialog(int maxSeconds) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(maxSeconds))
+                    .ignoring(Exception.class)
+                    .until(d -> languageDialog.isDisplayed());
+        } catch (Exception e) {
+            // se fail o assertion phia duoi
         }
     }
 
@@ -99,7 +85,7 @@ public class Setting03_Verify_Language extends BaseTest {
     public void test_ST_03_01_open_language_dialog()
             throws InterruptedException {
         settingsPage.clickLanguage();
-        Thread.sleep(1500);
+        waitForLanguageDialog(3);
 
         Assert.assertTrue(languageDialog.isDisplayed(),
                 "Language dialog khong mo");
@@ -111,7 +97,7 @@ public class Setting03_Verify_Language extends BaseTest {
     public void test_ST_03_02_verify_language_list()
             throws InterruptedException {
         settingsPage.clickLanguage();
-        Thread.sleep(1500);
+        waitForLanguageDialog(3);
 
         Assert.assertTrue(languageDialog.isDisplayed(),
                 "Dialog khong mo");
@@ -138,7 +124,7 @@ public class Setting03_Verify_Language extends BaseTest {
             throws InterruptedException {
         // Mo dialog
         settingsPage.clickLanguage();
-        Thread.sleep(1500);
+        waitForLanguageDialog(3);
         Assert.assertTrue(languageDialog.isDisplayed(), "Dialog khong mo");
 
         // Chon English
@@ -146,9 +132,15 @@ public class Setting03_Verify_Language extends BaseTest {
         Assert.assertTrue(selected, "Khong chon duoc English");
         Thread.sleep(500);
 
-        // Click OK
+        // Click OK - smart wait dialog dong
         languageDialog.clickOk();
-        Thread.sleep(2000);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> !languageDialog.isDisplayed());
+        } catch (Exception e) {
+            // se fail o assertion phia duoi
+        }
 
         // Verify dialog dong
         Assert.assertFalse(languageDialog.isDisplayed(),
@@ -170,7 +162,7 @@ public class Setting03_Verify_Language extends BaseTest {
             throws InterruptedException {
         // Mo dialog
         settingsPage.clickLanguage();
-        Thread.sleep(1500);
+        waitForLanguageDialog(3);
         Assert.assertTrue(languageDialog.isDisplayed(), "Dialog khong mo");
 
         // Chon Default
@@ -178,9 +170,15 @@ public class Setting03_Verify_Language extends BaseTest {
         Assert.assertTrue(selected, "Khong chon duoc Default");
         Thread.sleep(500);
 
-        // Click OK
+        // Click OK - smart wait dialog dong
         languageDialog.clickOk();
-        Thread.sleep(2000);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .ignoring(Exception.class)
+                    .until(d -> !languageDialog.isDisplayed());
+        } catch (Exception e) {
+            // se fail o assertion phia duoi
+        }
 
         // Verify ve Default
         String langValue = settingsPage.getLanguageValue();

@@ -1,12 +1,8 @@
 package testcases.TextToSpeech;
 
-import Base.BaseTest;
+import Base.BaseSharedSessionTest;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import Pages.TextToAudioPage;
 import Pages.VoiceEffectsPage;
@@ -21,66 +17,29 @@ import Utils.RecordFlowHelper;
  *
  * Priority:
  * - 1-2: Validation tests (share session, chay truoc)
- * - 10-13: E2E tests (reset each, chay sau)
+ * - 10-13: E2E tests (sau E2E man bi doi, @BeforeMethod tu re-nav)
  */
-public class TextToAudio03_Verify_Text_Input extends BaseTest {
+public class TextToAudio03_Verify_Text_Input extends BaseSharedSessionTest {
 
     private TextToAudioPage textToAudioPage;
     private VoiceEffectsPage voiceEffectsPage;
 
-    private boolean sessionSetup = false;
-
-    @BeforeClass(dependsOnMethods = "setUp")
-    public void setupSession() {
-        logger.info("=== SETUP TTS Text Input Suite ===");
-        try {
-            textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-            voiceEffectsPage = new VoiceEffectsPage(driver);
-            sessionSetup = true;
-        } catch (Exception e) {
-            RecordFlowHelper.forceResetToHome(driver);
-            textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-            voiceEffectsPage = new VoiceEffectsPage(driver);
-            sessionSetup = true;
-        }
+    @Override
+    protected void navigateToScreen() {
+        textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
+        voiceEffectsPage = new VoiceEffectsPage(driver);
     }
 
-    @BeforeMethod
-    public void ensureState() {
-        // Cho validation tests (priority < 10): chi can o man TTS
-        // Cho E2E tests (priority >= 10): can fresh state
-
-        if (!textToAudioPage.isDisplayed()) {
-            try {
-                RecordFlowHelper.smartResetToHome(driver);
-                textToAudioPage = RecordFlowHelper.navigateToTextToAudio(driver);
-                voiceEffectsPage = new VoiceEffectsPage(driver);
-            } catch (Exception e) {
-                logger.error("Re-navigate error: " + e.getMessage());
-            }
-        }
-
+    @Override
+    protected boolean isAtExpectedScreen() {
+        if (!RecordFlowHelper.isAtTextToAudio(driver)) return false;
         // Clear text neu lo nhap tu test truoc
         try {
             textToAudioPage.clearEditText();
         } catch (Exception e) {
             // skip
         }
-    }
-
-    @AfterMethod(alwaysRun = true)
-    public void cleanupBetweenTests() {
-        // Sau E2E test, can ve Audio Saved -> Home -> TTS lai
-        // Cho cleanup logic xu ly trong @BeforeMethod
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void cleanupAfterClass() {
-        try {
-            RecordFlowHelper.smartResetToHome(driver);
-        } catch (Exception e) {
-            logger.error("Cleanup error: " + e.getMessage());
-        }
+        return true;
     }
 
     // ========================================
@@ -126,7 +85,7 @@ public class TextToAudio03_Verify_Text_Input extends BaseTest {
     }
 
     // ========================================
-    // E2E TESTS (priority 10+, reset state)
+    // E2E TESTS (priority 10+, sau E2E man bi doi)
     // ========================================
 
     @Test(priority = 10, description = "TTS_03_01: Nhap text va nhan Next")
@@ -142,7 +101,8 @@ public class TextToAudio03_Verify_Text_Input extends BaseTest {
         Thread.sleep(300);
 
         textToAudioPage.clickNext();
-        Thread.sleep(2500);  // Giam tu 4000
+        // L1: smart wait Voice Effects thay sleep(2500)
+        RecordFlowHelper.waitForVoiceEffects(driver, 5);  // Giam tu 4000
 
         Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                 "Khong chuyen sang Voice Effects");
@@ -163,7 +123,8 @@ public class TextToAudio03_Verify_Text_Input extends BaseTest {
         Thread.sleep(300);
 
         textToAudioPage.clickNext();
-        Thread.sleep(2500);
+        // L1: smart wait Voice Effects thay sleep(2500)
+        RecordFlowHelper.waitForVoiceEffects(driver, 5);
 
         Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                 "Khong chuyen Voice Effects");
@@ -187,7 +148,8 @@ public class TextToAudio03_Verify_Text_Input extends BaseTest {
         Thread.sleep(300);
 
         textToAudioPage.clickNext();
-        Thread.sleep(4000);  // Text dai mat thoi gian generate hon
+        // L1: smart wait Voice Effects (text dai, cho lau hon)
+        RecordFlowHelper.waitForVoiceEffects(driver, 7);
 
         boolean atVE = voiceEffectsPage.isDisplayed();
         boolean atTTS = textToAudioPage.isDisplayed();
@@ -215,7 +177,8 @@ public class TextToAudio03_Verify_Text_Input extends BaseTest {
         Thread.sleep(300);
 
         textToAudioPage.clickNext();
-        Thread.sleep(2500);
+        // L1: smart wait Voice Effects thay sleep(2500)
+        RecordFlowHelper.waitForVoiceEffects(driver, 5);
 
         Assert.assertTrue(voiceEffectsPage.isDisplayed(),
                 "Khong chuyen Voice Effects");

@@ -11,8 +11,22 @@ import Report.ExtentReportManager;
 import Utils.RecordFlowHelper;
 
 /**
- * Test 23 effects + 2 case logic.
- * Test theo thu tu trong list -> moi effect cach nhau 1-2 swipes -> NHANH.
+ * Test click ap dung 34 effects (DOM moi) + 2 case logic.
+ * Thu tu test theo DOM order -> moi effect cach nhau 1-2 swipes -> NHANH.
+ *
+ * Layout DOM (theo row, 3 cot, Volume block dong duoi row chua effect chon):
+ *   Row 0: Normal | Man    | Woman
+ *   Row 1: Child  | Baby   | Tenor
+ *   Row 2: Helium | Parody | Whisper
+ *   Row 3: Cyborg | Devil  | Ghost
+ *   Row 4: Penguin | Monster | Death
+ *   Row 5: Zombie | Drunk  | Alien
+ *   Row 6: Bee    | Robot  | Fast
+ *   Row 7: Slow   | Bass   | Echo
+ *   Row 8: Tremolo| Bathroom | Cave
+ *   Row 9: Hall   | Stadium | Tunnel
+ *   Row 10: Underwater | Telephone | Megaphone
+ *   Row 11: Old Radio
  */
 public class VoiceEffects03_Verify_Apply_Effects extends BaseTest {
 
@@ -49,8 +63,9 @@ public class VoiceEffects03_Verify_Apply_Effects extends BaseTest {
         ExtentReportManager.getTest().log(Status.PASS, "OK: " + effectName);
     }
 
-    // ========== TEST 23 EFFECTS THEO THU TU ==========
+    // ========== TEST 34 EFFECTS THEO DOM ORDER ==========
 
+    // Row 0
     @Test(description = "VE_03_01: Normal", priority = 1)
     public void test_VE_03_01_normal() { verifyClickEffect("Normal"); }
 
@@ -60,70 +75,114 @@ public class VoiceEffects03_Verify_Apply_Effects extends BaseTest {
     @Test(description = "VE_03_03: Woman", priority = 3)
     public void test_VE_03_03_woman() { verifyClickEffect("Woman"); }
 
+    // Row 1
     @Test(description = "VE_03_04: Child", priority = 4)
     public void test_VE_03_04_child() { verifyClickEffect("Child"); }
 
-    @Test(description = "VE_03_05: Penguin", priority = 5)
-    public void test_VE_03_05_penguin() { verifyClickEffect("Penguin"); }
+    @Test(description = "VE_03_05: Baby", priority = 5)
+    public void test_VE_03_05_baby() { verifyClickEffect("Baby"); }
 
-    @Test(description = "VE_03_06: Monster", priority = 6)
-    public void test_VE_03_06_monster() { verifyClickEffect("Monster"); }
+    @Test(description = "VE_03_06: Tenor", priority = 6)
+    public void test_VE_03_06_tenor() { verifyClickEffect("Tenor"); }
 
-    @Test(description = "VE_03_07: Fast", priority = 7)
-    public void test_VE_03_07_fast() { verifyClickEffect("Fast"); }
+    // Row 2
+    @Test(description = "VE_03_07: Helium", priority = 7)
+    public void test_VE_03_07_helium() { verifyClickEffect("Helium"); }
 
-    @Test(description = "VE_03_08: Slow", priority = 8)
-    public void test_VE_03_08_slow() { verifyClickEffect("Slow"); }
+    @Test(description = "VE_03_08: Parody", priority = 8)
+    public void test_VE_03_08_parody() { verifyClickEffect("Parody"); }
 
-    @Test(description = "VE_03_09: Alien", priority = 9)
-    public void test_VE_03_09_alien() { verifyClickEffect("Alien"); }
+    @Test(description = "VE_03_09: Whisper", priority = 9)
+    public void test_VE_03_09_whisper() { verifyClickEffect("Whisper"); }
 
-    @Test(description = "VE_03_10: Zombie", priority = 10)
-    public void test_VE_03_10_zombie() { verifyClickEffect("Zombie"); }
+    // Row 3
+    @Test(description = "VE_03_10: Cyborg", priority = 10)
+    public void test_VE_03_10_cyborg() { verifyClickEffect("Cyborg"); }
 
-    @Test(description = "VE_03_11: Drunk", priority = 11)
-    public void test_VE_03_11_drunk() { verifyClickEffect("Drunk"); }
+    @Test(description = "VE_03_11: Devil", priority = 11)
+    public void test_VE_03_11_devil() { verifyClickEffect("Devil"); }
 
-    @Test(description = "VE_03_12: Helium", priority = 12)
-    public void test_VE_03_12_helium() { verifyClickEffect("Helium"); }
+    @Test(description = "VE_03_12: Ghost", priority = 12)
+    public void test_VE_03_12_ghost() { verifyClickEffect("Ghost"); }
 
-    @Test(description = "VE_03_13: Death", priority = 13)
-    public void test_VE_03_13_death() { verifyClickEffect("Death"); }
+    // Row 4
+    @Test(description = "VE_03_13: Penguin", priority = 13)
+    public void test_VE_03_13_penguin() { verifyClickEffect("Penguin"); }
 
-    @Test(description = "VE_03_14: Robot", priority = 14)
-    public void test_VE_03_14_robot() { verifyClickEffect("Robot"); }
+    @Test(description = "VE_03_14: Monster", priority = 14)
+    public void test_VE_03_14_monster() { verifyClickEffect("Monster"); }
 
-    @Test(description = "VE_03_15: Baby", priority = 15)
-    public void test_VE_03_15_baby() { verifyClickEffect("Baby"); }
+    @Test(description = "VE_03_15: Death", priority = 15)
+    public void test_VE_03_15_death() { verifyClickEffect("Death"); }
 
-    @Test(description = "VE_03_16: Echo", priority = 16)
-    public void test_VE_03_16_echo() { verifyClickEffect("Echo"); }
+    // Row 5
+    @Test(description = "VE_03_16: Zombie", priority = 16)
+    public void test_VE_03_16_zombie() { verifyClickEffect("Zombie"); }
 
-    @Test(description = "VE_03_17: Underwater", priority = 17)
-    public void test_VE_03_17_underwater() { verifyClickEffect("Underwater"); }
+    @Test(description = "VE_03_17: Drunk", priority = 17)
+    public void test_VE_03_17_drunk() { verifyClickEffect("Drunk"); }
 
-    @Test(description = "VE_03_18: Telephone", priority = 18)
-    public void test_VE_03_18_telephone() { verifyClickEffect("Telephone"); }
+    @Test(description = "VE_03_18: Alien", priority = 18)
+    public void test_VE_03_18_alien() { verifyClickEffect("Alien"); }
 
-    @Test(description = "VE_03_19: Parody", priority = 19)
-    public void test_VE_03_19_parody() { verifyClickEffect("Parody"); }
+    // Row 6
+    @Test(description = "VE_03_19: Bee", priority = 19)
+    public void test_VE_03_19_bee() { verifyClickEffect("Bee"); }
 
-    @Test(description = "VE_03_20: Bass", priority = 20)
-    public void test_VE_03_20_bass() { verifyClickEffect("Bass"); }
+    @Test(description = "VE_03_20: Robot", priority = 20)
+    public void test_VE_03_20_robot() { verifyClickEffect("Robot"); }
 
-    @Test(description = "VE_03_21: Tenor", priority = 21)
-    public void test_VE_03_21_tenor() { verifyClickEffect("Tenor"); }
+    @Test(description = "VE_03_21: Fast", priority = 21)
+    public void test_VE_03_21_fast() { verifyClickEffect("Fast"); }
 
-    @Test(description = "VE_03_22: Bee", priority = 22)
-    public void test_VE_03_22_bee() { verifyClickEffect("Bee"); }
+    // Row 7
+    @Test(description = "VE_03_22: Slow", priority = 22)
+    public void test_VE_03_22_slow() { verifyClickEffect("Slow"); }
 
-    @Test(description = "VE_03_23: Fade", priority = 23)
-    public void test_VE_03_23_fade() { verifyClickEffect("Fade"); }
+    @Test(description = "VE_03_23: Bass", priority = 23)
+    public void test_VE_03_23_bass() { verifyClickEffect("Bass"); }
+
+    @Test(description = "VE_03_24: Echo", priority = 24)
+    public void test_VE_03_24_echo() { verifyClickEffect("Echo"); }
+
+    // Row 8
+    @Test(description = "VE_03_25: Tremolo", priority = 25)
+    public void test_VE_03_25_tremolo() { verifyClickEffect("Tremolo"); }
+
+    @Test(description = "VE_03_26: Bathroom", priority = 26)
+    public void test_VE_03_26_bathroom() { verifyClickEffect("Bathroom"); }
+
+    @Test(description = "VE_03_27: Cave", priority = 27)
+    public void test_VE_03_27_cave() { verifyClickEffect("Cave"); }
+
+    // Row 9
+    @Test(description = "VE_03_28: Hall", priority = 28)
+    public void test_VE_03_28_hall() { verifyClickEffect("Hall"); }
+
+    @Test(description = "VE_03_29: Stadium", priority = 29)
+    public void test_VE_03_29_stadium() { verifyClickEffect("Stadium"); }
+
+    @Test(description = "VE_03_30: Tunnel", priority = 30)
+    public void test_VE_03_30_tunnel() { verifyClickEffect("Tunnel"); }
+
+    // Row 10
+    @Test(description = "VE_03_31: Underwater", priority = 31)
+    public void test_VE_03_31_underwater() { verifyClickEffect("Underwater"); }
+
+    @Test(description = "VE_03_32: Telephone", priority = 32)
+    public void test_VE_03_32_telephone() { verifyClickEffect("Telephone"); }
+
+    @Test(description = "VE_03_33: Megaphone", priority = 33)
+    public void test_VE_03_33_megaphone() { verifyClickEffect("Megaphone"); }
+
+    // Row 11
+    @Test(description = "VE_03_34: Old Radio", priority = 34)
+    public void test_VE_03_34_old_radio() { verifyClickEffect("Old Radio"); }
 
     // ========== TEST LOGIC ==========
 
-    @Test(description = "VE_03_24: Chi 1 effect duoc chon cung luc", priority = 24)
-    public void test_VE_03_24_only_one_selected() throws InterruptedException {
+    @Test(description = "VE_03_35: Chi 1 effect duoc chon cung luc", priority = 35)
+    public void test_VE_03_35_only_one_selected() throws InterruptedException {
         // Lay danh sach effects dang visible
         java.util.List<String> visibleEffects = voiceEffectsPage.getVisibleEffectNames();
         ExtentReportManager.getTest().log(Status.INFO,
@@ -148,8 +207,8 @@ public class VoiceEffects03_Verify_Apply_Effects extends BaseTest {
                 "Da chuyen tu " + effect1 + " sang " + effect2);
     }
 
-    @Test(description = "VE_03_25: Switch ve Normal", priority = 25)
-    public void test_VE_03_25_switch_back_to_normal() throws InterruptedException {
+    @Test(description = "VE_03_36: Switch ve Normal", priority = 36)
+    public void test_VE_03_36_switch_back_to_normal() throws InterruptedException {
         // Click 1 effect bat ky visible
         java.util.List<String> visibleEffects = voiceEffectsPage.getVisibleEffectNames();
         String anyEffect = visibleEffects.get(0);

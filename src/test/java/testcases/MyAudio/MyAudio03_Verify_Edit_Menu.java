@@ -117,7 +117,7 @@ public class MyAudio03_Verify_Edit_Menu extends BaseTest {
                 "Menu mo voi header dung");
     }
 
-    @Test(priority = 2, description = "MA_03_02: Verify 5 action")
+    @Test(priority = 2, description = "MA_03_02: Verify 4 action")
     public void test_MA_03_02_verify_five_actions()
             throws InterruptedException {
         myAudioPage.clickMoreAt(1);
@@ -125,8 +125,6 @@ public class MyAudio03_Verify_Edit_Menu extends BaseTest {
 
         Assert.assertTrue(editMenu.isDisplayed(), "Menu khong mo");
 
-        Assert.assertTrue(editMenu.isVoiceMessageDisplayed(),
-                "Thieu Voice Message");
         Assert.assertTrue(editMenu.isShareDisplayed(), "Thieu Share");
         Assert.assertTrue(editMenu.isRenameDisplayed(), "Thieu Rename");
         Assert.assertTrue(editMenu.isSetRingtoneDisplayed(),
@@ -134,10 +132,10 @@ public class MyAudio03_Verify_Edit_Menu extends BaseTest {
         Assert.assertTrue(editMenu.isDeleteDisplayed(), "Thieu Delete");
 
         int total = editMenu.countActions();
-        Assert.assertEquals(total, 5,
-                "Phai co 5 action, co: " + total);
+        Assert.assertEquals(total, 4,
+                "Phai co 4 action, co: " + total);
         ExtentReportManager.getTest().log(Status.PASS,
-                "Du 5 action");
+                "Du 4 action");
     }
 
     @Test(priority = 3, description = "MA_03_03: Dong menu bang tap outside")

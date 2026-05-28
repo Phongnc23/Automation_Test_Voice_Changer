@@ -1,51 +1,153 @@
-
-0
-<android.widget.FrameLayout>
-<android.widget.LinearLayout>
-<android.widget.FrameLayout>
-<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/action_bar_root">
-<android.widget.FrameLayout resource-id="android:id/content">
-<androidx.drawerlayout.widget.DrawerLayout resource-id="com.bluesoftware.voicechanger:id/main">
-<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment">
-<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment">
-<android.view.ViewGroup>
-<android.view.ViewGroup resource-id="com.bluesoftware.voicechanger:id/layoutHeader">
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/btnClose">
-<android.widget.TextView text="Voice Effects" resource-id="com.bluesoftware.voicechanger:id/tvTitle">
-<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layoutAudio">
-<android.widget.LinearLayout>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/image_wave">
-<android.widget.TextView text="tts_1778733430253.wav" resource-id="com.bluesoftware.voicechanger:id/tvAudioName">
-<android.widget.LinearLayout>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/btnPlayPause">
-<android.widget.SeekBar text="0.0" resource-id="com.bluesoftware.voicechanger:id/seekBar">
-<android.widget.TextView text="00:00 / 00:00" resource-id="com.bluesoftware.voicechanger:id/tvTime">
-<androidx.recyclerview.widget.RecyclerView resource-id="com.bluesoftware.voicechanger:id/rvEffects">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.widget.TextView text="Normal" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.widget.TextView text="Man" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.widget.TextView text="Woman" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.widget.TextView text="Child" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.widget.TextView text="Penguin" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.widget.TextView text="Monster" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.view.ViewGroup>
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
-<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layoutBottom">
-<android.widget.TextView text="Send Voice Message" resource-id="com.bluesoftware.voicechanger:id/btnSend">
-<android.widget.TextView text="Save" resource-id="com.bluesoftware.voicechanger:id/btnSave">
-<android.view.View resource-id="android:id/navigationBarBackground">
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<hierarchy index="0" class="hierarchy" rotation="0" width="1720" height="2364">
+  <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2408]" displayed="true">
+    <android.widget.LinearLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2364]" displayed="true">
+      <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,64][1720,2364]" displayed="true">
+        <android.widget.LinearLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" resource-id="com.bluesoftware.voicechanger:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,64][1720,2364]" displayed="true">
+          <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,64][1720,2364]" displayed="true">
+            <androidx.drawerlayout.widget.DrawerLayout index="0" package="com.bluesoftware.voicechanger" class="androidx.drawerlayout.widget.DrawerLayout" text="" resource-id="com.bluesoftware.voicechanger:id/main" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,64][1720,2364]" displayed="true">
+              <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,64][1720,2364]" displayed="true">
+                <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" resource-id="com.bluesoftware.voicechanger:id/nav_host_fragment" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,64][1720,2364]" displayed="true">
+                  <android.view.ViewGroup index="0" package="com.bluesoftware.voicechanger" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,64][1720,2364]" displayed="true">
+                    <android.view.ViewGroup index="0" package="com.bluesoftware.voicechanger" class="android.view.ViewGroup" text="" resource-id="com.bluesoftware.voicechanger:id/layoutHeader" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,73][1720,163]" displayed="true">
+                      <android.widget.ImageView index="0" package="com.bluesoftware.voicechanger" class="android.widget.ImageView" text="" resource-id="com.bluesoftware.voicechanger:id/btnClose" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[18,73][108,163]" displayed="true" />
+                      <android.widget.TextView index="1" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="Voice Effects" resource-id="com.bluesoftware.voicechanger:id/tvTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[789,91][1022,145]" displayed="true" />
+                    </android.view.ViewGroup>
+                    <android.widget.LinearLayout index="1" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" resource-id="com.bluesoftware.voicechanger:id/layoutAudio" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[18,186][1702,385]" displayed="true">
+                      <android.widget.LinearLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[54,209][1675,281]" displayed="true">
+                        <android.widget.ImageView index="0" package="com.bluesoftware.voicechanger" class="android.widget.ImageView" text="" resource-id="com.bluesoftware.voicechanger:id/image_wave" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[54,209][126,281]" displayed="true" />
+                        <android.widget.TextView index="1" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="tts_part_1779848052754_0.wav" resource-id="com.bluesoftware.voicechanger:id/tvAudioName" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[153,221][649,268]" displayed="true" />
+                      </android.widget.LinearLayout>
+                      <android.widget.LinearLayout index="1" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[54,308][1675,362]" displayed="true">
+                        <android.widget.ImageView index="0" package="com.bluesoftware.voicechanger" class="android.widget.ImageView" text="" resource-id="com.bluesoftware.voicechanger:id/btnPlayPause" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[54,308][108,362]" displayed="true" />
+                        <android.widget.SeekBar index="1" package="com.bluesoftware.voicechanger" class="android.widget.SeekBar" text="0.0" resource-id="com.bluesoftware.voicechanger:id/seekBar" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[126,314][1474,355]" displayed="true" />
+                        <android.widget.TextView index="2" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="00:00 / 00:00" resource-id="com.bluesoftware.voicechanger:id/tvTime" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[1492,317][1648,352]" displayed="true" />
+                      </android.widget.LinearLayout>
+                    </android.widget.LinearLayout>
+                    <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                           <android.widget.TextView text="Normal" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                           <android.view.ViewGroup>
+                                                           <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                           <android.widget.TextView text="Man" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                           <android.view.ViewGroup>
+                                                           <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                           <android.widget.TextView text="Woman" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                           <android.widget.LinearLayout>
+                                                           <android.widget.LinearLayout>
+                                                           <android.widget.TextView text="Volume" resource-id="com.bluesoftware.voicechanger:id/tvVolumeLabel">
+                                                           <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/btnResetVolume">
+                                                           <android.widget.SeekBar text="100.0" resource-id="com.bluesoftware.voicechanger:id/seekVolume">
+                                                           <android.widget.LinearLayout>
+                                                           <android.widget.TextView text="0">
+                                                           <android.widget.TextView text="100" resource-id="com.bluesoftware.voicechanger:id/tvVolumeValue">
+                                                           <android.widget.TextView text="200">
+                                                           <android.view.ViewGroup>
+                                                           <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                           <android.widget.TextView text="Child" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                           <android.view.ViewGroup>
+                                                           <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                           <android.widget.TextView text="Baby" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                           <android.view.ViewGroup>
+                                                           <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                           <android.widget.TextView text="Tenor" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             </android.view.ViewGroup>
+                                                             <androidx.recyclerview.widget.RecyclerView resource-id="com.bluesoftware.voicechanger:id/rvEffects">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Helium" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Parody" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Whisper" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Cyborg" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Devil" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Ghost" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Penguin" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Monster" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Death" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Zombie" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Drunk" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Alien" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Bee" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Robot" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Fast" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Slow" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Bass" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Echo" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Tremolo" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Bathroom" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Cave" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Hall" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Stadium" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Tunnel" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Underwater" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Telephone" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Megaphone" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                                                             <android.view.ViewGroup>
+                                                             <android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/img">
+                                                             <android.widget.TextView text="Old Radio" resource-id="com.bluesoftware.voicechanger:id/tv_effect_name">
+                    </androidx.recyclerview.widget.RecyclerView>
+                    <android.widget.LinearLayout index="3" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" resource-id="com.bluesoftware.voicechanger:id/layoutBottom" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2155][1720,2346]" displayed="true">
+                      <android.widget.TextView index="0" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="Send Voice Message" resource-id="com.bluesoftware.voicechanger:id/btnSend" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[36,2191][860,2310]" displayed="true" />
+                      <android.widget.TextView index="1" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="Save" resource-id="com.bluesoftware.voicechanger:id/btnSave" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[887,2191][1684,2310]" displayed="true" />
+                    </android.widget.LinearLayout>
+                  </android.view.ViewGroup>
+                </android.widget.FrameLayout>
+              </android.widget.FrameLayout>
+            </androidx.drawerlayout.widget.DrawerLayout>
+          </android.widget.FrameLayout>
+        </android.widget.LinearLayout>
+      </android.widget.FrameLayout>
+    </android.widget.LinearLayout>
+  </android.widget.FrameLayout>
+</hierarchy>

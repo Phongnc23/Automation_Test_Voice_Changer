@@ -7,8 +7,7 @@ import org.openqa.selenium.By;
 /**
  * Bottom sheet Edit Menu - mo khi click btnMore tren item My Audio.
  *
- * 5 action layouts:
- * - layout_voice_message ("Send Voice Message")
+ * DOM moi: 4 action layouts (Send Voice Message da bi remove khoi DOM):
  * - layout_share ("Share")
  * - layout_rename ("Rename")
  * - layout_set_as_ringtone ("Set as ringtone")
@@ -25,8 +24,6 @@ public class MyAudioEditMenu extends BasePage {
     private static final By TOUCH_OUTSIDE =
             By.id("com.bluesoftware.voicechanger:id/touch_outside");
 
-    private static final By VOICE_MESSAGE =
-            By.id("com.bluesoftware.voicechanger:id/layout_voice_message");
     private static final By SHARE =
             By.id("com.bluesoftware.voicechanger:id/layout_share");
     private static final By RENAME =
@@ -43,7 +40,7 @@ public class MyAudioEditMenu extends BasePage {
     public boolean isDisplayed() {
         try {
             return driver.findElements(BOTTOM_SHEET).size() > 0
-                    && driver.findElements(VOICE_MESSAGE).size() > 0;
+                    && driver.findElements(SHARE).size() > 0;
         } catch (Exception e) {
             return false;
         }
@@ -65,10 +62,6 @@ public class MyAudioEditMenu extends BasePage {
         }
     }
 
-    public boolean isVoiceMessageDisplayed() {
-        return driver.findElements(VOICE_MESSAGE).size() > 0;
-    }
-
     public boolean isShareDisplayed() {
         return driver.findElements(SHARE).size() > 0;
     }
@@ -87,17 +80,11 @@ public class MyAudioEditMenu extends BasePage {
 
     public int countActions() {
         int count = 0;
-        if (isVoiceMessageDisplayed()) count++;
         if (isShareDisplayed()) count++;
         if (isRenameDisplayed()) count++;
         if (isSetRingtoneDisplayed()) count++;
         if (isDeleteDisplayed()) count++;
         return count;
-    }
-
-    public void clickVoiceMessage() {
-        logger.info("Click Send Voice Message");
-        click(VOICE_MESSAGE);
     }
 
     public void clickShare() {

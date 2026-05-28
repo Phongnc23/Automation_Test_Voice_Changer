@@ -32,6 +32,7 @@
             <class name="testcases.Voiceeffects.VoiceEffects03_Verify_Apply_Effects"/>
             <class name="testcases.Voiceeffects.VoiceEffects04_Verify_Save_Close"/>
             <class name="testcases.Voiceeffects.VoiceEffects05_Verify_Send_Voice_Message"/>
+            <class name="testcases.Voiceeffects.VoiceEffects06_Verify_Volume"/>
         </classes>
     </test>
 
@@ -67,7 +68,6 @@
             <class name="testcases.MyAudio.MyAudio04_Verify_Rename"/>
             <class name="testcases.MyAudio.MyAudio05_Verify_Delete"/>
             <class name="testcases.MyAudio.MyAudio06_Verify_Open_File_Save_Flow"/>
-            <class name="testcases.MyAudio.MyAudio07_Verify_Send_Voice_Message_From_Edit_Menu"/>
             <class name="testcases.MyAudio.MyAudio08_Verify_Share_From_Edit_Menu"/>
         </classes>
     </test>

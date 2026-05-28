@@ -106,8 +106,9 @@ public class VoiceEffects01_Verify_UI_Display extends BaseTest {
         ExtentReportManager.getTest().log(Status.PASS, "Nut Save hien thi");
     }
 
-    @Test(description = "VE_01_08: Verify 23 effects co trong list", priority = 8)
+    @Test(description = "VE_01_08: Verify cac effects co trong list", priority = 8)
     public void test_VE_01_08_verify_all_23_effects_listed() {
+        int total = VoiceEffectsPage.ALL_EFFECTS.size();
         int foundCount = 0;
         StringBuilder missing = new StringBuilder();
 
@@ -120,14 +121,14 @@ public class VoiceEffects01_Verify_UI_Display extends BaseTest {
         }
 
         ExtentReportManager.getTest().log(Status.INFO,
-                "Found " + foundCount + "/23 effects");
+                "Found " + foundCount + "/" + total + " effects");
         if (missing.length() > 0) {
             ExtentReportManager.getTest().log(Status.WARNING,
                     "Missing: " + missing.toString());
         }
 
         Assert.assertTrue(foundCount >= 21,
-                "Khong tim du effects. Found: " + foundCount + "/23");
+                "Khong tim du effects. Found: " + foundCount + "/" + total);
         ExtentReportManager.getTest().log(Status.PASS,
                 foundCount + " effects xuat hien");
     }

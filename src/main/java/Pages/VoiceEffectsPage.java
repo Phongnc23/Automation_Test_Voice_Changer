@@ -7,6 +7,7 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -28,13 +29,24 @@ import java.util.List;
 public class VoiceEffectsPage extends BasePage {
 
     /**
-     * Danh sach 23 effects co the chon tren Voice Effects.
+     * Danh sach 34 effects co the chon tren Voice Effects (DOM moi).
+     * Thu tu khop voi thu tu render trong rvEffects.
+     * Volume block khong nam trong list nay (khong dung tv_effect_name).
      */
     public static final List<String> ALL_EFFECTS = Arrays.asList(
-            "Normal", "Man", "Woman", "Child", "Penguin", "Monster",
-            "Fast", "Slow", "Alien", "Zombie", "Drunk", "Helium",
-            "Death", "Robot", "Baby", "Echo", "Underwater", "Telephone",
-            "Parody", "Bass", "Tenor", "Bee", "Fade"
+            // Group 1: Voice tone (gioi tinh / tuoi)
+            "Normal", "Man", "Woman", "Child", "Baby", "Tenor",
+            // Group 2: Pitch / character
+            "Helium", "Parody", "Whisper", "Cyborg", "Devil", "Ghost",
+            "Penguin", "Monster", "Death", "Zombie", "Drunk", "Alien",
+            "Bee", "Robot",
+            // Group 3: Speed
+            "Fast", "Slow",
+            // Group 4: Frequency / EQ
+            "Bass", "Echo", "Tremolo",
+            // Group 5: Room / environment
+            "Bathroom", "Cave", "Hall", "Stadium", "Tunnel",
+            "Underwater", "Telephone", "Megaphone", "Old Radio"
     );
 
     // ========== LOCATORS ==========
@@ -67,6 +79,20 @@ public class VoiceEffectsPage extends BasePage {
             By.id("com.bluesoftware.voicechanger:id/btnSend");
     private static final By SAVE_BUTTON =
             By.id("com.bluesoftware.voicechanger:id/btnSave");
+
+    // Volume control (DOM moi) - block hien thi DONG, ngay duoi effect dang chon
+    private static final By VOLUME_LABEL =
+            By.id("com.bluesoftware.voicechanger:id/tvVolumeLabel");
+    private static final By VOLUME_RESET_BTN =
+            By.id("com.bluesoftware.voicechanger:id/btnResetVolume");
+    private static final By VOLUME_SEEKBAR =
+            By.id("com.bluesoftware.voicechanger:id/seekVolume");
+    private static final By VOLUME_VALUE_TEXT =
+            By.id("com.bluesoftware.voicechanger:id/tvVolumeValue");
+
+    /** Range cua Volume seekbar trong app (text="100.0" la default, max=200). */
+    private static final double VOLUME_MAX = 200.0;
+    private static final double VOLUME_DEFAULT = 100.0;
 
     // UiAutomator selector cho Play/Pause - tranh stale element
     private static final String PLAY_PAUSE_UIAUTOMATOR =
@@ -393,6 +419,140 @@ public class VoiceEffectsPage extends BasePage {
     public void clickSendVoiceMessage() {
         logger.info("Click Send Voice Message");
         click(SEND_BUTTON);
+    }
+
+    // ========== VOLUME CONTROL (DOM moi) ==========
+    // Volume block xuat hien DONG, ngay duoi row chua effect dang chon.
+
+    public boolean isVolumeSectionDisplayed() {
+        return driver.findElements(VOLUME_LABEL).size() > 0
+                && driver.findElements(VOLUME_SEEKBAR).size() > 0
+                && driver.findElements(VOLUME_VALUE_TEXT).size() > 0;
+    }
+
+    public boolean isVolumeLabelDisplayed() {
+        return driver.findElements(VOLUME_LABEL).size() > 0;
+    }
+
+    public boolean isVolumeResetButtonDisplayed() {
+        return driver.findElements(VOLUME_RESET_BTN).size() > 0;
+    }
+
+    public boolean isVolumeSeekBarDisplayed() {
+        return driver.findElements(VOLUME_SEEKBAR).size() > 0;
+    }
+
+    public boolean isVolumeValueTextDisplayed() {
+        return driver.findElements(VOLUME_VALUE_TEXT).size() > 0;
+    }
+
+    /** Text cua tvVolumeValue, vd "100". */
+    public String getVolumeValue() {
+        try {
+            return driver.findElement(VOLUME_VALUE_TEXT).getText();
+        } catch (Exception e) {
+            logger.warn("getVolumeValue error: " + e.getMessage());
+            return null;
+        }
+    }
+
+    /** Parse tvVolumeValue ve int, tra ve -1 neu loi. */
+    public int getVolumeValueAsInt() {
+        String text = getVolumeValue();
+        if (text == null) return -1;
+        try {
+            return Integer.parseInt(text.trim());
+        } catch (NumberFormatException e) {
+            return -1;
+        }
+    }
+
+    /** Text cua seekVolume (Android SeekBar luu giá tri thuc, vd "100.0"). */
+    public String getVolumeSeekBarText() {
+        try {
+            return driver.findElement(VOLUME_SEEKBAR).getText();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    /**
+     * Y-coordinate cua seekVolume - dung de verify Volume block DI CHUYEN
+     * khi chon effect khac (volume nam duoi row chua effect dang chon).
+     */
+    public int getVolumeSeekBarY() {
+        try {
+            return driver.findElement(VOLUME_SEEKBAR).getLocation().getY();
+        } catch (Exception e) {
+            return -1;
+        }
+    }
+
+    public void clickResetVolume() {
+        logger.info("Click Reset Volume");
+        click(VOLUME_RESET_BTN);
+    }
+
+    /**
+     * Drag seekVolume thumb den vi tri tuong duong percent (0.0..1.0).
+     * Tinh start tu vi tri thumb hien tai (parse tu seekbar text / max).
+     *
+     * Note: gesture drag KHONG chinh xac den tung don vi - chi de verify
+     * volume "thay doi", khong assert gia tri cu the.
+     */
+    public void dragVolumeTo(double percent) {
+        percent = Math.max(0.0, Math.min(1.0, percent));
+
+        WebElement seek = driver.findElement(VOLUME_SEEKBAR);
+        Point loc = seek.getLocation();
+        Dimension dim = seek.getSize();
+
+        // Inset 30px de tranh edge - thumb thuong khong dat sat 2 dau
+        int inset = 30;
+        int leftEdge = loc.getX() + inset;
+        int rightEdge = loc.getX() + dim.getWidth() - inset;
+        int trackWidth = rightEdge - leftEdge;
+        int y = loc.getY() + dim.getHeight() / 2;
+
+        // Tinh thumb position hien tai tu text "100.0"
+        double currentPercent = VOLUME_DEFAULT / VOLUME_MAX;
+        try {
+            currentPercent = Double.parseDouble(seek.getText()) / VOLUME_MAX;
+        } catch (Exception e) {
+            // fallback default
+        }
+        currentPercent = Math.max(0.0, Math.min(1.0, currentPercent));
+
+        int startX = leftEdge + (int) (trackWidth * currentPercent);
+        int endX = leftEdge + (int) (trackWidth * percent);
+
+        logger.info("Drag volume tu x=" + startX + " den x=" + endX
+                + " (percent " + currentPercent + " -> " + percent + ")");
+
+        GestureUtils.swipe(driver, startX, y, endX, y, 600);
+        sleep(500);
+    }
+
+    /** Drag thumb sang TRAI ~25% - giam volume. */
+    public void dragVolumeLeft() {
+        double current = VOLUME_DEFAULT / VOLUME_MAX;
+        try {
+            current = Double.parseDouble(getVolumeSeekBarText()) / VOLUME_MAX;
+        } catch (Exception e) {
+            // fallback default
+        }
+        dragVolumeTo(Math.max(0.0, current - 0.25));
+    }
+
+    /** Drag thumb sang PHAI ~25% - tang volume. */
+    public void dragVolumeRight() {
+        double current = VOLUME_DEFAULT / VOLUME_MAX;
+        try {
+            current = Double.parseDouble(getVolumeSeekBarText()) / VOLUME_MAX;
+        } catch (Exception e) {
+            // fallback default
+        }
+        dragVolumeTo(Math.min(1.0, current + 0.25));
     }
 
     // ========== DISCARD DIALOG ==========

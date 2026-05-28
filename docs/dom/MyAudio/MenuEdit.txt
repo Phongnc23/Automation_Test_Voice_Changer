@@ -1,36 +1,52 @@
-<android.widget.FrameLayout>
-<android.widget.LinearLayout>
-<android.widget.FrameLayout>
-<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/action_bar_root">
-<android.widget.FrameLayout resource-id="android:id/content">
-<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/container">
-<android.view.ViewGroup resource-id="com.bluesoftware.voicechanger:id/coordinator">
-<android.view.View resource-id="com.bluesoftware.voicechanger:id/touch_outside">
-<android.widget.FrameLayout resource-id="com.bluesoftware.voicechanger:id/design_bottom_sheet">
-<android.widget.LinearLayout>
-<android.view.View>
-<android.widget.LinearLayout>
-<android.widget.ImageView>
-<android.widget.LinearLayout>
-<android.widget.TextView text="tts_1778747413892.wav.m4a" resource-id="com.bluesoftware.voicechanger:id/tvName">
-<android.widget.TextView text="00:01 · 60 KB" resource-id="com.bluesoftware.voicechanger:id/tvInfo">
-<android.widget.LinearLayout>
-<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_voice_message">
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
-<android.widget.TextView text="Send Voice Message" resource-id="com.bluesoftware.voicechanger:id/tvAction">
-<android.view.View>
-<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_share">
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
-<android.widget.TextView text="Share" resource-id="com.bluesoftware.voicechanger:id/tvAction">
-<android.view.View>
-<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_rename">
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
-<android.widget.TextView text="Rename" resource-id="com.bluesoftware.voicechanger:id/tvAction">
-<android.widget.LinearLayout>
-<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_set_as_ringtone">
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
-<android.widget.TextView text="Set as ringtone" resource-id="com.bluesoftware.voicechanger:id/tvAction">
-<android.view.View>
-<android.widget.LinearLayout resource-id="com.bluesoftware.voicechanger:id/layout_delete">
-<android.widget.ImageView resource-id="com.bluesoftware.voicechanger:id/imgIcon">
-<android.widget.TextView text="Delete" resource-id="com.bluesoftware.voicechanger:id/tvAction">
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<hierarchy index="0" class="hierarchy" rotation="0" width="1720" height="2364">
+  <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2408]" displayed="true">
+    <android.widget.LinearLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2364]" displayed="true">
+      <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2364]" displayed="true">
+        <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" resource-id="com.bluesoftware.voicechanger:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2364]" displayed="true">
+          <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2364]" displayed="true">
+            <android.widget.FrameLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" resource-id="com.bluesoftware.voicechanger:id/container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2364]" displayed="true">
+              <android.view.ViewGroup index="0" package="com.bluesoftware.voicechanger" class="android.view.ViewGroup" text="" resource-id="com.bluesoftware.voicechanger:id/coordinator" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1720,2364]" displayed="true">
+                <android.view.View index="0" package="com.bluesoftware.voicechanger" class="android.view.View" text="" resource-id="com.bluesoftware.voicechanger:id/touch_outside" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,64][1720,2364]" displayed="true" />
+                <android.widget.FrameLayout index="1" package="com.bluesoftware.voicechanger" class="android.widget.FrameLayout" text="" resource-id="com.bluesoftware.voicechanger:id/design_bottom_sheet" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[140,1595][1580,2364]" displayed="true">
+                  <android.widget.LinearLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[140,1595][1580,2364]" displayed="true">
+                    <android.view.View index="0" package="com.bluesoftware.voicechanger" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[821,1618][898,1625]" displayed="true" />
+                    <android.widget.LinearLayout index="1" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[140,1643][1580,1823]" displayed="true">
+                      <android.widget.ImageView index="0" package="com.bluesoftware.voicechanger" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,1679][284,1787]" displayed="true" />
+                      <android.widget.LinearLayout index="1" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[311,1696][1544,1770]" displayed="true">
+                        <android.widget.TextView index="0" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="tts_part_1779859359903_0.wav.m4a" resource-id="com.bluesoftware.voicechanger:id/tvName" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[311,1696][806,1737]" displayed="true" />
+                        <android.widget.TextView index="1" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="00:01 · 69 KB" resource-id="com.bluesoftware.voicechanger:id/tvInfo" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[311,1737][449,1770]" displayed="true" />
+                      </android.widget.LinearLayout>
+                    </android.widget.LinearLayout>
+                    <android.widget.LinearLayout index="2" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,1859][1544,2080]" displayed="true">
+                      <android.widget.LinearLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" resource-id="com.bluesoftware.voicechanger:id/layout_share" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,1859][1544,1967]" displayed="true">
+                        <android.widget.ImageView index="0" package="com.bluesoftware.voicechanger" class="android.widget.ImageView" text="" resource-id="com.bluesoftware.voicechanger:id/imgIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[221,1886][275,1940]" displayed="true" />
+                        <android.widget.TextView index="1" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="Share" resource-id="com.bluesoftware.voicechanger:id/tvAction" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[320,1891][403,1935]" displayed="true" />
+                      </android.widget.LinearLayout>
+                      <android.view.View index="1" package="com.bluesoftware.voicechanger" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,1967][1544,1972]" displayed="true" />
+                      <android.widget.LinearLayout index="2" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" resource-id="com.bluesoftware.voicechanger:id/layout_rename" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,1972][1544,2080]" displayed="true">
+                        <android.widget.ImageView index="0" package="com.bluesoftware.voicechanger" class="android.widget.ImageView" text="" resource-id="com.bluesoftware.voicechanger:id/imgIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[221,1999][275,2053]" displayed="true" />
+                        <android.widget.TextView index="1" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="Rename" resource-id="com.bluesoftware.voicechanger:id/tvAction" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[320,2004][436,2048]" displayed="true" />
+                      </android.widget.LinearLayout>
+                    </android.widget.LinearLayout>
+                    <android.widget.LinearLayout index="3" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,2107][1544,2328]" displayed="true">
+                      <android.widget.LinearLayout index="0" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" resource-id="com.bluesoftware.voicechanger:id/layout_set_as_ringtone" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,2107][1544,2215]" displayed="true">
+                        <android.widget.ImageView index="0" package="com.bluesoftware.voicechanger" class="android.widget.ImageView" text="" resource-id="com.bluesoftware.voicechanger:id/imgIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[221,2134][275,2188]" displayed="true" />
+                        <android.widget.TextView index="1" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="Set as ringtone" resource-id="com.bluesoftware.voicechanger:id/tvAction" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[320,2139][535,2183]" displayed="true" />
+                      </android.widget.LinearLayout>
+                      <android.view.View index="1" package="com.bluesoftware.voicechanger" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,2215][1544,2220]" displayed="true" />
+                      <android.widget.LinearLayout index="2" package="com.bluesoftware.voicechanger" class="android.widget.LinearLayout" text="" resource-id="com.bluesoftware.voicechanger:id/layout_delete" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[176,2220][1544,2328]" displayed="true">
+                        <android.widget.ImageView index="0" package="com.bluesoftware.voicechanger" class="android.widget.ImageView" text="" resource-id="com.bluesoftware.voicechanger:id/imgIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[221,2247][275,2301]" displayed="true" />
+                        <android.widget.TextView index="1" package="com.bluesoftware.voicechanger" class="android.widget.TextView" text="Delete" resource-id="com.bluesoftware.voicechanger:id/tvAction" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[320,2252][411,2296]" displayed="true" />
+                      </android.widget.LinearLayout>
+                    </android.widget.LinearLayout>
+                  </android.widget.LinearLayout>
+                </android.widget.FrameLayout>
+              </android.view.ViewGroup>
+            </android.widget.FrameLayout>
+          </android.widget.FrameLayout>
+        </android.widget.FrameLayout>
+      </android.widget.FrameLayout>
+    </android.widget.LinearLayout>
+  </android.widget.FrameLayout>
+</hierarchy>

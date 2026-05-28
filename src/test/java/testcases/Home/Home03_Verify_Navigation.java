@@ -5,6 +5,8 @@ import com.aventstack.extentreports.Status;
 import Constants.AppConstants;
 import Constants.TimeOutConstants;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -106,7 +108,7 @@ public class Home03_Verify_Navigation extends BaseTest {
         ExtentReportManager.getTest().log(Status.PASS, "Da ve Home thanh cong");
     }
 
-    @Test(description = "TC_15: Click Import Audio mo File Picker, back ve Home (3 lan)")
+    @Test(description = "TC_15: Click Import Audio mo File Picker, back ve Home")
     public void TC_15_click_import_audio_card() {
         ExtentReportManager.getTest().log(Status.INFO, "Click Import Audio card");
 
@@ -119,10 +121,12 @@ public class Home03_Verify_Navigation extends BaseTest {
         ExtentReportManager.getTest().log(Status.INFO, "Da mo - package: " + currentPackage);
         ExtentReportManager.getTest().log(Status.PASS, "File picker mo thanh cong");
 
-        // Swipe back 3 lan
-        backToHome(3);
+        // File picker external (OPPO Documents/Files) - cau truc back navigation
+        // khong on dinh -> terminate + activate app de chac chan ve Home.
+        forceRelaunchToHome();
 
-        Assert.assertTrue(isHomeScreenDisplayed(), "Khong ve Home sau 3 lan swipe");
+        Assert.assertTrue(isHomeScreenDisplayed(),
+                "Khong ve Home sau forceRelaunch");
         ExtentReportManager.getTest().log(Status.PASS, "Da ve Home thanh cong");
     }
 
@@ -201,10 +205,23 @@ public class Home03_Verify_Navigation extends BaseTest {
     private void forceRelaunchToHome() {
         AndroidDriver androidDriver = (AndroidDriver) driver;
         try {
+            // File picker external (DocumentsUI/OPPO Files) chay trong task RIENG.
+            // activateApp KHONG keo Voice Changer len tren duoc.
+            // Press BACK truoc de dismiss picker (max 5 lan).
+            for (int i = 0; i < 5; i++) {
+                String currentPkg = androidDriver.getCurrentPackage();
+                if (AppConstants.APP_PACKAGE.equals(currentPkg)
+                        && isHomeScreenDisplayed()) {
+                    return;
+                }
+                androidDriver.pressKey(new KeyEvent(AndroidKey.BACK));
+                Thread.sleep(500);
+            }
+
+            // Neu BACK chua giai quyet -> terminate + activate
             androidDriver.terminateApp(AppConstants.APP_PACKAGE);
             Thread.sleep(1000);
             androidDriver.activateApp(AppConstants.APP_PACKAGE);
-            // Smart wait: doi den khi Home hien thi (thay vi sleep co dinh)
             waitForHomeScreen();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

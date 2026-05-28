@@ -39,6 +39,7 @@ public class Home03_Verify_Navigation extends BaseTest {
         homePage = new HomePage(driver);
     }
 
+
     @Test(description = "TC_11: Kiem tra nhan icon Hamburger Menu mo va dong drawer")
     public void TC_11_click_hamburger_menu() {
         ExtentReportManager.getTest().log(Status.INFO, "Click hamburger menu");
